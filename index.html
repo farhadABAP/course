@@ -9,7 +9,7 @@
 
 <meta
     name="description"
-    content="C_ABAPD SAP ABAP Cloud certification preparation - ABAP, ABAP OO, SQL, CDS, RAP, Clean Core and exam practice."
+    content="C_ABAPD SAP ABAP Cloud certification preparation - Core ABAP, ABAP OO, SQL, CDS, RAP, Clean Core, BTP, Joule and exam practice."
 >
 
 <style>
@@ -28,7 +28,7 @@
     --warn: #d29922;
     --purple: #a371f7;
     --code-bg: #1e1e1e;
-    --sidebar-width: 280px;
+    --sidebar-width: 285px;
 }
 
 * {
@@ -163,6 +163,20 @@ nav {
     letter-spacing: 0.06em;
 
     margin-bottom: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-weight {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 8px;
+    background: var(--bg-tertiary);
+    color: var(--warn);
+    font-weight: 700;
+    letter-spacing: 0;
 }
 
 .nav-item {
@@ -266,6 +280,16 @@ nav {
 
 .module-header h2 {
     font-size: 1.45rem;
+}
+
+.module-header .weight-badge {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--warn);
 }
 
 .module-content {
@@ -402,6 +426,15 @@ code {
     margin-right: 0.4rem;
 }
 
+.priority-card .priority.med {
+    background: var(--warn);
+    color: #1a1a1a;
+}
+
+.priority-card .priority.low {
+    background: var(--purple);
+}
+
 .topic-card {
     background: var(--bg-tertiary);
 
@@ -452,6 +485,112 @@ code {
 
 .bad {
     color: #f85149;
+}
+
+/* =========================================================
+   WEIGHT BARS
+   ========================================================= */
+
+.weight-chart {
+    margin: 1.5rem 0;
+}
+
+.weight-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.9rem;
+}
+
+.weight-label {
+    width: 260px;
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    flex-shrink: 0;
+}
+
+.weight-bar-wrap {
+    flex: 1;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    height: 26px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border);
+}
+
+.weight-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+    transition: width 0.6s ease;
+}
+
+.wb-high { background: linear-gradient(90deg, #da3633, #f85149); }
+.wb-mid  { background: linear-gradient(90deg, #d29922, #e3b341); color: #1a1a1a; }
+.wb-low  { background: linear-gradient(90deg, #a371f7, #bc8cff); }
+.wb-min  { background: linear-gradient(90deg, #238636, #3fb950); }
+
+@media (max-width: 640px) {
+    .weight-row { flex-direction: column; align-items: flex-start; }
+    .weight-label { width: 100%; }
+    .weight-bar-wrap { width: 100%; }
+}
+
+/* =========================================================
+   ALLOWED / FORBIDDEN
+   ========================================================= */
+
+.rule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+@media (max-width: 700px) {
+    .rule-grid { grid-template-columns: 1fr; }
+}
+
+.rule-col {
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--border);
+}
+
+.rule-col.allowed {
+    background: rgba(35,134,54,0.08);
+    border-left: 4px solid var(--success);
+}
+
+.rule-col.forbidden {
+    background: rgba(218,54,51,0.08);
+    border-left: 4px solid var(--danger);
+}
+
+.rule-col h5 {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.rule-col.allowed h5 { color: #3fb950; }
+.rule-col.forbidden h5 { color: #f85149; }
+
+.rule-col ul {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.rule-col li {
+    font-size: 0.82rem;
+    margin-bottom: 0.3rem;
 }
 
 /* =========================================================
@@ -627,6 +766,42 @@ td {
     color: var(--accent);
 
     margin-bottom: 0.7rem;
+
+    font-size: 0.95rem;
+}
+
+.question .q-tag {
+    display: inline-block;
+    background: var(--purple);
+    color: white;
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    letter-spacing: 0.04em;
+}
+
+.question .q-tag.multi { background: var(--danger); }
+.question .q-tag.code  { background: var(--accent); color: #0d1117; }
+
+.question p {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.88rem;
+}
+
+.question .options {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
+
+.question .options li {
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+    padding: 0.2rem 0;
 }
 
 .answer {
@@ -639,10 +814,52 @@ td {
     border-left: 3px solid var(--success);
 
     border-radius: 0 5px 5px 0;
+
+    font-size: 0.85rem;
 }
 
 .answer strong {
     color: var(--success);
+}
+
+.answer .why {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+}
+
+/* =========================================================
+   LAB STEPS
+   ========================================================= */
+
+.lab-step {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--purple);
+}
+
+.lab-step h4 {
+    color: var(--purple);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.lab-step .step-num {
+    display: inline-block;
+    background: var(--purple);
+    color: white;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
 }
 
 /* =========================================================
@@ -755,7 +972,7 @@ td {
         </span>
     </a>
 
-    <span class="version">v5.0</span>
+    <span class="version">v6.0</span>
 
 </nav>
 
@@ -773,7 +990,7 @@ td {
 
 
 <!-- =====================================================
-     OVERVIEW
+     EXAM STRATEGY
      ===================================================== -->
 
 <div class="nav-section">
@@ -802,13 +1019,14 @@ td {
 
 
 <!-- =====================================================
-     CORE ABAP
+     CORE ABAP  (31-40%)
      ===================================================== -->
 
 <div class="nav-section">
 
     <div class="nav-title">
         Core ABAP
+        <span class="nav-weight">31–40%</span>
     </div>
 
     <div
@@ -829,10 +1047,42 @@ td {
 
     <div
         class="nav-item"
+        onclick="showPanel('modular', this)"
+    >
+        <span class="nav-icon">📦</span>
+        Modularization
+    </div>
+
+    <div
+        class="nav-item"
+        onclick="showPanel('itab', this)"
+    >
+        <span class="nav-icon">📋</span>
+        Internal Tables
+    </div>
+
+    <div
+        class="nav-item"
+        onclick="showPanel('ddic', this)"
+    >
+        <span class="nav-icon">📖</span>
+        ABAP Dictionary
+    </div>
+
+    <div
+        class="nav-item"
         onclick="showPanel('oo', this)"
     >
         <span class="nav-icon">🧩</span>
         ABAP OO
+    </div>
+
+    <div
+        class="nav-item"
+        onclick="showPanel('patterns', this)"
+    >
+        <span class="nav-icon">🎨</span>
+        Design Patterns
     </div>
 
     <div
@@ -843,17 +1093,26 @@ td {
         ABAP SQL
     </div>
 
+    <div
+        class="nav-item"
+        onclick="showPanel('debug', this)"
+    >
+        <span class="nav-icon">🐞</span>
+        Debugging &amp; Perf
+    </div>
+
 </div>
 
 
 <!-- =====================================================
-     DATA MODEL
+     DATA MODELING  (21-30%)
      ===================================================== -->
 
 <div class="nav-section">
 
     <div class="nav-title">
         Data Modeling
+        <span class="nav-weight">21–30%</span>
     </div>
 
     <div
@@ -876,13 +1135,14 @@ td {
 
 
 <!-- =====================================================
-     RAP
+     RAP  (11-20%)
      ===================================================== -->
 
 <div class="nav-section">
 
     <div class="nav-title">
         RAP
+        <span class="nav-weight">11–20%</span>
     </div>
 
     <div
@@ -921,13 +1181,13 @@ td {
 
 
 <!-- =====================================================
-     QUALITY
+     QUALITY & PLATFORM
      ===================================================== -->
 
 <div class="nav-section">
 
     <div class="nav-title">
-        Quality & Exam
+        Quality &amp; Platform
     </div>
 
     <div
@@ -948,6 +1208,27 @@ td {
 
     <div
         class="nav-item"
+        onclick="showPanel('btp', this)"
+    >
+        <span class="nav-icon">🛰️</span>
+        BTP &amp; Joule
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     EXAM PREP
+     ===================================================== -->
+
+<div class="nav-section">
+
+    <div class="nav-title">
+        Exam Prep
+    </div>
+
+    <div
+        class="nav-item"
         onclick="showPanel('pitfalls', this)"
     >
         <span class="nav-icon">⚠️</span>
@@ -956,10 +1237,18 @@ td {
 
     <div
         class="nav-item"
-        onclick="showPanel('questions', this)"
+        onclick="showPanel('scenario', this)"
     >
-        <span class="nav-icon">❓</span>
-        Practice Questions
+        <span class="nav-icon">🎬</span>
+        Scenario Questions
+    </div>
+
+    <div
+        class="nav-item"
+        onclick="showPanel('lab', this)"
+    >
+        <span class="nav-icon">🔬</span>
+        Hands-On Lab
     </div>
 
 </div>
@@ -978,18 +1267,74 @@ td {
 
 <div class="module-header">
     <h2>🎯 C_ABAPD Exam Strategy</h2>
+    <span class="weight-badge">Updated blueprint</span>
 </div>
 
 <div class="info-box">
 
 <strong>Goal:</strong>
-Prepare for the SAP Certified Associate -
-Back-End Developer - ABAP Cloud certification.
+Prepare for the SAP Certified Associate —
+Back-End Developer — ABAP Cloud certification.
 
-The preparation should not be RAP-only.
-The important areas include ABAP programming,
-ABAP OO, SQL/code pushdown, CDS/data modeling,
-RAP and Clean Core/ABAP Cloud concepts.
+The current exam combines a <strong>system-based
+assessment</strong> (hands-on coding) with a
+<strong>multiple-choice section</strong>. The cut
+score is roughly <strong>67%</strong> — you cannot
+pass by memorizing code alone.
+
+Do not prepare RAP-only. Core ABAP is the single
+largest topic.
+
+</div>
+
+
+<h3 style="color:var(--accent);margin-top:1.5rem;margin-bottom:0.5rem;">
+Official Topic Weightings
+</h3>
+
+<div class="weight-chart">
+
+<div class="weight-row">
+    <div class="weight-label">Core ABAP Programming</div>
+    <div class="weight-bar-wrap">
+        <div class="weight-bar wb-high" style="width:40%;">31–40%</div>
+    </div>
+</div>
+
+<div class="weight-row">
+    <div class="weight-label">ABAP CDS &amp; Data Modeling</div>
+    <div class="weight-bar-wrap">
+        <div class="weight-bar wb-mid" style="width:30%;">21–30%</div>
+    </div>
+</div>
+
+<div class="weight-row">
+    <div class="weight-label">RAP (RESTful ABAP Model)</div>
+    <div class="weight-bar-wrap">
+        <div class="weight-bar wb-low" style="width:20%;">11–20%</div>
+    </div>
+</div>
+
+<div class="weight-row">
+    <div class="weight-label">Clean Core &amp; ABAP Cloud Extensibility</div>
+    <div class="weight-bar-wrap">
+        <div class="weight-bar wb-low" style="width:20%;">11–20%</div>
+    </div>
+</div>
+
+<div class="weight-row">
+    <div class="weight-label">Object-Oriented Design</div>
+    <div class="weight-bar-wrap">
+        <div class="weight-bar wb-min" style="width:10%;">≤ 10%</div>
+    </div>
+</div>
+
+<div class="weight-row">
+    <div class="weight-label">ABAP SQL &amp; Code Pushdown</div>
+    <div class="weight-bar-wrap">
+        <div class="weight-bar wb-min" style="width:10%;">≤ 10%</div>
+    </div>
+</div>
 
 </div>
 
@@ -997,23 +1342,24 @@ RAP and Clean Core/ABAP Cloud concepts.
 <div class="priority-card">
 
 <h4>
-<span class="priority">HIGH</span>
-ABAP Cloud Fundamentals
+<span class="priority">HIGH — 31–40%</span>
+Core ABAP Programming
 </h4>
 
 <p>
-Understand the difference between Standard ABAP,
-ABAP for Cloud Development and the restrictions
-introduced by the cloud development model.
+The largest single block. Includes internal tables,
+modularization, DDIC, modern syntax, OO, SQL, and
+debugging/performance analysis.
 </p>
 
 <ul>
-<li>ABAP Cloud architecture</li>
-<li>Released APIs</li>
-<li>Restricted language version</li>
-<li>ADT / Eclipse</li>
-<li>Cloud-ready development</li>
-<li>Clean Core principles</li>
+<li>Internal table types &amp; performance</li>
+<li>Modularization (methods, function modules)</li>
+<li>ABAP Dictionary objects</li>
+<li>Modern ABAP syntax &amp; expressions</li>
+<li>ABAP OO &amp; interfaces</li>
+<li>ABAP SQL &amp; code pushdown</li>
+<li>Debugging (ABAP Profiler, SQL Trace)</li>
 </ul>
 
 </div>
@@ -1022,23 +1368,20 @@ introduced by the cloud development model.
 <div class="priority-card">
 
 <h4>
-<span class="priority">HIGH</span>
-CDS + Data Modeling
+<span class="priority">HIGH — 21–30%</span>
+ABAP CDS &amp; Data Modeling
 </h4>
 
 <p>
-CDS is one of the foundations of modern ABAP Cloud
+CDS is the foundation of modern ABAP Cloud
 development and RAP.
 </p>
 
 <ul>
 <li>View entities</li>
-<li>Keys</li>
-<li>Associations</li>
-<li>Cardinalities</li>
-<li>Path expressions</li>
-<li>Annotations</li>
-<li>Parameters</li>
+<li>Keys &amp; associations</li>
+<li>Cardinalities &amp; path expressions</li>
+<li>Annotations &amp; parameters</li>
 <li>Authorization / DCL</li>
 </ul>
 
@@ -1048,23 +1391,18 @@ development and RAP.
 <div class="priority-card">
 
 <h4>
-<span class="priority">HIGH</span>
+<span class="priority med">MEDIUM — 11–20%</span>
 RAP
 </h4>
 
 <ul>
 <li>Business object architecture</li>
 <li>Root view entity</li>
-<li>Behavior definition</li>
-<li>Behavior implementation</li>
+<li>Behavior definition &amp; implementation</li>
 <li>Managed vs unmanaged</li>
-<li>Determinations</li>
-<li>Validations</li>
-<li>Actions</li>
-<li>Draft</li>
-<li>EML</li>
-<li>Service definition</li>
-<li>Service binding</li>
+<li>Determinations, validations, actions</li>
+<li>Draft &amp; EML</li>
+<li>Service definition &amp; binding</li>
 </ul>
 
 </div>
@@ -1073,21 +1411,16 @@ RAP
 <div class="priority-card">
 
 <h4>
-<span class="priority">MEDIUM / HIGH</span>
-Core ABAP
+<span class="priority med">MEDIUM — 11–20%</span>
+Clean Core &amp; ABAP Cloud
 </h4>
 
 <ul>
-<li>Internal tables</li>
-<li>Work areas</li>
-<li>Field symbols</li>
-<li>References</li>
-<li>Modern syntax</li>
-<li>Expressions</li>
-<li>String templates</li>
-<li>Exception handling</li>
-<li>ABAP OO</li>
-<li>ABAP SQL</li>
+<li>Extension models (in-app, developer, side-by-side)</li>
+<li>Released APIs</li>
+<li>Restricted language version</li>
+<li>ADT / Eclipse</li>
+<li>Upgrade-stable extensions</li>
 </ul>
 
 </div>
@@ -1096,17 +1429,15 @@ Core ABAP
 <div class="priority-card">
 
 <h4>
-<span class="priority">MEDIUM</span>
-Testing & Quality
+<span class="priority low">LOW — ≤ 10%</span>
+OO Design &amp; ABAP SQL
 </h4>
 
 <ul>
-<li>ABAP Unit</li>
-<li>Test classes</li>
-<li>Debugging</li>
-<li>Clean ABAP</li>
-<li>Performance</li>
-<li>SQL efficiency</li>
+<li>Design patterns (factory, singleton)</li>
+<li>Polymorphism &amp; interfaces</li>
+<li>SQL expressions &amp; host variables</li>
+<li>Code pushdown principles</li>
 </ul>
 
 </div>
@@ -1118,7 +1449,7 @@ Testing & Quality
 
 Do not prepare only by memorizing code.
 For C_ABAPD-style questions, understand
-why a particular artifact, language version,
+<em>why</em> a particular artifact, language version,
 API, data model or RAP mechanism is appropriate.
 
 </div>
@@ -1150,7 +1481,7 @@ API, data model or RAP mechanism is appropriate.
 </ul>
 
 
-<h3>Phase 2 — Modern ABAP</h3>
+<h3>Phase 2 — Modern ABAP &amp; Core Language</h3>
 
 <ul>
 <li>Inline declarations</li>
@@ -1164,83 +1495,90 @@ API, data model or RAP mechanism is appropriate.
 </ul>
 
 
-<h3>Phase 3 — ABAP OO</h3>
+<h3>Phase 3 — Modularization &amp; Internal Tables</h3>
 
 <ul>
-<li>Classes</li>
-<li>Interfaces</li>
-<li>Inheritance</li>
-<li>Polymorphism</li>
-<li>Visibility</li>
-<li>Static vs instance components</li>
-<li>References</li>
-<li>Factory concepts</li>
+<li>Methods, function modules, subroutines</li>
+<li>Standard, sorted, hashed tables</li>
+<li>Primary &amp; secondary keys</li>
+<li>READ TABLE / LOOP AT variants</li>
+<li>Performance trade-offs</li>
 </ul>
 
 
-<h3>Phase 4 — ABAP SQL</h3>
+<h3>Phase 4 — ABAP Dictionary</h3>
 
 <ul>
-<li>SELECT</li>
-<li>JOIN</li>
-<li>WHERE</li>
-<li>GROUP BY</li>
-<li>Aggregations</li>
+<li>Transparent, pooled, cluster tables</li>
+<li>Data elements, domains, structures</li>
+<li>Buffering &amp; technical settings</li>
+<li>Table field shortening</li>
+</ul>
+
+
+<h3>Phase 5 — ABAP OO &amp; Design Patterns</h3>
+
+<ul>
+<li>Classes &amp; interfaces</li>
+<li>Inheritance &amp; polymorphism</li>
+<li>Visibility &amp; static vs instance</li>
+<li>References &amp; factory concepts</li>
+<li>Singleton &amp; strategy patterns</li>
+</ul>
+
+
+<h3>Phase 6 — ABAP SQL</h3>
+
+<ul>
+<li>SELECT, JOIN, WHERE, GROUP BY</li>
+<li>Aggregations &amp; SQL expressions</li>
 <li>Host variables</li>
-<li>SQL expressions</li>
 <li>Code pushdown</li>
 <li>Performance considerations</li>
 </ul>
 
 
-<h3>Phase 5 — CDS</h3>
+<h3>Phase 7 — CDS &amp; DCL</h3>
 
 <ul>
 <li>CDS view entities</li>
-<li>Associations</li>
-<li>Cardinality</li>
+<li>Associations &amp; cardinality</li>
 <li>Path expressions</li>
 <li>Annotations</li>
-<li>Authorization</li>
-<li>DCL</li>
+<li>Authorization / DCL</li>
 </ul>
 
 
-<h3>Phase 6 — RAP</h3>
+<h3>Phase 8 — RAP</h3>
 
 <ul>
 <li>BO architecture</li>
 <li>Behavior definition</li>
 <li>Managed implementation</li>
-<li>Determinations</li>
-<li>Validations</li>
-<li>Actions</li>
-<li>Draft</li>
-<li>EML</li>
+<li>Determinations, validations, actions</li>
+<li>Draft &amp; EML</li>
 <li>Transactional behavior</li>
 </ul>
 
 
-<h3>Phase 7 — Services</h3>
+<h3>Phase 9 — Services &amp; Platform</h3>
 
 <ul>
-<li>Service definition</li>
-<li>Service binding</li>
-<li>OData</li>
-<li>Fiori elements relationship</li>
-<li>RESTful architecture</li>
+<li>Service definition &amp; binding</li>
+<li>OData &amp; Fiori elements</li>
+<li>SAP BTP ABAP environment</li>
+<li>Joule for Developers</li>
 </ul>
 
 
-<h3>Phase 8 — Practice</h3>
+<h3>Phase 10 — Debugging &amp; Practice</h3>
 
 <ul>
-<li>Concept questions</li>
-<li>Code-reading questions</li>
-<li>Choose-the-correct-artifact questions</li>
-<li>RAP lifecycle questions</li>
-<li>CDS/DCL questions</li>
-<li>Cloud restriction questions</li>
+<li>ABAP Profiler (SAT)</li>
+<li>SQL Trace (ST05)</li>
+<li>Code Inspector / ATC</li>
+<li>Scenario-based questions</li>
+<li>Hands-on RAP build</li>
 </ul>
 
 </div>
@@ -1256,6 +1594,7 @@ API, data model or RAP mechanism is appropriate.
 
 <div class="module-header">
     <h2>☁️ ABAP Cloud</h2>
+    <span class="weight-badge">11–20%</span>
 </div>
 
 <div class="module-content">
@@ -1307,6 +1646,61 @@ API, data model or RAP mechanism is appropriate.
 </ul>
 
 
+<h3>Allowed vs Forbidden in ABAP Cloud</h3>
+
+<p>
+This is the single most tested conceptual distinction.
+The restricted language version blocks many classic
+statements. Know which side of the line common
+features fall on.
+</p>
+
+<div class="rule-grid">
+
+<div class="rule-col allowed">
+<h5>✓ Allowed</h5>
+<ul>
+<li>Released SAP APIs (C1 contract)</li>
+<li>CDS view entities</li>
+<li>ABAP SQL with released tables/views</li>
+<li>ABAP OO (classes, interfaces)</li>
+<li>RAP business objects</li>
+<li>ADT-based development</li>
+<li>ABAP Unit tests</li>
+<li>Released BAdIs</li>
+<li>Custom CDS entities</li>
+</ul>
+</div>
+
+<div class="rule-col forbidden">
+<h5>✗ Forbidden</h5>
+<ul>
+<li>Direct SELECT on non-released tables</li>
+<li><code>CALL FUNCTION</code> to unreleased FMs</li>
+<li>Classic Dynpro / SAP GUI screens</li>
+<li>Classic lists / SAPscript / Smart Forms</li>
+<li>Modifications to SAP standard objects</li>
+<li><code>EXEC SQL</code> / native SQL</li>
+<li>Obsolete statements (e.g. <code>TABLES</code>)</li>
+<li>Direct access to SAP internals</li>
+<li>Non-released BAPIs / function modules</li>
+</ul>
+</div>
+
+</div>
+
+
+<h3>Released APIs — Why They Matter</h3>
+
+<p>
+A <strong>released API</strong> is an SAP object that
+carries a released contract (C1 for SAP-internal use,
+C0 for external). Only released APIs are guaranteed
+to remain stable across releases — that is why the
+cloud development model restricts you to them.
+</p>
+
+
 <div class="exam-tip">
 
 <strong>Exam trap:</strong>
@@ -1335,6 +1729,7 @@ allowed in the target development model?"
 
 <div class="module-header">
     <h2>⌨️ Modern ABAP</h2>
+    <span class="weight-badge">Core ABAP</span>
 </div>
 
 <div class="search-bar">
@@ -1419,6 +1814,86 @@ DATA(lt_numbers) =
 
 <div class="snippet-header">
 
+<h3>COND / SWITCH</h3>
+
+<button
+    class="copy-btn"
+    onclick="copyCode(this)"
+>
+Copy
+</button>
+
+</div>
+
+<div class="snippet-body">
+
+<pre><code class="language-abap">
+
+DATA(lv_category) =
+    COND string(
+        WHEN lv_amount > 1000 THEN 'HIGH'
+        WHEN lv_amount > 100  THEN 'MEDIUM'
+        ELSE 'LOW'
+    ).
+
+DATA(lv_name) =
+    SWITCH string( lv_code
+        WHEN 'A' THEN 'Alpha'
+        WHEN 'B' THEN 'Beta'
+        ELSE 'Unknown'
+    ).
+
+</code></pre>
+
+</div>
+
+</div>
+
+
+<div class="snippet-card searchable">
+
+<div class="snippet-header">
+
+<h3>FOR Expression</h3>
+
+<button
+    class="copy-btn"
+    onclick="copyCode(this)"
+>
+Copy
+</button>
+
+</div>
+
+<div class="snippet-body">
+
+<pre><code class="language-abap">
+
+DATA(lt_names) =
+    VALUE string_table(
+        FOR ls IN lt_customers
+        ( ls-name )
+    ).
+
+" with WHERE
+DATA(lt_active) =
+    VALUE string_table(
+        FOR ls IN lt_customers
+            WHERE ( status = 'A' )
+        ( ls-name )
+    ).
+
+</code></pre>
+
+</div>
+
+</div>
+
+
+<div class="snippet-card searchable">
+
+<div class="snippet-header">
+
 <h3>Table Expression</h3>
 
 <button
@@ -1434,8 +1909,16 @@ Copy
 
 <pre><code class="language-abap">
 
+" Single row read — throws if not found
 DATA(ls_customer) =
     lt_customers[ id = 100 ].
+
+" Safe read with default
+DATA(ls_customer2) =
+    VALUE #(
+        lt_customers[ id = 999 ]
+        DEFAULT VALUE #( )
+    ).
 
 </code></pre>
 
@@ -1466,6 +1949,14 @@ Copy
 DATA(lv_text) =
     |Customer { lv_id } has status { lv_status }.|.
 
+" Formatting options
+DATA(lv_amt) =
+    |Total: { lv_amount NUMBER = USER } EUR|.
+
+" Date formatting
+DATA(lv_date) =
+    |Created: { lv_created DATE = USER }|.
+
 </code></pre>
 
 </div>
@@ -1486,6 +1977,383 @@ not only write it from memory.
 
 
 <!-- =====================================================
+     MODULARIZATION
+     ===================================================== -->
+
+<div class="panel" id="panel-modular">
+
+<div class="module-header">
+    <h2>📦 Modularization Techniques</h2>
+    <span class="weight-badge">Core ABAP</span>
+</div>
+
+<div class="module-content">
+
+<h3>Three Classic Techniques</h3>
+
+<div class="table-wrap">
+
+<table>
+<tr>
+<th>Technique</th>
+<th>Purpose</th>
+<th>Cloud-Ready?</th>
+</tr>
+<tr>
+<td>Subroutine (<code>FORM</code>/<code>PERFORM</code>)</td>
+<td>Legacy procedural modularization</td>
+<td class="bad">No — obsolete in cloud</td>
+</tr>
+<tr>
+<td>Function Module (<code>FUNCTION</code>)</td>
+<td>Reusable remote/local function</td>
+<td class="good">Only if released (RFC)</td>
+</tr>
+<tr>
+<td>Method (<code>METHOD</code>)</td>
+<td>Preferred OO modularization</td>
+<td class="good">Yes</td>
+</tr>
+</table>
+</div>
+
+
+<h3>Methods — The Modern Way</h3>
+
+<ul>
+<li>Defined in classes (global or local)</li>
+<li>Support importing / exporting / changing / returning parameters</li>
+<li>Can raise class-based exceptions</li>
+<li>Can be instance or static</li>
+<li>Enforced encapsulation via visibility sections</li>
+</ul>
+
+
+<h3>Parameter Passing</h3>
+
+<pre><code class="language-abap">
+
+CLASS zcl_calc DEFINITION.
+    PUBLIC SECTION.
+        METHODS add
+            IMPORTING
+                iv_a        TYPE i
+                iv_b        TYPE i
+            RETURNING
+                VALUE(rv_sum) TYPE i.
+ENDCLASS.
+
+CLASS zcl_calc IMPLEMENTATION.
+    METHOD add.
+        rv_sum = iv_a + iv_b.
+    ENDMETHOD.
+ENDCLASS.
+
+" Call
+DATA(lo_calc) = NEW zcl_calc( ).
+DATA(lv_result) = lo_calc->add(
+    iv_a = 10
+    iv_b = 20
+).
+
+</code></pre>
+
+
+<h3>Function Modules — When They Still Matter</h3>
+
+<p>
+Function modules are allowed in ABAP Cloud only when
+they are <strong>released</strong> (for example, released
+RFC-enabled function modules on the SAP allowlist).
+You will still see them in classic systems and in exam
+questions about legacy vs modern code.
+</p>
+
+
+<h3>Subroutines — Obsolete</h3>
+
+<p>
+<code>FORM</code> / <code>PERFORM</code> are not
+available in ABAP for Cloud Development. If you see a
+question offering a subroutine as the "modern" answer,
+that's a trap.
+</p>
+
+
+<div class="exam-tip">
+
+<strong>Exam trap:</strong>
+
+A question may ask you to refactor legacy procedural
+code. The correct direction is almost always:
+subroutine → method, global mutable state →
+encapsulated class, <code>TABLES</code> → typed
+parameters.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     INTERNAL TABLES
+     ===================================================== -->
+
+<div class="panel" id="panel-itab">
+
+<div class="module-header">
+    <h2>📋 Internal Tables</h2>
+    <span class="weight-badge">Core ABAP</span>
+</div>
+
+<div class="module-content">
+
+<h3>Three Table Types</h3>
+
+<div class="table-wrap">
+
+<table>
+<tr>
+<th>Type</th>
+<th>Access</th>
+<th>Key</th>
+<th>Best For</th>
+</tr>
+<tr>
+<td><code>STANDARD TABLE</code></td>
+<td>Index + linear search</td>
+<td>Non-unique (default)</td>
+<td>Sequential processing, small tables</td>
+</tr>
+<tr>
+<td><code>SORTED TABLE</code></td>
+<td>Binary search on key</td>
+<td>Unique or non-unique</td>
+<td>Frequent key reads, sorted output</td>
+</tr>
+<tr>
+<td><code>HASHED TABLE</code></td>
+<td>Hash — O(1)</td>
+<td>Always unique</td>
+<td>Large tables, frequent key lookups</td>
+</tr>
+</table>
+</div>
+
+
+<h3>Primary vs Secondary Keys</h3>
+
+<p>
+A <strong>primary key</strong> is defined at table type
+level and governs uniqueness/sorting. A
+<strong>secondary key</strong> can be added later to
+speed up specific access patterns on the same table.
+</p>
+
+<pre><code class="language-abap">
+
+" Standard table with secondary key
+DATA lt_customers TYPE STANDARD TABLE OF ty_customer
+    WITH NON-UNIQUE SORTED KEY by_name
+        COMPONENTS name.
+
+" Fast lookup using secondary key
+READ TABLE lt_customers
+    WITH TABLE KEY by_name
+        COMPONENTS name = 'ACME'
+    ASSIGNING FIELD-SYMBOL(&lt;ls&gt;).
+
+</code></pre>
+
+
+<h3>Common Operations</h3>
+
+<pre><code class="language-abap">
+
+" APPEND (standard tables only)
+APPEND ls_customer TO lt_customers.
+
+" INSERT
+INSERT ls_customer INTO TABLE lt_customers.
+
+" READ TABLE
+READ TABLE lt_customers
+    INTO DATA(ls_found)
+    WITH KEY id = 100.
+
+" LOOP AT with WHERE
+LOOP AT lt_customers INTO DATA(ls_c)
+    WHERE status = 'A'.
+    " ...
+ENDLOOP.
+
+" SORT
+SORT lt_customers BY name ASCENDING.
+
+" DELETE
+DELETE lt_customers WHERE status = 'X'.
+
+" MODIFY
+MODIFY lt_customers FROM ls_customer
+    TRANSPORTING name.
+
+</code></pre>
+
+
+<h3>Performance Rules of Thumb</h3>
+
+<ul>
+<li><code>READ TABLE</code> on a standard table with
+<code>WITH KEY</code> is <strong>linear</strong> — slow
+for large tables.</li>
+<li><code>READ TABLE ... INDEX</code> is O(1) on any
+table type.</li>
+<li>Use <code>ASSIGNING</code> + field symbols to avoid
+copying large rows in loops.</li>
+<li>Prefer <code>HASHED</code> for large lookup tables,
+<code>SORTED</code> when you also need order.</li>
+<li>Avoid <code>LOOP AT ... WHERE</code> on huge tables
+when a filtered SQL read would be faster.</li>
+</ul>
+
+
+<div class="exam-tip">
+
+<strong>Exam trap:</strong>
+
+"Which table type is fastest for key access?" —
+<strong>HASHED</strong>. "Which is fastest for index
+access?" — <strong>STANDARD</strong> (any type is O(1)
+on index, but standard is designed for it).
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     ABAP DICTIONARY
+     ===================================================== -->
+
+<div class="panel" id="panel-ddic">
+
+<div class="module-header">
+    <h2>📖 ABAP Dictionary (DDIC)</h2>
+    <span class="weight-badge">Core ABAP</span>
+</div>
+
+<div class="module-content">
+
+<h3>Core DDIC Objects</h3>
+
+<div class="table-wrap">
+
+<table>
+<tr>
+<th>Object</th>
+<th>Purpose</th>
+<th>Reuse</th>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td>Technical definition: type, length, value range</td>
+<td>Reusable across data elements</td>
+</tr>
+<tr>
+<td><strong>Data Element</strong></td>
+<td>Semantic meaning: field labels, documentation</td>
+<td>Used in structures and tables</td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td>Reusable field group, no data storage</td>
+<td>Components for tables and programs</td>
+</tr>
+<tr>
+<td><strong>Table</strong></td>
+<td>Physical storage (transparent tables)</td>
+<td>Defined with data elements</td>
+</tr>
+</table>
+</div>
+
+
+<h3>Table Categories</h3>
+
+<ul>
+<li><strong>Transparent tables</strong> — one-to-one
+with database tables; the standard choice.</li>
+<li><strong>Pooled tables</strong> — grouped into a
+database pool; historical, limited in cloud.</li>
+<li><strong>Cluster tables</strong> — multiple tables
+stored in one cluster; historical, limited in cloud.</li>
+</ul>
+
+
+<h3>Technical Settings</h3>
+
+<ul>
+<li><strong>Data class</strong> — affects physical
+placement.</li>
+<li><strong>Size category</strong> — expected row count.</li>
+<li><strong>Buffering</strong> — full, generic, or none;
+cached at application server level.</li>
+<li><strong>Logging</strong> — whether changes are
+logged.</li>
+</ul>
+
+
+<h3>Field Length Change &amp; Activation</h3>
+
+<p>
+If you <strong>shorten</strong> a table field, the system
+may need to convert data and the table cannot be
+converted online — the conversion is performed during
+activation. This is a classic exam topic because it
+affects availability.
+</p>
+
+
+<h3>Buffering Notes</h3>
+
+<pre><code class="language-abap">
+
+" Buffered access example
+SELECT SINGLE * FROM zconfig
+    INTO @DATA(ls_cfg)
+    WHERE key_field = @lv_key.
+
+</code></pre>
+
+<p>
+Buffered tables are read from the application server
+buffer, not the database. This is fast for small,
+rarely-changing configuration data — and dangerous
+for frequently-changing data.
+</p>
+
+
+<div class="exam-tip">
+
+<strong>Exam trap:</strong>
+
+A question may present a table that is read constantly
+but changes often. Buffering would be <em>wrong</em>
+because the buffer would become stale. Choose
+buffering for read-mostly config tables only.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
      ABAP OO
      ===================================================== -->
 
@@ -1493,6 +2361,7 @@ not only write it from memory.
 
 <div class="module-header">
     <h2>🧩 ABAP OO</h2>
+    <span class="weight-badge">≤ 10%</span>
 </div>
 
 <div class="module-content">
@@ -1502,17 +2371,41 @@ not only write it from memory.
 <ul>
 <li>Class definition vs implementation</li>
 <li>PUBLIC / PROTECTED / PRIVATE</li>
-<li>Instance methods</li>
-<li>Static methods</li>
-<li>Instance attributes</li>
-<li>Static attributes</li>
+<li>Instance methods &amp; attributes</li>
+<li>Static methods &amp; attributes</li>
 <li>Interfaces</li>
-<li>Inheritance</li>
-<li>Redefinition</li>
+<li>Inheritance &amp; redefinition</li>
 <li>Polymorphism</li>
 <li>Object references</li>
 <li>Exception classes</li>
 </ul>
+
+
+<h3>Calling Syntax — Very Tested</h3>
+
+<pre><code class="language-abap">
+
+" Static method call (class =&gt;)
+DATA(lv_result) = zcl_util=&gt;get_version( ).
+
+" Instance method call (-&gt;)
+DATA(lo_obj) = NEW zcl_util( ).
+DATA(lv_name) = lo_obj-&gt;get_name( ).
+
+" Static attribute access
+DATA(lv_count) = zcl_util=&gt;mv_counter.
+
+" Instance attribute access
+DATA(lv_id) = lo_obj-&gt;mv_id.
+
+</code></pre>
+
+<p>
+Memorize the two arrows:
+<code>=&gt;</code> is for <strong>static</strong> access,
+<code>-&gt;</code> is for <strong>instance</strong> access.
+A very common exam distractor swaps them.
+</p>
 
 
 <h3>Interface Example</h3>
@@ -1520,20 +2413,70 @@ not only write it from memory.
 <pre><code class="language-abap">
 
 INTERFACE zif_customer.
-
     METHODS get_name
         RETURNING VALUE(rv_name) TYPE string.
-
 ENDINTERFACE.
 
 
 CLASS zcl_customer DEFINITION.
-
     PUBLIC SECTION.
-
         INTERFACES zif_customer.
-
 ENDCLASS.
+
+
+CLASS zcl_customer IMPLEMENTATION.
+    METHOD zif_customer~get_name.
+        rv_name = 'ACME'.
+    ENDMETHOD.
+ENDCLASS.
+
+
+" Polymorphic call
+DATA lo_cust TYPE REF TO zif_customer.
+lo_cust = NEW zcl_customer( ).
+DATA(lv_name) = lo_cust-&gt;get_name( ).
+
+</code></pre>
+
+
+<h3>Inheritance &amp; Redefinition</h3>
+
+<pre><code class="language-abap">
+
+CLASS zcl_base DEFINITION.
+    PUBLIC SECTION.
+        METHODS describe
+            RETURNING VALUE(rv) TYPE string.
+ENDCLASS.
+
+CLASS zcl_child DEFINITION
+    INHERITING FROM zcl_base.
+    PUBLIC SECTION.
+        METHODS describe REDEFINITION.
+ENDCLASS.
+
+</code></pre>
+
+
+<h3>Exception Classes</h3>
+
+<ul>
+<li><code>CX_STATIC_CHECK</code> — must be declared or
+handled</li>
+<li><code>CX_DYNAMIC_CHECK</code> — checked at runtime</li>
+<li><code>CX_NO_CHECK</code> — not checked</li>
+</ul>
+
+<pre><code class="language-abap">
+
+" Declaring a static-check exception
+METHODS do_work
+    RAISING zcx_my_error.
+
+" Raising it
+RAISE EXCEPTION TYPE zcx_my_error
+    EXPORTING
+        textid = zcx_my_error=&gt;invalid_input.
 
 </code></pre>
 
@@ -1544,7 +2487,162 @@ ENDCLASS.
 
 Understand what happens when an interface reference
 points to an implementing class and how method
-visibility and polymorphism work.
+visibility and polymorphism work. Expect a question
+where a class implements two interfaces that both
+declare a method of the same name — you must know
+which one is called.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     DESIGN PATTERNS
+     ===================================================== -->
+
+<div class="panel" id="panel-patterns">
+
+<div class="module-header">
+    <h2>🎨 Design Patterns in ABAP</h2>
+    <span class="weight-badge">OO Design</span>
+</div>
+
+<div class="module-content">
+
+<h3>Why Patterns Matter for the Exam</h3>
+
+<p>
+The exam does not ask you to write a pattern from
+scratch. It asks you to <strong>recognize</strong> which
+pattern solves a design problem, or to read code and
+identify the pattern in use.
+</p>
+
+
+<div class="topic-card">
+
+<h4>Singleton</h4>
+
+<div class="exam">Intent</div>
+
+<p>
+Ensure a class has exactly one instance and provide a
+global point of access to it.
+</p>
+
+<pre><code class="language-abap">
+
+CLASS zcl_config DEFINITION.
+    PUBLIC SECTION.
+        CLASS-METHODS get_instance
+            RETURNING VALUE(ro) TYPE REF TO zcl_config.
+        METHODS get_value
+            IMPORTING iv_key TYPE string
+            RETURNING VALUE(rv) TYPE string.
+    PRIVATE SECTION.
+        CLASS-DATA go_instance TYPE REF TO zcl_config.
+ENDCLASS.
+
+CLASS zcl_config IMPLEMENTATION.
+    METHOD get_instance.
+        IF go_instance IS NOT BOUND.
+            go_instance = NEW zcl_config( ).
+        ENDIF.
+        ro = go_instance.
+    ENDMETHOD.
+ENDCLASS.
+
+</code></pre>
+
+</div>
+
+
+<div class="topic-card">
+
+<h4>Factory</h4>
+
+<div class="exam">Intent</div>
+
+<p>
+Delegate object creation to a dedicated method or class
+so the caller does not depend on concrete classes.
+</p>
+
+<pre><code class="language-abap">
+
+CLASS zcl_doc_factory DEFINITION.
+    PUBLIC SECTION.
+        CLASS-METHODS create
+            IMPORTING iv_type TYPE string
+            RETURNING VALUE(ro) TYPE REF TO zif_document.
+ENDCLASS.
+
+CLASS zcl_doc_factory IMPLEMENTATION.
+    METHOD create.
+        CASE iv_type.
+            WHEN 'INVOICE'.
+                ro = NEW zcl_invoice( ).
+            WHEN 'ORDER'.
+                ro = NEW zcl_order( ).
+            WHEN OTHERS.
+                RAISE EXCEPTION TYPE zcx_unknown_type.
+        ENDCASE.
+    ENDMETHOD.
+ENDCLASS.
+
+</code></pre>
+
+</div>
+
+
+<div class="topic-card">
+
+<h4>Strategy</h4>
+
+<div class="exam">Intent</div>
+
+<p>
+Encapsulate interchangeable algorithms behind a common
+interface so they can be swapped at runtime.
+</p>
+
+<pre><code class="language-abap">
+
+INTERFACE zif_pricing.
+    METHODS calculate
+        IMPORTING iv_amount TYPE decfloat34
+        RETURNING VALUE(rv) TYPE decfloat34.
+ENDINTERFACE.
+
+CLASS zcl_tax_pricing  DEFINITION. " implements zif_pricing
+CLASS zcl_discount_pricing DEFINITION. " implements zif_pricing
+
+" Runtime selection
+DATA lo_pricing TYPE REF TO zif_pricing.
+IF lv_customer_type = 'VIP'.
+    lo_pricing = NEW zcl_discount_pricing( ).
+ELSE.
+    lo_pricing = NEW zcl_tax_pricing( ).
+ENDIF.
+DATA(lv_total) = lo_pricing-&gt;calculate( lv_amount ).
+
+</code></pre>
+
+</div>
+
+
+<div class="exam-tip">
+
+<strong>How to spot them:</strong>
+
+<ul>
+<li>One instance + global accessor → <strong>Singleton</strong></li>
+<li>Creation behind a method returning an interface → <strong>Factory</strong></li>
+<li>Runtime swap of algorithm via interface reference → <strong>Strategy</strong></li>
+</ul>
 
 </div>
 
@@ -1560,7 +2658,8 @@ visibility and polymorphism work.
 <div class="panel" id="panel-sql">
 
 <div class="module-header">
-    <h2>🗄️ ABAP SQL & Code Pushdown</h2>
+    <h2>🗄️ ABAP SQL &amp; Code Pushdown</h2>
+    <span class="weight-badge">≤ 10%</span>
 </div>
 
 <div class="module-content">
@@ -1568,16 +2667,13 @@ visibility and polymorphism work.
 <h3>Core Topics</h3>
 
 <ul>
-<li>SELECT</li>
-<li>JOIN</li>
-<li>WHERE</li>
-<li>GROUP BY</li>
-<li>HAVING</li>
-<li>ORDER BY</li>
+<li>SELECT / JOIN / WHERE</li>
+<li>GROUP BY / HAVING / ORDER BY</li>
 <li>Aggregations</li>
-<li>SQL expressions</li>
-<li>Host variables</li>
+<li>SQL expressions &amp; functions</li>
+<li>Host variables (<code>@</code>)</li>
 <li>Database-side processing</li>
+<li>Code pushdown</li>
 </ul>
 
 
@@ -1595,14 +2691,87 @@ SELECT FROM zcustomer
 </code></pre>
 
 
+<h3>Joins</h3>
+
+<pre><code class="language-abap">
+
+SELECT FROM zcustomer AS c
+    INNER JOIN zcompany AS co
+        ON c~company_id = co~company_id
+    FIELDS c~id,
+           c~name,
+           co~company_name
+    WHERE c~status = @lv_status
+    INTO TABLE @DATA(lt_result).
+
+</code></pre>
+
+
+<h3>Aggregation &amp; GROUP BY</h3>
+
+<pre><code class="language-abap">
+
+SELECT FROM zorders
+    FIELDS customer_id,
+           COUNT(*) AS order_count,
+           SUM( amount ) AS total_amount
+    GROUP BY customer_id
+    HAVING SUM( amount ) &gt; @lv_min
+    ORDER BY total_amount DESCENDING
+    INTO TABLE @DATA(lt_totals).
+
+</code></pre>
+
+
+<h3>SQL Expressions</h3>
+
+<pre><code class="language-abap">
+
+" CASE, CAST, COALESCE, string functions
+SELECT FROM zcustomer
+    FIELDS id,
+           name,
+           CASE WHEN status = 'A'
+                THEN 'Active'
+                ELSE 'Inactive'
+           END AS status_text,
+           COALESCE( phone, 'N/A' ) AS phone
+    INTO TABLE @DATA(lt_result).
+
+</code></pre>
+
+
 <h3>Code Pushdown</h3>
 
 <p>
 Code pushdown means moving data-intensive processing
-as close to the database as appropriate instead of
-retrieving large datasets and processing everything
-in ABAP.
+<strong>as close to the database as appropriate</strong>
+instead of retrieving large datasets and processing
+everything in ABAP.
 </p>
+
+<div class="rule-grid">
+<div class="rule-col allowed">
+<h5>✓ Push down</h5>
+<ul>
+<li>Filtering (<code>WHERE</code>)</li>
+<li>Joining related tables</li>
+<li>Aggregation (<code>SUM</code>, <code>COUNT</code>)</li>
+<li>Sorting (<code>ORDER BY</code>)</li>
+<li>Column projection (only needed fields)</li>
+<li>Calculations in SQL expressions</li>
+</ul>
+</div>
+<div class="rule-col forbidden">
+<h5>✗ Keep in ABAP</h5>
+<ul>
+<li>Complex procedural logic with side effects</li>
+<li>Business rules requiring external calls</li>
+<li>Row-by-row formatting for UI</li>
+<li>Logic that cannot be expressed in SQL</li>
+</ul>
+</div>
+</div>
 
 
 <div class="exam-tip">
@@ -1621,6 +2790,138 @@ processing where possible.
 
 
 <!-- =====================================================
+     DEBUGGING & PERFORMANCE
+     ===================================================== -->
+
+<div class="panel" id="panel-debug">
+
+<div class="module-header">
+    <h2>🐞 Debugging &amp; Performance</h2>
+    <span class="weight-badge">Core ABAP</span>
+</div>
+
+<div class="module-content">
+
+<h3>Tools You Must Know</h3>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Tool</th>
+<th>Transaction</th>
+<th>Purpose</th>
+</tr>
+<tr>
+<td>ABAP Debugger</td>
+<td>/h</td>
+<td>Step through running code, inspect variables</td>
+</tr>
+<tr>
+<td>ABAP Profiler</td>
+<td>SAT</td>
+<td>Aggregated runtime analysis of ABAP execution</td>
+</tr>
+<tr>
+<td>SQL Trace</td>
+<td>ST05</td>
+<td>Analyze database access, find slow SQL</td>
+</tr>
+<tr>
+<td>Code Inspector</td>
+<td>SCI</td>
+<td>Static checks: performance, security, syntax</td>
+</tr>
+<tr>
+<td>ABAP Test Cockpit</td>
+<td>ATC</td>
+<td>Central quality gate for transports</td>
+</tr>
+<tr>
+<td>Runtime Analysis</td>
+<td>SE30</td>
+<td>Legacy predecessor of SAT</td>
+</tr>
+</table>
+</div>
+
+
+<h3>ABAP Profiler (SAT)</h3>
+
+<ul>
+<li>Aggregated view: total time per procedure</li>
+<li>Hit list: most expensive operations</li>
+<li>Call hierarchy: who called what</li>
+<li>Database access breakdown</li>
+</ul>
+
+
+<h3>SQL Trace (ST05)</h3>
+
+<ul>
+<li>Captures all database statements during a trace</li>
+<li>Identifies <strong>full table scans</strong> and
+missing indexes</li>
+<li>Shows execution plan</li>
+<li>Look for <code>SELECT *</code> where a narrower
+projection would suffice</li>
+<li>Look for SELECT inside LOOP (classic performance
+killer)</li>
+</ul>
+
+
+<h3>Classic Anti-Patterns</h3>
+
+<pre><code class="language-abap">
+
+" ❌ SELECT inside LOOP — N+1 queries
+LOOP AT lt_customers INTO DATA(ls_c).
+    SELECT SINGLE name FROM zcompany
+        INTO @DATA(lv_name)
+        WHERE company_id = @ls_c-company_id.
+ENDLOOP.
+
+" ✓ One JOIN or one SELECT ... FOR ALL ENTRIES
+SELECT c~id, co~name
+    FROM zcustomer AS c
+    INNER JOIN zcompany AS co
+        ON c~company_id = co~company_id
+    INTO TABLE @DATA(lt_result).
+
+</code></pre>
+
+
+<h3>Other Performance Principles</h3>
+
+<ul>
+<li>Select only the columns you need — avoid
+<code>SELECT *</code>.</li>
+<li>Use <code>WHERE</code>, not ABAP filtering, when
+possible.</li>
+<li>Use <code>FOR ALL ENTRIES</code> carefully — always
+guard against empty driver table.</li>
+<li>Prefer <code>ASSIGNING</code> to
+<code>INTO</code> in loops for large rows.</li>
+<li>Avoid nested loops when a hashed lookup works.</li>
+</ul>
+
+
+<div class="exam-tip">
+
+<strong>Exam trap:</strong>
+
+Given a slow report, the correct answer is almost
+always to <em>reduce data transfer and push down
+processing</em> — not to add buffering or increase
+memory.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
      CDS
      ===================================================== -->
 
@@ -1628,6 +2929,7 @@ processing where possible.
 
 <div class="module-header">
     <h2>📊 CDS Data Modeling</h2>
+    <span class="weight-badge">21–30%</span>
 </div>
 
 <div class="search-bar">
@@ -1722,6 +3024,41 @@ define view entity ZI_Customer
 
 <div class="snippet-header">
 
+<h3>Cardinality</h3>
+
+<button
+    class="copy-btn"
+    onclick="copyCode(this)"
+>
+Copy
+</button>
+
+</div>
+
+<div class="snippet-body">
+
+<pre><code class="language-abap">
+
+" [0..1]  = at most one
+" [1..1]  = exactly one
+" [0..*]  = any number
+" [1..*]  = at least one
+
+association [0..*]
+    to I_OrderItem as _Items
+    on $projection.OrderId = _Items.OrderId
+
+</code></pre>
+
+</div>
+
+</div>
+
+
+<div class="snippet-card searchable">
+
+<div class="snippet-header">
+
 <h3>Path Expression</h3>
 
 <button
@@ -1746,12 +3083,74 @@ _CompanyCode.CompanyName as CompanyName
 </div>
 
 
+<div class="snippet-card searchable">
+
+<div class="snippet-header">
+
+<h3>Parameters</h3>
+
+<button
+    class="copy-btn"
+    onclick="copyCode(this)"
+>
+Copy
+</button>
+
+</div>
+
+<div class="snippet-body">
+
+<pre><code class="language-abap">
+
+define view entity ZI_CustomerByStatus
+    with parameters
+        p_status : abap.char(1)
+    as select from zcustomer
+{
+    key id,
+        name,
+        status
+}
+where status = $parameters.p_status
+
+</code></pre>
+
+</div>
+
+</div>
+
+
+<div class="module-content">
+
+<h3>Things to Know Cold</h3>
+
+<ul>
+<li><strong>Association vs JOIN</strong> — an association
+is a lazy, reusable relationship definition; a JOIN is
+eager and executed in the query.</li>
+<li><strong>Cardinality</strong> — declared on the
+association, used by consumers (e.g. RAP) to understand
+the relationship.</li>
+<li><strong>Path expression</strong> — navigate from one
+entity to another via <code>_Association.Field</code>.</li>
+<li><strong>Annotations</strong> — <code>@EndUserText.label</code>,
+<code>@Semantics</code>, <code>@AccessControl</code>,
+<code>@ObjectModel</code> — drive UI and behavior.</li>
+<li><strong>Parameters</strong> — input values bound at
+query time via <code>$parameters</code>.</li>
+</ul>
+
 <div class="exam-tip">
 
 <strong>Know:</strong>
 
 Understand the difference between associations,
-joins, cardinalities and path expressions.
+joins, cardinalities and path expressions. Expect
+a question where an association and a join produce
+the same result but only one is the "modeling"
+answer.
+
+</div>
 
 </div>
 
@@ -1766,6 +3165,7 @@ joins, cardinalities and path expressions.
 
 <div class="module-header">
     <h2>🔐 DCL / Authorization</h2>
+    <span class="weight-badge">Data Modeling</span>
 </div>
 
 <div class="module-content">
@@ -1798,12 +3198,41 @@ define role ZI_Customer_Role {
 
 <ul>
 <li>DCL role</li>
-<li>GRANT SELECT</li>
-<li>$user</li>
+<li><code>GRANT SELECT</code></li>
+<li><code>$user</code> / <code>$session</code></li>
 <li>Authorization conditions</li>
 <li>CDS authorization annotations</li>
 <li>Interaction between CDS and DCL</li>
+<li>Access control on associations</li>
 </ul>
+
+
+<h3>How It Fits Together</h3>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Layer</th>
+<th>Controls</th>
+</tr>
+<tr>
+<td>CDS view entity</td>
+<td>What data exists and how it is shaped</td>
+</tr>
+<tr>
+<td>DCL role</td>
+<td>Who can read which rows</td>
+</tr>
+<tr>
+<td>Authorization object</td>
+<td>Classic SAP authorization check</td>
+</tr>
+<tr>
+<td>Behavior authorization (RAP)</td>
+<td>Who can create/update/delete</td>
+</tr>
+</table>
+</div>
 
 
 <div class="exam-tip">
@@ -1811,7 +3240,9 @@ define role ZI_Customer_Role {
 <strong>Exam trap:</strong>
 
 Know the difference between defining a CDS data model
-and restricting access to that data model.
+and restricting access to that data model. DCL is the
+authorization layer — it is not part of the view
+definition itself.
 
 </div>
 
@@ -1828,6 +3259,7 @@ and restricting access to that data model.
 
 <div class="module-header">
     <h2>🧱 RAP Architecture</h2>
+    <span class="weight-badge">11–20%</span>
 </div>
 
 <div class="module-content">
@@ -1882,21 +3314,41 @@ and restricting access to that data model.
 
 <ul>
 <li>Business Object</li>
-<li>Root entity</li>
-<li>Child entities</li>
+<li>Root entity &amp; child entities</li>
 <li>Composition</li>
 <li>Managed scenario</li>
 <li>Unmanaged scenario</li>
 <li>Draft</li>
-<li>Behavior definition</li>
-<li>Behavior implementation</li>
-<li>Determination</li>
-<li>Validation</li>
-<li>Action</li>
+<li>Behavior definition &amp; implementation</li>
+<li>Determination / validation / action</li>
 <li>Feature control</li>
 <li>Authorization</li>
 <li>EML</li>
 </ul>
+
+
+<h3>Managed vs Unmanaged</h3>
+
+<div class="rule-grid">
+<div class="rule-col allowed">
+<h5>Managed</h5>
+<ul>
+<li>Framework handles CREATE/UPDATE/DELETE</li>
+<li>Persistent table declared in BDEF</li>
+<li>You add determinations, validations, actions</li>
+<li>Default choice for new BOs</li>
+</ul>
+</div>
+<div class="rule-col forbidden">
+<h5>Unmanaged</h5>
+<ul>
+<li>You implement save/read logic yourself</li>
+<li>Used when persistence is non-standard</li>
+<li>Often wraps legacy APIs or external data</li>
+<li>More code, more control</li>
+</ul>
+</div>
+</div>
 
 
 <div class="exam-tip">
@@ -1926,6 +3378,7 @@ Service binding makes that service available.
 
 <div class="module-header">
     <h2>⚙️ RAP Behavior Definition</h2>
+    <span class="weight-badge">RAP</span>
 </div>
 
 
@@ -1986,21 +3439,37 @@ authorization master
 
 <p>
 Automatically derives or changes values based on
-business events.
+business events. Triggered by framework events
+(<code>on modify</code>, <code>on save</code>).
 </p>
 
 <h3>Validation</h3>
 
 <p>
 Checks whether business data is valid before saving.
+Reports messages; does not change data.
 </p>
 
 <h3>Action</h3>
 
 <p>
 Represents an explicit business operation initiated
-by a consumer or application.
+by a consumer or application. Called via EML or
+OData.
 </p>
+
+
+<h3>Feature Control</h3>
+
+<pre><code class="language-abap">
+
+" Static instance-level control
+field ( readonly ) id, created_at, created_by;
+
+" Dynamic via feature instance in implementation
+" (e.g. disable delete for certain instances)
+
+</code></pre>
 
 
 <div class="exam-tip">
@@ -2008,6 +3477,12 @@ by a consumer or application.
 <strong>Very important:</strong>
 
 Do not confuse determination, validation and action.
+
+<ul>
+<li><strong>Determination</strong> — derives/changes values</li>
+<li><strong>Validation</strong> — checks and reports</li>
+<li><strong>Action</strong> — explicit consumer-triggered operation</li>
+</ul>
 
 </div>
 
@@ -2024,6 +3499,7 @@ Do not confuse determination, validation and action.
 
 <div class="module-header">
     <h2>⚡ Entity Manipulation Language</h2>
+    <span class="weight-badge">RAP</span>
 </div>
 
 
@@ -2113,23 +3589,83 @@ READ ENTITIES OF ZI_Customer
 </div>
 
 
+<div class="snippet-card">
+
+<div class="snippet-header">
+
+<h3>COMMIT</h3>
+
+<button
+    class="copy-btn"
+    onclick="copyCode(this)"
+>
+Copy
+</button>
+
+</div>
+
+<div class="snippet-body">
+
+<pre><code class="language-abap">
+
+COMMIT ENTITIES
+    RESPONSE OF ZI_Customer
+    FAILED   DATA(lt_failed)
+    REPORTED DATA(lt_reported).
+
+</code></pre>
+
+</div>
+
+</div>
+
+
 <div class="module-content">
 
 <h3>EML Concepts to Know</h3>
 
 <ul>
-<li>READ ENTITIES</li>
-<li>MODIFY ENTITIES</li>
-<li>CREATE</li>
-<li>UPDATE</li>
-<li>DELETE</li>
-<li>%cid</li>
-<li>MAPPED</li>
-<li>FAILED</li>
-<li>REPORTED</li>
-<li>COMMIT ENTITIES</li>
-<li>LOCAL MODE</li>
+<li><code>READ ENTITIES</code> / <code>MODIFY ENTITIES</code></li>
+<li><code>CREATE</code> / <code>UPDATE</code> / <code>DELETE</code></li>
+<li><code>%cid</code> — client-side temporary ID for new rows</li>
+<li><code>MAPPED</code> / <code>FAILED</code> / <code>REPORTED</code></li>
+<li><code>COMMIT ENTITIES</code></li>
+<li><code>IN LOCAL MODE</code> — bypasses authorization,
+used inside behavior implementations</li>
 </ul>
+
+
+<h3>EML vs ABAP SQL</h3>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Aspect</th>
+<th>EML</th>
+<th>ABAP SQL</th>
+</tr>
+<tr>
+<td>Works on</td>
+<td>RAP business objects</td>
+<td>Database tables / CDS</td>
+</tr>
+<tr>
+<td>Triggers behavior</td>
+<td>Yes (determinations, validations, actions)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Yes (unless LOCAL MODE)</td>
+<td>Handled separately</td>
+</tr>
+<tr>
+<td>Transactional buffer</td>
+<td>Yes — commit needed</td>
+<td>Direct DB write (in cloud, restricted)</td>
+</tr>
+</table>
+</div>
 
 
 <div class="exam-tip">
@@ -2138,6 +3674,11 @@ READ ENTITIES OF ZI_Customer
 
 Understand what EML is doing conceptually.
 Do not simply memorize one CREATE statement.
+Expect a question like: "You need to create a
+business object instance with all validations and
+determinations applied. Which mechanism?"
+
+Answer: <strong>EML</strong>, not direct SQL.
 
 </div>
 
@@ -2154,6 +3695,7 @@ Do not simply memorize one CREATE statement.
 
 <div class="module-header">
     <h2>🌐 Service Definition / Binding / OData</h2>
+    <span class="weight-badge">RAP</span>
 </div>
 
 <div class="module-content">
@@ -2179,7 +3721,16 @@ define service ZUI_CUSTOMER {
 <p>
 The service binding connects the service definition
 to a protocol and runtime used to expose the service.
+Common binding types:
 </p>
+
+<ul>
+<li><strong>OData V2</strong> — UI (Fiori) usage</li>
+<li><strong>OData V4</strong> — UI (Fiori) usage, modern</li>
+<li><strong>Web API</strong> — machine-to-machine</li>
+<li><strong>SQL</strong> — direct SQL access via CDS</li>
+<li><strong>InA</strong> — analytics</li>
+</ul>
 
 
 <h3>Know the Difference</h3>
@@ -2218,12 +3769,27 @@ to a protocol and runtime used to expose the service.
 </div>
 
 
+<h3>Fiori Elements Relationship</h3>
+
+<p>
+Fiori elements apps consume OData services exposed
+via service bindings. Annotations in the CDS model
+(<code>@UI</code>, <code>@ObjectModel</code>) drive
+the generated UI.
+</p>
+
+
 <div class="exam-tip">
 
 <strong>Common confusion:</strong>
 
 Service definition and service binding are not the
 same artifact.
+
+<ul>
+<li>Definition — <em>what</em></li>
+<li>Binding — <em>how</em></li>
+</ul>
 
 </div>
 
@@ -2239,7 +3805,8 @@ same artifact.
 <div class="panel" id="panel-testing">
 
 <div class="module-header">
-    <h2>🧪 Testing & Quality</h2>
+    <h2>🧪 Testing &amp; Quality</h2>
+    <span class="weight-badge">Quality</span>
 </div>
 
 <div class="module-content">
@@ -2249,36 +3816,34 @@ same artifact.
 <ul>
 <li>Test class</li>
 <li>Test method</li>
-<li>Assertions</li>
+<li>Assertions (<code>cl_abap_unit_assert</code>)</li>
 <li>Test isolation</li>
-<li>Testable design</li>
+<li>Testable design (dependency injection)</li>
 </ul>
 
 
-<h3>Executable Test Class</h3>
+<h3>Test Class Skeleton</h3>
 
 <pre><code class="language-abap">
 
-CLASS zcl_test DEFINITION
-    PUBLIC
-    FINAL
-    CREATE PUBLIC.
+CLASS ltcl_calc DEFINITION
+    FOR TESTING
+    DURATION SHORT
+    RISK LEVEL HARMLESS.
 
-    PUBLIC SECTION.
-
-        INTERFACES if_oo_adt_classrun.
-
+    PRIVATE SECTION.
+        METHODS add_test FOR TESTING.
 ENDCLASS.
 
+CLASS ltcl_calc IMPLEMENTATION.
 
-CLASS zcl_test IMPLEMENTATION.
-
-    METHOD if_oo_adt_classrun~main.
-
-        out->write(
-            |ABAP Cloud test|
+    METHOD add_test.
+        DATA(lo) = NEW zcl_calc( ).
+        DATA(lv) = lo-&gt;add( iv_a = 2 iv_b = 3 ).
+        cl_abap_unit_assert=&gt;assert_equals(
+            act = lv
+            exp = 5
         ).
-
     ENDMETHOD.
 
 ENDCLASS.
@@ -2289,14 +3854,27 @@ ENDCLASS.
 <h3>Quality Topics</h3>
 
 <ul>
-<li>Clean ABAP</li>
-<li>Readable code</li>
+<li>Clean ABAP (naming, readability, small methods)</li>
 <li>Meaningful names</li>
 <li>Exception handling</li>
 <li>Performance</li>
 <li>SQL efficiency</li>
 <li>Unit testing</li>
+<li>Code Inspector / ATC checks</li>
 </ul>
+
+
+<div class="exam-tip">
+
+<strong>Exam tip:</strong>
+
+A question may ask which design makes a class
+<em>testable</em>. The answer usually involves
+<strong>injecting dependencies</strong> (via
+constructor or setter) rather than hard-coding
+them inside the class.
+
+</div>
 
 </div>
 
@@ -2310,7 +3888,8 @@ ENDCLASS.
 <div class="panel" id="panel-clean">
 
 <div class="module-header">
-    <h2>🧹 Clean Core & Extensibility</h2>
+    <h2>🧹 Clean Core &amp; Extensibility</h2>
+    <span class="weight-badge">11–20%</span>
 </div>
 
 <div class="module-content">
@@ -2324,16 +3903,48 @@ in appropriate supported extension mechanisms.
 </p>
 
 
+<h3>Three Extension Models</h3>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Model</th>
+<th>Where</th>
+<th>Tools</th>
+<th>Use For</th>
+</tr>
+<tr>
+<td><strong>In-app</strong></td>
+<td>Inside S/4HANA Cloud</td>
+<td>Key user tools, custom fields, custom logic</td>
+<td>Small config-level extensions by key users</td>
+</tr>
+<tr>
+<td><strong>Developer</strong></td>
+<td>Inside S/4HANA Cloud</td>
+<td>ABAP Cloud, ADT, RAP, released APIs</td>
+<td>Full ABAP extensions, BAdIs, RAP BOs</td>
+</tr>
+<tr>
+<td><strong>Side-by-side</strong></td>
+<td>SAP BTP ABAP environment</td>
+<td>ABAP Cloud on BTP</td>
+<td>New apps, integrations, extensions</td>
+</tr>
+</table>
+</div>
+
+
 <h3>Important Concepts</h3>
 
 <ul>
-<li>In-app extensibility</li>
-<li>Developer extensibility</li>
-<li>Side-by-side extensibility</li>
-<li>Released APIs</li>
+<li>Released APIs (C0, C1 contracts)</li>
 <li>Extension points</li>
 <li>Upgrade stability</li>
 <li>ABAP Cloud</li>
+<li>Custom CDS entities</li>
+<li>Released BAdIs</li>
+<li>No modifications to SAP standard</li>
 </ul>
 
 
@@ -2344,6 +3955,124 @@ in appropriate supported extension mechanisms.
 When several extension approaches are possible,
 consider whether the solution follows supported
 extension mechanisms and Clean Core principles.
+A modification to standard SAP code is almost
+never the right answer.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     BTP & JOULE
+     ===================================================== -->
+
+<div class="panel" id="panel-btp">
+
+<div class="module-header">
+    <h2>🛰️ SAP BTP &amp; Joule for Developers</h2>
+    <span class="weight-badge">Platform</span>
+</div>
+
+<div class="module-content">
+
+<h3>SAP Business Technology Platform (BTP)</h3>
+
+<p>
+SAP BTP is the cloud platform where modern ABAP
+Cloud applications run. It provides services for
+integration, data, analytics, AI, and application
+development.
+</p>
+
+
+<h3>ABAP Environment on BTP</h3>
+
+<ul>
+<li>Runs on <strong>Cloud Foundry</strong> as a runtime</li>
+<li>Access via <strong>ADT</strong> (Eclipse-based)</li>
+<li>Only <strong>ABAP for Cloud Development</strong> —
+restricted language version</li>
+<li>Released APIs only</li>
+<li>Multi-tenant, isolated</li>
+<li>CI/CD via <strong>abapGit</strong> and
+<strong>gCTS</strong> / pipeline tools</li>
+</ul>
+
+
+<h3>Key Services</h3>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Service</th>
+<th>Purpose</th>
+</tr>
+<tr>
+<td>Destination service</td>
+<td>Configure outbound connections</td>
+</tr>
+<tr>
+<td>Connectivity service</td>
+<td>Cloud connector to on-premise</td>
+</tr>
+<tr>
+<td>Authorization &amp; Trust Management</td>
+<td>OAuth, identity provider</td>
+</tr>
+<tr>
+<td>HTML5 Application Repository</td>
+<td>Host Fiori apps</td>
+</tr>
+<tr>
+<td>Job Scheduler</td>
+<td>Schedule background jobs</td>
+</tr>
+</table>
+</div>
+
+
+<h3>Joule for Developers</h3>
+
+<p>
+<strong>Joule</strong> is SAP's generative AI
+assistant. For ABAP developers, Joule can:
+</p>
+
+<ul>
+<li>Generate ABAP code from natural language
+descriptions</li>
+<li>Explain existing ABAP code</li>
+<li>Suggest refactorings and improvements</li>
+<li>Help write ABAP Unit tests</li>
+<li>Assist with CDS / RAP artifact creation</li>
+<li>Answer questions about ABAP syntax and APIs</li>
+</ul>
+
+
+<h3>What to Remember for the Exam</h3>
+
+<ul>
+<li>Joule is an <strong>assistant</strong> — the
+developer remains responsible for correctness,
+security, and Clean Core compliance.</li>
+<li>Joule does not replace understanding of ABAP,
+CDS, RAP, or cloud restrictions.</li>
+<li>Expect concept questions like "What is Joule
+used for?" — answer: AI-assisted code generation
+and explanation.</li>
+</ul>
+
+
+<div class="exam-tip">
+
+<strong>Exam trap:</strong>
+
+A question may suggest Joule can bypass cloud
+restrictions or auto-fix all issues. That is false.
+Joule suggests; the developer decides and validates.
 
 </div>
 
@@ -2395,7 +4124,8 @@ around business objects.
 
 <p>
 A determination derives or changes values.
-A validation checks business consistency.
+A validation checks business consistency and
+reports messages.
 </p>
 
 </div>
@@ -2418,8 +4148,10 @@ The binding connects the service to its runtime/protocol.
 <h4>Trap 5 — Association ≠ Join</h4>
 
 <p>
-Know why and when associations are used and how
-cardinality and path expressions work.
+An association is a lazy, reusable relationship
+definition. A join is eager. Know why and when
+associations are used and how cardinality and
+path expressions work.
 </p>
 
 </div>
@@ -2444,7 +4176,8 @@ parts require developer implementation.
 
 <p>
 ABAP SQL works with database data.
-EML interacts with RAP business objects.
+EML interacts with RAP business objects and
+triggers behavior.
 </p>
 
 </div>
@@ -2452,7 +4185,33 @@ EML interacts with RAP business objects.
 
 <div class="topic-card">
 
-<h4>Trap 8 — Memorization Only</h4>
+<h4>Trap 8 — Static ≠ Instance Access</h4>
+
+<p>
+<code>=&gt;</code> is for static members.
+<code>-&gt;</code> is for instance members.
+A question may swap them.
+</p>
+
+</div>
+
+
+<div class="topic-card">
+
+<h4>Trap 9 — Standard ≠ Sorted ≠ Hashed</h4>
+
+<p>
+"Fastest by key" is <strong>hashed</strong>.
+"Fastest by index" is <strong>standard</strong>.
+Sorted sits in between and maintains order.
+</p>
+
+</div>
+
+
+<div class="topic-card">
+
+<h4>Trap 10 — Memorization Only</h4>
 
 <p>
 Do not prepare by memorizing code blocks.
@@ -2462,36 +4221,60 @@ artifact or mechanism.
 
 </div>
 
+
+<div class="topic-card">
+
+<h4>Trap 11 — Joule as a Shortcut</h4>
+
+<p>
+Joule assists but does not replace developer
+judgment. It cannot bypass cloud restrictions
+or guarantee Clean Core compliance.
+</p>
+
+</div>
+
 </div>
 
 
 <!-- =====================================================
-     QUESTIONS
+     SCENARIO QUESTIONS
      ===================================================== -->
 
-<div class="panel" id="panel-questions">
+<div class="panel" id="panel-scenario">
 
 <div class="module-header">
-    <h2>❓ Practice Questions</h2>
+    <h2>🎬 Scenario-Based Practice Questions</h2>
 </div>
 
 
 <div class="question">
 
 <h4>
-1. Which technology is primarily used for defining
-a modern ABAP Cloud data model?
+<span class="q-tag">SCENARIO</span>
+1. A business requirement states that when a new
+customer record is created, a default status of
+<code>'NEW'</code> must be populated automatically
+before saving.
 </h4>
 
-<p>
-A. Dynpro<br>
-B. CDS<br>
-C. Smart Forms<br>
-D. SAPscript
-</p>
+<p>Which RAP mechanism should you use?</p>
+
+<ul class="options">
+<li>A. Validation</li>
+<li>B. Determination</li>
+<li>C. Action</li>
+<li>D. Feature control</li>
+</ul>
 
 <div class="answer">
-<strong>Answer:</strong> B — CDS
+<strong>Answer:</strong> B — Determination
+<span class="why">
+A determination derives or populates values
+automatically on a framework event. A validation
+only checks and reports; an action is consumer-
+triggered; feature control toggles UI capabilities.
+</span>
 </div>
 
 </div>
@@ -2500,18 +4283,29 @@ D. SAPscript
 <div class="question">
 
 <h4>
-2. What is the main purpose of a RAP Behavior Definition?
+<span class="q-tag">SCENARIO</span>
+2. A developer needs to create a business object
+instance from ABAP code so that all determinations,
+validations, and actions on the object execute.
 </h4>
 
-<p>
-A. Define database indexes<br>
-B. Define transactional behavior<br>
-C. Define CSS<br>
-D. Define an SAP GUI screen
-</p>
+<p>Which mechanism should be used?</p>
+
+<ul class="options">
+<li>A. Direct <code>INSERT</code> into the persistent table</li>
+<li>B. ABAP SQL <code>INSERT</code></li>
+<li>C. EML <code>MODIFY ENTITIES ... CREATE</code></li>
+<li>D. A CDS view entity</li>
+</ul>
 
 <div class="answer">
-<strong>Answer:</strong> B — Define transactional behavior
+<strong>Answer:</strong> C — EML
+<span class="why">
+EML interacts with the RAP business object and
+triggers the framework's behavior pipeline.
+Direct SQL or <code>INSERT</code> bypasses behavior
+and is also restricted in ABAP Cloud.
+</span>
 </div>
 
 </div>
@@ -2520,18 +4314,30 @@ D. Define an SAP GUI screen
 <div class="question">
 
 <h4>
-3. What is EML primarily used for?
+<span class="q-tag multi">MULTI</span>
+<span class="q-tag">SCENARIO</span>
+3. Which of the following are <strong>allowed</strong>
+in ABAP for Cloud Development? (Choose all that apply.)
 </h4>
 
-<p>
-A. Manipulating RAP business objects<br>
-B. Styling Fiori applications<br>
-C. Creating database indexes<br>
-D. Managing operating-system files
-</p>
+<ul class="options">
+<li>A. Direct <code>SELECT</code> on a non-released
+transparent table</li>
+<li>B. Calling a released RFC-enabled function module</li>
+<li>C. Using a CDS view entity as a data source</li>
+<li>D. Modifying SAP standard code via a modification
+assistant</li>
+<li>E. Implementing a released BAdI</li>
+</ul>
 
 <div class="answer">
-<strong>Answer:</strong> A — Manipulating RAP business objects
+<strong>Answer:</strong> B, C, E
+<span class="why">
+Released RFC function modules, CDS view entities,
+and released BAdIs are all allowed. Direct SELECT
+on non-released tables is forbidden, and modifying
+SAP standard code is never Clean Core.
+</span>
 </div>
 
 </div>
@@ -2540,19 +4346,26 @@ D. Managing operating-system files
 <div class="question">
 
 <h4>
-4. Which artifact is used to define authorization
-restrictions for CDS data access?
+<span class="q-tag code">CODE</span>
+4. What is the correct syntax for calling a
+<strong>static</strong> method <code>get_version</code>
+of class <code>zcl_util</code>?
 </h4>
 
-<p>
-A. DCL<br>
-B. BDEF<br>
-C. Service Binding<br>
-D. Behavior Pool
-</p>
+<ul class="options">
+<li>A. <code>zcl_util-&gt;get_version( )</code></li>
+<li>B. <code>zcl_util=&gt;get_version( )</code></li>
+<li>C. <code>zcl_util.get_version( )</code></li>
+<li>D. <code>zcl_util::get_version( )</code></li>
+</ul>
 
 <div class="answer">
-<strong>Answer:</strong> A — DCL
+<strong>Answer:</strong> B — <code>=&gt;</code>
+<span class="why">
+Static access always uses <code>=&gt;</code>.
+The <code>-&gt;</code> operator is only for
+instance members.
+</span>
 </div>
 
 </div>
@@ -2561,18 +4374,60 @@ D. Behavior Pool
 <div class="question">
 
 <h4>
-5. Which concept is strongly associated with ABAP Cloud?
+<span class="q-tag">SCENARIO</span>
+5. A report reads a very large custom table
+(500,000+ rows) repeatedly by key inside a loop.
+The current implementation uses a
+<code>STANDARD TABLE</code>. What is the most
+appropriate change?
 </h4>
 
-<p>
-A. Unlimited direct access to every SAP object<br>
-B. Released APIs and supported extension points<br>
-C. Mandatory Dynpro development<br>
-D. SAPscript-only development
-</p>
+<ul class="options">
+<li>A. Add a secondary sorted key to the standard table</li>
+<li>B. Change to a <code>SORTED TABLE</code></li>
+<li>C. Change to a <code>HASHED TABLE</code></li>
+<li>D. Add a database index</li>
+</ul>
+
+<div class="answer">
+<strong>Answer:</strong> C — Hashed table
+<span class="why">
+If the table is always accessed by a unique key,
+a hashed table gives O(1) lookup. A sorted table
+gives O(log n); a standard table with
+<code>WITH KEY</code> is linear. A database index
+would not help an in-memory table.
+</span>
+</div>
+
+</div>
+
+
+<div class="question">
+
+<h4>
+<span class="q-tag">SCENARIO</span>
+6. A business object needs a service that is
+consumed by a Fiori elements app. Which sequence
+is correct?
+</h4>
+
+<ul class="options">
+<li>A. Service Binding → Service Definition → CDS</li>
+<li>B. CDS → Behavior Definition → Service Definition
+→ Service Binding</li>
+<li>C. DCL → Behavior → Service Binding → CDS</li>
+<li>D. CDS → DCL → Service Binding</li>
+</ul>
 
 <div class="answer">
 <strong>Answer:</strong> B
+<span class="why">
+The data model (CDS) comes first, then the
+transactional behavior, then the service
+definition (what to expose), then the service
+binding (how to expose it).
+</span>
 </div>
 
 </div>
@@ -2581,18 +4436,27 @@ D. SAPscript-only development
 <div class="question">
 
 <h4>
-6. What is the purpose of a determination?
+<span class="q-tag code">CODE</span>
+7. In a behavior implementation, you see
+<code>READ ENTITIES OF ZI_Order IN LOCAL MODE</code>.
+What does <code>IN LOCAL MODE</code> do?
 </h4>
 
-<p>
-A. Automatically derive or modify values<br>
-B. Define authorization roles<br>
-C. Expose an OData service<br>
-D. Create a database table
-</p>
+<ul class="options">
+<li>A. Reads from the database directly</li>
+<li>B. Bypasses authorization checks</li>
+<li>C. Forces draft handling</li>
+<li>D. Uses the local ABAP memory</li>
+</ul>
 
 <div class="answer">
-<strong>Answer:</strong> A
+<strong>Answer:</strong> B — Bypasses authorization
+<span class="why">
+Inside behavior implementations, <code>IN LOCAL MODE</code>
+is used so that the framework-level authorization
+check is not performed again. The caller is already
+inside a controlled behavior context.
+</span>
 </div>
 
 </div>
@@ -2601,18 +4465,27 @@ D. Create a database table
 <div class="question">
 
 <h4>
-7. What is code pushdown?
+<span class="q-tag">SCENARIO</span>
+8. A developer must restrict which rows of a CDS
+view entity a user can read based on their
+user name. Which artifact is used?
 </h4>
 
-<p>
-A. Moving suitable data processing toward the database<br>
-B. Moving all logic into the UI<br>
-C. Moving ABAP code into JavaScript<br>
-D. Removing CDS
-</p>
+<ul class="options">
+<li>A. Behavior definition</li>
+<li>B. Service binding</li>
+<li>C. DCL role</li>
+<li>D. ABAP Unit test class</li>
+</ul>
 
 <div class="answer">
-<strong>Answer:</strong> A
+<strong>Answer:</strong> C — DCL role
+<span class="why">
+DCL defines row-level access restrictions on
+CDS entities. Behavior definition handles
+transactional logic, not row-level read
+authorization.
+</span>
 </div>
 
 </div>
@@ -2621,18 +4494,61 @@ D. Removing CDS
 <div class="question">
 
 <h4>
-8. Which sequence best describes a typical RAP service?
+<span class="q-tag">SCENARIO</span>
+9. A report currently performs a SELECT inside
+a LOOP and the SQL Trace shows thousands of
+database calls. What is the best fix?
 </h4>
 
-<p>
-A. CDS → Behavior → Service Definition → Service Binding<br>
-B. Dynpro → Smart Form → JavaScript<br>
-C. SQL → SAPscript → GUI status<br>
-D. DCL → Dynpro → BAdI
-</p>
+<ul class="options">
+<li>A. Add table buffering</li>
+<li>B. Use a JOIN or FOR ALL ENTRIES to replace
+the SELECT-in-LOOP</li>
+<li>C. Increase the application server memory</li>
+<li>D. Change the internal table type to HASHED</li>
+</ul>
 
 <div class="answer">
-<strong>Answer:</strong> A
+<strong>Answer:</strong> B
+<span class="why">
+SELECT inside LOOP is a classic N+1 query
+problem. Replacing it with a single JOIN or
+<code>FOR ALL ENTRIES</code> read (guarded
+against an empty driver table) is the correct
+code-pushdown fix. Buffering does not fix the
+N+1 pattern.
+</span>
+</div>
+
+</div>
+
+
+<div class="question">
+
+<h4>
+<span class="q-tag">SCENARIO</span>
+10. A customer wants to add a custom field and
+a small custom validation to a standard
+S/4HANA Cloud app without leaving the cloud
+environment. Which extension model fits best?
+</h4>
+
+<ul class="options">
+<li>A. Classic modification via SMOD/CMOD</li>
+<li>B. In-app extensibility with key-user tools</li>
+<li>C. Side-by-side extension on BTP</li>
+<li>D. Direct modification of SAP standard code</li>
+</ul>
+
+<div class="answer">
+<strong>Answer:</strong> B — In-app extensibility
+<span class="why">
+For small, user-driven extensions inside
+S/4HANA Cloud, key-user in-app extensibility is
+the Clean Core choice. Modifications are never
+allowed; side-by-side is used for larger,
+decoupled apps.
+</span>
 </div>
 
 </div>
@@ -2642,9 +4558,293 @@ D. DCL → Dynpro → BAdI
 
 <strong>Next step:</strong>
 
-After mastering these topics, practice questions should
-become scenario-based rather than simple definition
-questions.
+After mastering these topics, practice reading
+<em>code snippets</em> in unfamiliar shapes and
+predicting what they do — that is the format of the
+hardest exam questions.
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     HANDS-ON LAB
+     ===================================================== -->
+
+<div class="panel" id="panel-lab">
+
+<div class="module-header">
+    <h2>🔬 Hands-On Lab: Build a Mini RAP App</h2>
+</div>
+
+<div class="info-box">
+<strong>Goal:</strong> Build a minimal RAP business
+object end-to-end in a BTP ABAP environment or the
+ABAP Developer Edition. Doing this once is worth
+more than reading ten explanations.
+</div>
+
+
+<div class="lab-step">
+
+<h4>
+<span class="step-num">1</span>
+Create the persistent table
+</h4>
+
+<p>
+Create a transparent table <code>ZCUSTOMER_LAB</code>
+with fields: <code>client</code>, <code>id</code>
+(key), <code>name</code>, <code>status</code>,
+<code>created_by</code>, <code>created_at</code>.
+</p>
+
+</div>
+
+
+<div class="lab-step">
+
+<h4>
+<span class="step-num">2</span>
+Create a CDS view entity
+</h4>
+
+<pre><code class="language-abap">
+
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Customer Lab'
+
+define view entity ZI_CustomerLab
+    as select from zcustomer_lab
+{
+    key id,
+        name,
+        status,
+        created_by,
+        created_at
+}
+
+</code></pre>
+
+</div>
+
+
+<div class="lab-step">
+
+<h4>
+<span class="step-num">3</span>
+Create the behavior definition
+</h4>
+
+<pre><code class="language-abap">
+
+managed implementation in class
+    zbp_i_customerlab unique;
+
+strict ( 2 );
+
+define behavior for ZI_CustomerLab
+persistent table zcustomer_lab
+lock master
+authorization master ( instance )
+{
+    create;
+    update;
+    delete;
+
+    field ( readonly ) id, created_by, created_at;
+
+    determination setDefaults
+        on modify { create; }
+
+    validation checkName
+        on save { create; update; }
+
+    action approve result [1] $self;
+}
+
+</code></pre>
+
+</div>
+
+
+<div class="lab-step">
+
+<h4>
+<span class="step-num">4</span>
+Implement the behavior pool
+</h4>
+
+<pre><code class="language-abap">
+
+CLASS lhc_CustomerLab DEFINITION
+    INHERITING FROM cl_abap_behavior_handler.
+
+    PRIVATE SECTION.
+        METHODS setDefaults FOR DETERMINE
+            ON MODIFY IMPORTING keys FOR CustomerLab.
+
+        METHODS checkName FOR VALIDATE
+            ON SAVE IMPORTING keys FOR CustomerLab.
+
+        METHODS approve FOR MODIFY
+            IMPORTING keys FOR ACTION CustomerLab~approve
+            RESULT result.
+ENDCLASS.
+
+CLASS lhc_CustomerLab IMPLEMENTATION.
+
+    METHOD setDefaults.
+        MODIFY ENTITIES OF ZI_CustomerLab IN LOCAL MODE
+            ENTITY CustomerLab
+            UPDATE FIELDS ( status created_by created_at )
+            WITH VALUE #(
+                FOR key IN keys (
+                    %tky       = key-%tky
+                    status     = 'NEW'
+                    created_by = sy-uname
+                    created_at = utclong_current( )
+                )
+            ).
+    ENDMETHOD.
+
+    METHOD checkName.
+        READ ENTITIES OF ZI_CustomerLab IN LOCAL MODE
+            ENTITY CustomerLab
+            FIELDS ( name ) WITH VALUE #(
+                FOR key IN keys ( %tky = key-%tky )
+            )
+            RESULT DATA(lt_cust).
+
+        LOOP AT lt_cust INTO DATA(ls_cust).
+            IF ls_cust-name IS INITIAL.
+                APPEND VALUE #(
+                    %tky = ls_cust-%tky
+                ) TO failed-CustomerLab.
+
+                APPEND VALUE #(
+                    %tky = ls_cust-%tky
+                    %msg = new_message_with_text(
+                        severity = if_abap_behv_message=&gt;severity-error
+                        text     = 'Name must not be empty'
+                    )
+                ) TO reported-CustomerLab.
+            ENDIF.
+        ENDLOOP.
+    ENDMETHOD.
+
+    METHOD approve.
+        MODIFY ENTITIES OF ZI_CustomerLab IN LOCAL MODE
+            ENTITY CustomerLab
+            UPDATE FIELDS ( status )
+            WITH VALUE #(
+                FOR key IN keys (
+                    %tky   = key-%tky
+                    status = 'APPROVED'
+                )
+            ).
+
+        READ ENTITIES OF ZI_CustomerLab IN LOCAL MODE
+            ENTITY CustomerLab
+            ALL FIELDS WITH VALUE #(
+                FOR key IN keys ( %tky = key-%tky )
+            )
+            RESULT DATA(lt_result).
+
+        result = VALUE #(
+            FOR ls IN lt_result (
+                %tky   = ls-%tky
+                %param = ls
+            )
+        ).
+    ENDMETHOD.
+
+ENDCLASS.
+
+</code></pre>
+
+</div>
+
+
+<div class="lab-step">
+
+<h4>
+<span class="step-num">5</span>
+Create the service definition
+</h4>
+
+<pre><code class="language-abap">
+
+@EndUserText.label: 'Customer Lab Service'
+
+define service ZUI_CUSTOMERLAB {
+    expose ZI_CustomerLab as CustomerLab;
+}
+
+</code></pre>
+
+</div>
+
+
+<div class="lab-step">
+
+<h4>
+<span class="step-num">6</span>
+Create the service binding
+</h4>
+
+<p>
+Create a service binding for <code>ZUI_CUSTOMERLAB</code>
+with type <strong>OData V4 — UI</strong>. Activate
+and use the preview to test your service.
+</p>
+
+</div>
+
+
+<div class="lab-step">
+
+<h4>
+<span class="step-num">7</span>
+Test with EML (optional)
+</h4>
+
+<pre><code class="language-abap">
+
+" Read all
+READ ENTITIES OF ZI_CustomerLab
+    ENTITY CustomerLab
+    ALL FIELDS WITH VALUE #( )
+    RESULT DATA(lt_all).
+
+" Create one
+MODIFY ENTITIES OF ZI_CustomerLab
+    ENTITY CustomerLab
+    CREATE FIELDS ( name )
+    WITH VALUE #( ( %cid = 'C1' name = 'Acme' ) ).
+
+COMMIT ENTITIES.
+
+</code></pre>
+
+</div>
+
+
+<div class="exam-tip">
+
+<strong>What this lab proves:</strong>
+
+You cannot pass the system-based part of C_ABAPD
+by reading alone. Build this once, and you will
+internalize:
+<ul>
+<li>The layered architecture (CDS → BDEF → impl → service)</li>
+<li>How determinations, validations and actions differ
+in code</li>
+<li>How <code>IN LOCAL MODE</code> is used</li>
+<li>How EML reads and modifies business objects</li>
+</ul>
 
 </div>
 
