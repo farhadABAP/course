@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>C_ABAPD Prüfungsvorbereitung | ABAP Cloud</title>
+<title>C_ABAPD Exam Preparation | ABAP Cloud</title>
 
 <meta
     name="description"
-    content="C_ABAPD SAP ABAP Cloud Zertifizierungsvorbereitung - Praktische Aufgaben in Eclipse ADT, Core ABAP, CDS, RAP, Clean Core und Joule."
+    content="C_ABAPD SAP ABAP Cloud certification preparation - Practical tasks in Eclipse ADT, Core ABAP, CDS, RAP, Clean Core and Joule."
 >
 
 <style>
@@ -717,7 +717,7 @@ td {
 }
 
 /* =========================================================
-   AUFGABEN-KARTEN (ersetzt Question Cards)
+   TASK CARDS (replaces Question Cards)
    ========================================================= */
 
 .task-card {
@@ -835,6 +835,165 @@ td {
 }
 
 /* =========================================================
+   MOCK EXAM
+   ========================================================= */
+
+.exam-header {
+    background: linear-gradient(135deg, rgba(218,54,51,0.15), rgba(137,87,229,0.15));
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.exam-header h3 {
+    color: var(--danger);
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+}
+
+.exam-header .exam-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.exam-header .exam-meta span {
+    background: var(--bg-primary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.exam-section-title {
+    background: var(--bg-tertiary);
+    border-left: 4px solid var(--danger);
+    padding: 0.8rem 1.1rem;
+    border-radius: 0 6px 6px 0;
+    margin: 2rem 0 1rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--danger);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.exam-task {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.exam-task h4 {
+    color: var(--accent);
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.exam-task .exam-num {
+    background: var(--danger);
+    color: white;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.exam-task .brief {
+    font-size: 0.88rem;
+    margin-bottom: 0.9rem;
+    color: var(--text-primary);
+}
+
+.exam-task .requirements {
+    background: var(--bg-primary);
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+    font-size: 0.84rem;
+}
+
+.exam-task .requirements strong {
+    color: var(--warn);
+}
+
+.exam-task .requirements ol {
+    padding-left: 1.3rem;
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.exam-task .requirements li {
+    margin-bottom: 0.3rem;
+}
+
+.solution-box {
+    background: rgba(35,134,54,0.06);
+    border: 1px solid rgba(35,134,54,0.4);
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-top: 1rem;
+}
+
+.solution-box h5 {
+    color: #3fb950;
+    font-size: 0.88rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.solution-box .explain {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--border);
+}
+
+.solution-box .explain strong {
+    color: #3fb950;
+}
+
+.checklist {
+    background: rgba(88,166,255,0.06);
+    border-left: 3px solid var(--accent);
+    padding: 0.9rem 1.1rem;
+    border-radius: 0 5px 5px 0;
+    margin-top: 1rem;
+    font-size: 0.84rem;
+}
+
+.checklist strong {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.checklist ul {
+    padding-left: 1.3rem;
+    margin: 0;
+}
+
+.checklist li {
+    margin-bottom: 0.25rem;
+}
+
+/* =========================================================
    MOBILE
    ========================================================= */
 
@@ -938,13 +1097,13 @@ td {
     </button>
 
     <a href="#" class="logo">
-        ⚡ C_ABAPD Prüfungsvorbereitung
+        ⚡ C_ABAPD Exam Preparation
         <span style="font-weight:400;color:var(--text-secondary);font-size:0.85rem;">
             ABAP Cloud
         </span>
     </a>
 
-    <span class="version">v7.0</span>
+    <span class="version">v8.0</span>
 
 </nav>
 
@@ -962,13 +1121,13 @@ td {
 
 
 <!-- =====================================================
-     PRÜFUNGSSTRATEGIE
+     EXAM STRATEGY
      ===================================================== -->
 
 <div class="nav-section">
 
     <div class="nav-title">
-        Prüfungsstrategie
+        Exam Strategy
     </div>
 
     <div
@@ -976,7 +1135,7 @@ td {
         onclick="showPanel('overview', this)"
     >
         <span class="nav-icon">🎯</span>
-        Prüfungsformat
+        Exam Format
     </div>
 
     <div
@@ -984,7 +1143,7 @@ td {
         onclick="showPanel('roadmap', this)"
     >
         <span class="nav-icon">🗺️</span>
-        Lernplan
+        Study Roadmap
     </div>
 
     <div
@@ -999,7 +1158,7 @@ td {
 
 
 <!-- =====================================================
-     CORE ABAP
+     CORE ABAP  (31-40%)
      ===================================================== -->
 
 <div class="nav-section">
@@ -1030,7 +1189,7 @@ td {
         onclick="showPanel('modular', this)"
     >
         <span class="nav-icon">📦</span>
-        Modularisierung
+        Modularization
     </div>
 
     <div
@@ -1038,7 +1197,7 @@ td {
         onclick="showPanel('itab', this)"
     >
         <span class="nav-icon">📋</span>
-        Interne Tabellen
+        Internal Tables
     </div>
 
     <div
@@ -1077,13 +1236,13 @@ td {
 
 
 <!-- =====================================================
-     DATENMODELLIERUNG
+     DATA MODELING  (21-30%)
      ===================================================== -->
 
 <div class="nav-section">
 
     <div class="nav-title">
-        Datenmodellierung
+        Data Modeling
         <span class="nav-weight">21–30%</span>
     </div>
 
@@ -1107,7 +1266,7 @@ td {
 
 
 <!-- =====================================================
-     RAP
+     RAP  (11-20%)
      ===================================================== -->
 
 <div class="nav-section">
@@ -1122,7 +1281,7 @@ td {
         onclick="showPanel('rap', this)"
     >
         <span class="nav-icon">🧱</span>
-        RAP Architektur
+        RAP Architecture
     </div>
 
     <div
@@ -1153,13 +1312,13 @@ td {
 
 
 <!-- =====================================================
-     QUALITÄT & PLATTFORM
+     QUALITY & PLATFORM
      ===================================================== -->
 
 <div class="nav-section">
 
     <div class="nav-title">
-        Qualität &amp; Plattform
+        Quality &amp; Platform
     </div>
 
     <div
@@ -1182,13 +1341,13 @@ td {
 
 
 <!-- =====================================================
-     PRAXISAUFGABEN
+     PRACTICE TASKS
      ===================================================== -->
 
 <div class="nav-section">
 
     <div class="nav-title">
-        Praxisaufgaben
+        Practice Tasks
     </div>
 
     <div
@@ -1196,7 +1355,7 @@ td {
         onclick="showPanel('tasks-adt', this)"
     >
         <span class="nav-icon">💻</span>
-        ADT-Aufgaben
+        ADT Tasks
     </div>
 
     <div
@@ -1204,7 +1363,7 @@ td {
         onclick="showPanel('tasks-rap', this)"
     >
         <span class="nav-icon">🔨</span>
-        RAP-Aufgaben
+        RAP Tasks
     </div>
 
     <div
@@ -1212,7 +1371,7 @@ td {
         onclick="showPanel('tasks-cds', this)"
     >
         <span class="nav-icon">📐</span>
-        CDS-Aufgaben
+        CDS Tasks
     </div>
 
     <div
@@ -1220,7 +1379,7 @@ td {
         onclick="showPanel('tasks-joule', this)"
     >
         <span class="nav-icon">🤖</span>
-        Joule-Aufgaben
+        Joule Tasks
     </div>
 
     <div
@@ -1233,6 +1392,35 @@ td {
 
 </div>
 
+
+<!-- =====================================================
+     MOCK EXAM
+     ===================================================== -->
+
+<div class="nav-section">
+
+    <div class="nav-title">
+        Mock Exam
+    </div>
+
+    <div
+        class="nav-item"
+        onclick="showPanel('mock', this)"
+    >
+        <span class="nav-icon">📝</span>
+        Full Mock Exam
+    </div>
+
+    <div
+        class="nav-item"
+        onclick="showPanel('mock-solutions', this)"
+    >
+        <span class="nav-icon">✅</span>
+        Solutions &amp; Answers
+    </div>
+
+</div>
+
 </aside>
 
 
@@ -1240,77 +1428,77 @@ td {
 
 
 <!-- =====================================================
-     PRÜFUNGSFORMAT
+     EXAM FORMAT
      ===================================================== -->
 
 <div class="panel active" id="panel-overview">
 
 <div class="module-header">
-    <h2>🎯 C_ABAPD Prüfungsformat</h2>
-    <span class="weight-badge">100 % praktisch</span>
+    <h2>🎯 C_ABAPD Exam Format</h2>
+    <span class="weight-badge">100% practical</span>
 </div>
 
 <div class="info-box warn">
 
-<strong>Wichtig:</strong>
-Die C_ABAPD ist eine <strong>rein praktische,
-systembasierte Zertifizierung</strong>. Es gibt
-<strong>keine Multiple-Choice-Fragen</strong>.
-Sie arbeiten in einer Live-SAP-BTP-ABAP-Umgebung
-über Eclipse ADT und bearbeiten konkrete
-Entwicklungsaufgaben.
+<strong>Important:</strong>
+The C_ABAPD is a <strong>purely practical,
+system-based certification</strong>. There are
+<strong>no multiple-choice questions</strong>.
+You work in a live SAP BTP ABAP environment
+via Eclipse ADT and complete concrete
+development tasks.
 
 </div>
 
 
 <h3 style="color:var(--accent);margin-top:1.5rem;margin-bottom:0.5rem;">
-Prüfungsdaten
+Exam Facts
 </h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Merkmal</th>
+<th>Attribute</th>
 <th>Details</th>
 </tr>
 <tr>
 <td>Format</td>
-<td>100 % praktische Aufgaben in einer Live-Umgebung</td>
+<td>100% practical tasks in a live environment</td>
 </tr>
 <tr>
-<td>Umgebung</td>
-<td>SAP BTP ABAP Environment über Eclipse ADT</td>
+<td>Environment</td>
+<td>SAP BTP ABAP Environment via Eclipse ADT</td>
 </tr>
 <tr>
-<td>Dauer</td>
-<td>3 Stunden</td>
+<td>Duration</td>
+<td>3 hours</td>
 </tr>
 <tr>
-<td>Bestehensgrenze</td>
-<td>67 %</td>
+<td>Passing score</td>
+<td>67%</td>
 </tr>
 <tr>
-<td>Anzahl Aufgaben</td>
-<td>ca. 5–8 praktische Aufgabenblöcke</td>
+<td>Number of tasks</td>
+<td>approx. 5–8 practical task blocks</td>
 </tr>
 <tr>
-<td>Bewertung</td>
-<td>Automatisiert (exakte Benennung, Typen, Sichtbarkeiten)</td>
+<td>Grading</td>
+<td>Automated (exact naming, types, visibilities)</td>
 </tr>
 <tr>
-<td>Hilfsmittel</td>
+<td>Aids allowed</td>
 <td>Open Book — SAP Help Portal, SAP Learning, SAP Joule</td>
 </tr>
 <tr>
-<td>Gültigkeit</td>
-<td>12 Monate (Stay-Certified-Module)</td>
+<td>Validity</td>
+<td>12 months (Stay-Certified modules)</td>
 </tr>
 </table>
 </div>
 
 
 <h3 style="color:var(--accent);margin-top:1.5rem;margin-bottom:0.5rem;">
-Offizielle Themengewichtung
+Official Topic Weightings
 </h3>
 
 <div class="weight-chart">
@@ -1363,27 +1551,26 @@ Offizielle Themengewichtung
 <div class="priority-card">
 
 <h4>
-<span class="priority">KRITISCH</span>
-Automatisierte Bewertung
+<span class="priority">CRITICAL</span>
+Automated Grading
 </h4>
 
 <p>
-Ihre Abgabe wird <strong>automatisiert</strong>
-bewertet — nicht von einem Menschen.
-Das bedeutet:
+Your submission is graded <strong>automatically</strong>
+— not by a human. This means:
 </p>
 
 <ul>
-<li><strong>Benennung ist entscheidend.</strong> Wenn
-eine Aufgabe einen exakten Objektnamen vorgibt,
-verwenden Sie genau diesen.</li>
-<li><strong>Groß-/Kleinschreibung beachten.</strong>
-ADT ist case-sensitiv bei Bezeichnern.</li>
-<li><strong>Typen und Sichtbarkeiten exakt einhalten.</strong>
+<li><strong>Naming is decisive.</strong> If a task
+specifies an exact object name, use exactly that
+name.</li>
+<li><strong>Case sensitivity matters.</strong> ADT is
+case-sensitive for identifiers.</li>
+<li><strong>Types and visibilities must be exact.</strong>
 <code>PUBLIC</code>, <code>PROTECTED</code>,
-<code>PRIVATE</code> — wie vorgegeben.</li>
-<li><strong>Es gibt keine Teilpunkte</strong> für
-"fast richtig".</li>
+<code>PRIVATE</code> — as specified.</li>
+<li><strong>There are no partial points</strong> for
+"almost right".</li>
 </ul>
 
 </div>
@@ -1391,12 +1578,12 @@ ADT ist case-sensitiv bei Bezeichnern.</li>
 
 <div class="exam-tip">
 
-<strong>Mentaler Shift:</strong>
+<strong>Mental shift:</strong>
 
-Diese Prüfung testet <em>Familiarität</em>, nicht
-clevere Algorithmen. Wer die Objekttypen in ADT
-schon einmal angelegt hat, ist im Vorteil.
-Theorie allein reicht nicht.
+This exam tests <em>familiarity</em>, not clever
+algorithms. Those who have already created the
+object types in ADT have an advantage.
+Theory alone is not enough.
 
 </div>
 
@@ -1404,71 +1591,70 @@ Theorie allein reicht nicht.
 
 
 <!-- =====================================================
-     LERNPLAN
+     ROADMAP
      ===================================================== -->
 
 <div class="panel" id="panel-roadmap">
 
 <div class="module-header">
-    <h2>🗺️ Empfohlener Lernplan</h2>
+    <h2>🗺️ Recommended Study Roadmap</h2>
 </div>
 
 <div class="module-content">
 
-<h3>Phase 1 — ABAP Cloud Umgebung verstehen</h3>
+<h3>Phase 1 — Understand the ABAP Cloud Environment</h3>
 <ul>
-<li>Eclipse ADT installieren und einrichten</li>
-<li>ABAP Cloud Project anlegen</li>
-<li>Paket mit korrektem Super-Package anlegen</li>
-<li>Transportauftrag zuordnen</li>
-<li>Restricted Language Version verstehen</li>
+<li>Install and configure Eclipse ADT</li>
+<li>Create an ABAP Cloud Project</li>
+<li>Create a package with the correct super-package</li>
+<li>Assign a transport request</li>
+<li>Understand the Restricted Language Version</li>
 </ul>
 
 <h3>Phase 2 — Core ABAP Hands-On</h3>
 <ul>
-<li>Klassenhierarchie mit Sichtbarkeiten bauen
+<li>Build a class hierarchy with visibilities
 (public-readonly, protected, private)</li>
-<li>Interne Tabellen: Typen, Sekundärschlüssel</li>
-<li>Moderne Ausdrücke: VALUE, COND, SWITCH, FOR,
+<li>Internal tables: types, secondary keys</li>
+<li>Modern expressions: VALUE, COND, SWITCH, FOR,
 REDUCE, FILTER</li>
-<li>ABAP SQL: SELECT, JOIN, Aggregation, Code Pushdown</li>
-<li>DDIC: Tabellen, Datenelemente, Domänen</li>
+<li>ABAP SQL: SELECT, JOIN, aggregation, code pushdown</li>
+<li>DDIC: tables, data elements, domains</li>
 </ul>
 
 <h3>Phase 3 — CDS &amp; DCL</h3>
 <ul>
-<li>CDS View Entity aus Tabelle generieren</li>
-<li>Assoziationen und Kardinalitäten</li>
-<li>DCL Access Control auf eine kopierte CDS View
-anwenden</li>
-<li>Autorisierungsobjekt einbinden</li>
+<li>Generate a CDS View Entity from a table</li>
+<li>Associations and cardinalities</li>
+<li>Apply DCL Access Control to a copied CDS view</li>
+<li>Integrate an authorization object</li>
 </ul>
 
 <h3>Phase 4 — RAP Business Object</h3>
 <ul>
-<li>RAP BO aus Tabelle generieren</li>
-<li>Behavior Definition: Determinations,
-Validations, Actions</li>
-<li>Field Control verdrahten</li>
-<li>Behavior Implementation in der Behavior Pool
-Klasse</li>
-<li>Service Definition und Service Binding</li>
+<li>Generate a RAP BO from a table</li>
+<li>Behavior Definition: determinations,
+validations, actions</li>
+<li>Wire up field control</li>
+<li>Behavior Implementation in the behavior pool
+class</li>
+<li>Service Definition and Service Binding</li>
 </ul>
 
-<h3>Phase 5 — Joule &amp; Open Book nutzen</h3>
+<h3>Phase 5 — Use Joule &amp; Open Book</h3>
 <ul>
-<li>Joule in ADT einrichten (SAP_COM_OA69)</li>
-<li>Code Explain, Predictive Completion,
-Unit Test Generation üben</li>
-<li>SAP Help Portal effizient durchsuchen</li>
+<li>Set up Joule in ADT (SAP_COM_OA69)</li>
+<li>Practice Code Explain, Predictive Completion,
+Unit Test Generation</li>
+<li>Search SAP Help Portal efficiently</li>
 </ul>
 
-<h3>Phase 6 — Prüfungssimulation</h3>
+<h3>Phase 6 — Exam Simulation</h3>
 <ul>
-<li>Aufgaben unter Zeitdruck in ADT bearbeiten</li>
-<li>Exakte Benennung üben</li>
-<li>Syntax-Checker als Freund nutzen</li>
-<li>Eigenen Code testen (IF_OO_ADT_CLASSRUN)</li>
+<li>Work on tasks under time pressure in ADT</li>
+<li>Practice exact naming</li>
+<li>Use the syntax checker as a friend</li>
+<li>Test your own code (IF_OO_ADT_CLASSRUN)</li>
 </ul>
 
 </div>
@@ -1483,127 +1669,125 @@ Unit Test Generation üben</li>
 <div class="panel" id="panel-joule">
 
 <div class="module-header">
-    <h2>🤖 Joule &amp; Open Book in der Prüfung</h2>
-    <span class="weight-badge">Hilfsmittel</span>
+    <h2>🤖 Joule &amp; Open Book in the Exam</h2>
+    <span class="weight-badge">Allowed aids</span>
 </div>
 
 <div class="module-content">
 
 <div class="info-box success">
-<strong>Open Book:</strong> Sie dürfen während der
-Prüfung SAP Help Portal, SAP Learning und
-SAP Joule (für Entwickler) nutzen.
+<strong>Open Book:</strong> During the exam you may
+use SAP Help Portal, SAP Learning, and SAP Joule
+(for developers).
 </div>
 
 
-<h3>Joule für Entwickler — ABAP AI Capabilities</h3>
+<h3>Joule for Developers — ABAP AI Capabilities</h3>
 
 <p>
-Joule ist in Eclipse ADT integriert und bietet
-KI-gestützte Unterstützung für ABAP-Entwickler.
+Joule is integrated into Eclipse ADT and provides
+AI-powered support for ABAP developers.
 </p>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Funktion</th>
-<th>Beschreibung</th>
-<th>Prüfungsrelevanz</th>
+<th>Function</th>
+<th>Description</th>
+<th>Exam relevance</th>
 </tr>
 <tr>
 <td><strong>Predictive Code Completion</strong></td>
-<td>KI-gestützte Code-Vervollständigung basierend auf
-dem SAP ABAP Codebase</td>
-<td>Beschleunigt das Schreiben von Code</td>
+<td>AI-powered code completion based on the
+SAP ABAP codebase</td>
+<td>Speeds up writing code</td>
 </tr>
 <tr>
 <td><strong>Explain</strong></td>
-<td>Erklärt bestehenden ABAP-Code in natürlicher
-Sprache</td>
-<td>Hilft beim Verständnis komplexer
-Vorgaben</td>
+<td>Explains existing ABAP code in natural
+language</td>
+<td>Helps understand complex
+requirements</td>
 </tr>
 <tr>
 <td><strong>Generate</strong></td>
-<td>Generiert Entwicklungsobjekte, z.B. RAP
-Business Objects</td>
-<td>Kann Boilerplate-Code erzeugen</td>
+<td>Generates development objects, e.g. RAP
+business objects</td>
+<td>Can produce boilerplate code</td>
 </tr>
 <tr>
 <td><strong>Unit Test Generation</strong></td>
-<td>Generiert ABAP Unit Tests für Klassen</td>
-<td>Nützlich für Testing-Aufgaben</td>
+<td>Generates ABAP Unit tests for classes</td>
+<td>Useful for testing tasks</td>
 </tr>
 <tr>
 <td><strong>RAP Business Logic Prediction</strong></td>
-<td>Unterstützt bei der Implementierung von
-RAP-Logik</td>
-<td>Direkt prüfungsrelevant</td>
+<td>Supports implementation of RAP logic</td>
+<td>Directly exam-relevant</td>
 </tr>
 </table>
 </div>
 
 
-<h3>Einrichtung von Joule in ADT</h3>
+<h3>Setting up Joule in ADT</h3>
 
 <ul>
-<li>Kommunikationsszenario <code>SAP_COM_OA69</code>
-muss aktiviert sein</li>
-<li>Verbindung zwischen ABAP-System und SAP AI Core
-herstellen</li>
-<li>Zugriff auf Large Language Models über den
+<li>Communication scenario <code>SAP_COM_OA69</code>
+must be activated</li>
+<li>Establish connection between ABAP system and
+SAP AI Core</li>
+<li>Access to Large Language Models via the
 Generative AI Hub</li>
-<li>Joule Chat View in ADT öffnen</li>
+<li>Open the Joule Chat View in ADT</li>
 </ul>
 
 
-<h3>Joule-Slash-Befehle</h3>
+<h3>Joule Slash Commands</h3>
 
 <pre><code class="language-abap">
 
 /raplogic    → RAP Business Logic Prediction
-/explain     → Code erklären lassen
-/test        → Unit Tests generieren
-/complete    → Code-Vervollständigung
+/explain     → Explain code
+/test        → Generate unit tests
+/complete    → Code completion
 
 </code></pre>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Nutzen Sie Joule, um sich <em>nicht</em> sicher
-erinnerte Syntax bestätigen zu lassen. Aber verlassen
-Sie sich nicht darauf — Joule kann Fehler machen.
-Der Syntax-Checker in ADT ist Ihre verlässlichste
-Instanz.
+Use Joule to confirm syntax you are <em>not</em>
+sure about. But do not rely on it — Joule can
+make mistakes. The syntax checker in ADT is your
+most reliable authority.
 
 </div>
 
 
-<h3>Open-Book-Ressourcen effizient nutzen</h3>
+<h3>Using Open-Book Resources Efficiently</h3>
 
 <ul>
-<li><strong>SAP Help Portal</strong> — offizielle
-Dokumentation zu ABAP, CDS, RAP, EML</li>
-<li><strong>SAP Learning</strong> — Lernpfade und
-Übungen</li>
-<li><strong>SAP Community</strong> — Blog-Posts und
-Diskussionen</li>
-<li><strong>Joule in ADT</strong> — direkt im
-Entwicklungswerkzeug</li>
+<li><strong>SAP Help Portal</strong> — official
+documentation on ABAP, CDS, RAP, EML</li>
+<li><strong>SAP Learning</strong> — learning paths
+and exercises</li>
+<li><strong>SAP Community</strong> — blog posts and
+discussions</li>
+<li><strong>Joule in ADT</strong> — directly in the
+development tool</li>
 </ul>
 
 
 <div class="exam-tip">
 
-<strong>Wichtig:</strong>
+<strong>Important:</strong>
 
-Die Open-Book-Nutzung ersetzt <em>nicht</em> das
-praktische Können. Sie spart Zeit bei Syntax-Details,
-aber die Aufgaben müssen Sie selbst in der Live-
-Umgebung umsetzen.
+Using Open Book does <em>not</em> replace practical
+skill. It saves time on syntax details, but you
+must implement the tasks yourself in the live
+environment.
 
 </div>
 
@@ -1625,19 +1809,19 @@ Umgebung umsetzen.
 
 <div class="module-content">
 
-<h3>Drei Entwicklungsmodelle</h3>
+<h3>Three Development Models</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Modell</th>
-<th>Umgebung</th>
-<th>Merkmale</th>
+<th>Model</th>
+<th>Environment</th>
+<th>Characteristics</th>
 </tr>
 <tr>
 <td>Standard ABAP</td>
-<td>Klassische Systeme</td>
-<td>Volle Sprach- und Repository-Zugriffe</td>
+<td>Classic systems</td>
+<td>Full language and repository access</td>
 </tr>
 <tr>
 <td>ABAP for Cloud Development</td>
@@ -1646,91 +1830,89 @@ Umgebung umsetzen.
 </tr>
 <tr>
 <td>ABAP for Key Users</td>
-<td>Key-User-Extensibility</td>
-<td>Stärker eingeschränkt, kein ABAP-Coding</td>
+<td>Key-user extensibility</td>
+<td>More restricted, no ABAP coding</td>
 </tr>
 </table>
 </div>
 
 
-<h3>ABAP Cloud Prinzipien</h3>
+<h3>ABAP Cloud Principles</h3>
 
 <ul>
-<li>Cloud-kompatible Sprachversion</li>
-<li>Released SAP APIs (C0 / C1 Contract)</li>
-<li>Stabile Extension Points</li>
-<li>ADT als Entwicklungsumgebung</li>
+<li>Cloud-compatible language version</li>
+<li>Released SAP APIs (C0 / C1 contract)</li>
+<li>Stable extension points</li>
+<li>ADT as development environment</li>
 <li>Clean Core</li>
-<li>Upgrade-stabile Erweiterungen</li>
+<li>Upgrade-stable extensions</li>
 </ul>
 
 
-<h3>Erlaubt vs. Verboten in ABAP Cloud</h3>
+<h3>Allowed vs. Forbidden in ABAP Cloud</h3>
 
 <p>
-Die Restricted Language Version blockiert viele
-klassische Statements. Dies ist ein zentrales
-Prüfungsthema — auch in praktischen Aufgaben
-(der Syntax-Checker meldet verbotene
-Konstrukte).
+The Restricted Language Version blocks many
+classic statements. This is a central exam topic —
+also in practical tasks (the syntax checker
+reports forbidden constructs).
 </p>
 
 <div class="rule-grid">
 
 <div class="rule-col allowed">
-<h5>✓ Erlaubt</h5>
+<h5>✓ Allowed</h5>
 <ul>
-<li>Released SAP APIs (C1 Contract)</li>
+<li>Released SAP APIs (C1 contract)</li>
 <li>CDS View Entities</li>
-<li>ABAP SQL mit released Tables/Views</li>
-<li>ABAP OO (Klassen, Interfaces)</li>
+<li>ABAP SQL with released tables/views</li>
+<li>ABAP OO (classes, interfaces)</li>
 <li>RAP Business Objects</li>
-<li>ADT-basierte Entwicklung</li>
-<li>ABAP Unit Tests</li>
+<li>ADT-based development</li>
+<li>ABAP Unit tests</li>
 <li>Released BAdIs</li>
-<li>Custom CDS Entities</li>
+<li>Custom CDS entities</li>
 </ul>
 </div>
 
 <div class="rule-col forbidden">
-<h5>✗ Verboten</h5>
+<h5>✗ Forbidden</h5>
 <ul>
-<li>Direct SELECT auf nicht-released Tables</li>
-<li><code>CALL FUNCTION</code> auf nicht-released FMs</li>
-<li>Classic Dynpro / SAP GUI Screens</li>
-<li>Classic Lists / SAPscript / Smart Forms</li>
-<li>Modifikationen am SAP-Standard</li>
+<li>Direct SELECT on non-released tables</li>
+<li><code>CALL FUNCTION</code> to non-released FMs</li>
+<li>Classic Dynpro / SAP GUI screens</li>
+<li>Classic lists / SAPscript / Smart Forms</li>
+<li>Modifications to SAP standard</li>
 <li><code>EXEC SQL</code> / Native SQL</li>
-<li>Obsolete Statements (z.B. <code>TABLES</code>)</li>
-<li>Direkter Zugriff auf SAP-Interna</li>
+<li>Obsolete statements (e.g. <code>TABLES</code>)</li>
+<li>Direct access to SAP internals</li>
 <li><code>FORM</code> / <code>PERFORM</code>
-(Subroutines)</li>
+(subroutines)</li>
 </ul>
 </div>
 
 </div>
 
 
-<h3>Released APIs — Warum sie wichtig sind</h3>
+<h3>Released APIs — Why They Matter</h3>
 
 <p>
-Eine <strong>Released API</strong> ist ein SAP-Objekt
-mit einem Released Contract (C1 für SAP-interne
-Nutzung, C0 für externe). Nur Released APIs sind
-über Releases hinweg stabil — deshalb beschränkt
-das Cloud-Entwicklungsmodell darauf.
+A <strong>Released API</strong> is an SAP object
+with a released contract (C1 for SAP-internal
+use, C0 for external). Only released APIs are
+stable across releases — that is why the cloud
+development model restricts you to them.
 </p>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Der Syntax-Checker in ADT markiert verbotene
-Statements sofort. Wenn Sie in der Prüfung ein
-klassisches Statement verwenden, das nicht
-erlaubt ist, erhalten Sie eine Fehlermeldung.
-Vertrauen Sie auf den Checker.
+The syntax checker in ADT flags forbidden
+statements immediately. If you use a classic
+statement that is not allowed during the exam,
+you will get an error message. Trust the checker.
 
 </div>
 
@@ -1752,12 +1934,12 @@ Vertrauen Sie auf den Checker.
 
 <div class="module-content">
 
-<h3>Moderne Ausdrücke — Prüfungsrelevant</h3>
+<h3>Modern Expressions — Exam-Relevant</h3>
 
 <p>
-In praktischen Aufgaben werden Sie moderne
-ABAP-Syntax verwenden. Der Syntax-Checker hilft,
-aber Sie sollten die Grundformen kennen.
+In practical tasks you will use modern ABAP
+syntax. The syntax checker helps, but you should
+know the basic forms.
 </p>
 
 
@@ -1765,13 +1947,13 @@ aber Sie sollten die Grundformen kennen.
 
 <div class="snippet-header">
 <h3>Inline Declaration</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
 <pre><code class="language-abap">
 
-" Statt: DATA lv_name TYPE string.
+" Instead of: DATA lv_name TYPE string.
 DATA(lv_name) = |Farhad|.
 
 LOOP AT lt_customers INTO DATA(ls_customer).
@@ -1787,20 +1969,20 @@ ENDLOOP.
 
 <div class="snippet-header">
 <h3>VALUE Operator</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
 <pre><code class="language-abap">
 
-" Interne Tabelle füllen
+" Fill internal table
 DATA(lt_numbers) = VALUE int4_table(
     ( 10 )
     ( 20 )
     ( 30 )
 ).
 
-" Struktur füllen
+" Fill structure
 DATA(ls_customer) = VALUE ty_customer(
     id     = 100
     name   = 'Acme'
@@ -1816,7 +1998,7 @@ DATA(ls_customer) = VALUE ty_customer(
 
 <div class="snippet-header">
 <h3>COND / SWITCH</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
@@ -1843,19 +2025,19 @@ DATA(lv_name) = SWITCH string( lv_code
 
 <div class="snippet-header">
 <h3>FOR Expression</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
 <pre><code class="language-abap">
 
-" Namen extrahieren
+" Extract names
 DATA(lt_names) = VALUE string_table(
     FOR ls IN lt_customers
     ( ls-name )
 ).
 
-" Mit WHERE-Filter
+" With WHERE filter
 DATA(lt_active) = VALUE string_table(
     FOR ls IN lt_customers
         WHERE ( status = 'A' )
@@ -1871,13 +2053,13 @@ DATA(lt_active) = VALUE string_table(
 
 <div class="snippet-header">
 <h3>REDUCE</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
 <pre><code class="language-abap">
 
-" Summe berechnen
+" Calculate sum
 DATA(lv_total) = REDUCE decfloat34(
     INIT sum = 0
     FOR ls IN lt_items
@@ -1893,13 +2075,13 @@ DATA(lv_total) = REDUCE decfloat34(
 
 <div class="snippet-header">
 <h3>FILTER</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
 <pre><code class="language-abap">
 
-" Tabelle filtern
+" Filter table
 DATA(lt_active) = FILTER #(
     lt_customers
     WHERE status = 'A'
@@ -1914,18 +2096,18 @@ DATA(lt_active) = FILTER #(
 
 <div class="snippet-header">
 <h3>CORRESPONDING</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
 <pre><code class="language-abap">
 
-" Strukturen mappen
+" Map structures
 DATA(ls_target) = CORRESPONDING ty_target(
     ls_source
 ).
 
-" Interne Tabelle mappen
+" Map internal tables
 DATA(lt_target) = CORRESPONDING ty_target_table(
     lt_source
 ).
@@ -1939,7 +2121,7 @@ DATA(lt_target) = CORRESPONDING ty_target_table(
 
 <div class="snippet-header">
 <h3>String Template</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
@@ -1947,10 +2129,10 @@ DATA(lt_target) = CORRESPONDING ty_target_table(
 
 DATA(lv_text) = |Customer { lv_id } has status { lv_status }.|.
 
-" Formatierung
+" Formatting
 DATA(lv_amt) = |Total: { lv_amount NUMBER = USER } EUR|.
 
-" Datum
+" Date
 DATA(lv_date) = |Created: { lv_created DATE = USER }|.
 
 </code></pre>
@@ -1962,16 +2144,16 @@ DATA(lv_date) = |Created: { lv_created DATE = USER }|.
 
 <div class="snippet-header">
 <h3>Table Expression</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
 <pre><code class="language-abap">
 
-" Einzelner Satz — Exception wenn nicht gefunden
+" Single row — throws if not found
 DATA(ls_customer) = lt_customers[ id = 100 ].
 
-" Sicher mit Default
+" Safe with default
 DATA(ls_customer2) = VALUE #(
     lt_customers[ id = 999 ]
     DEFAULT VALUE #( )
@@ -1984,12 +2166,12 @@ DATA(ls_customer2) = VALUE #(
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Sie müssen moderne Syntax nicht auswendig schreiben.
-Der Syntax-Checker in ADT zeigt Fehler sofort an.
-Beginnen Sie zu tippen und lassen Sie sich führen.
-Aber erkennen sollten Sie die Konstrukte.
+You do not have to write modern syntax from
+memory. The syntax checker in ADT shows errors
+immediately. Start typing and let it guide you.
+But you should be able to recognize the constructs.
 
 </div>
 
@@ -1999,63 +2181,63 @@ Aber erkennen sollten Sie die Konstrukte.
 
 
 <!-- =====================================================
-     MODULARISIERUNG
+     MODULARIZATION
      ===================================================== -->
 
 <div class="panel" id="panel-modular">
 
 <div class="module-header">
-    <h2>📦 Modularisierung</h2>
+    <h2>📦 Modularization</h2>
     <span class="weight-badge">Core ABAP</span>
 </div>
 
 <div class="module-content">
 
-<h3>Drei klassische Techniken</h3>
+<h3>Three Classic Techniques</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Technik</th>
-<th>Zweck</th>
+<th>Technique</th>
+<th>Purpose</th>
 <th>Cloud-Ready?</th>
 </tr>
 <tr>
 <td>Subroutine (<code>FORM</code>/<code>PERFORM</code>)</td>
-<td>Legacy-prozedurale Modularisierung</td>
-<td class="bad">Nein — obsolet in Cloud</td>
+<td>Legacy procedural modularization</td>
+<td class="bad">No — obsolete in cloud</td>
 </tr>
 <tr>
-<td>Funktionsbaustein (<code>FUNCTION</code>)</td>
-<td>Wiederverwendbare Funktion</td>
-<td class="good">Nur wenn released (RFC)</td>
+<td>Function Module (<code>FUNCTION</code>)</td>
+<td>Reusable function</td>
+<td class="good">Only if released (RFC)</td>
 </tr>
 <tr>
-<td>Methode (<code>METHOD</code>)</td>
-<td>Bevorzugte OO-Modularisierung</td>
-<td class="good">Ja</td>
+<td>Method (<code>METHOD</code>)</td>
+<td>Preferred OO modularization</td>
+<td class="good">Yes</td>
 </tr>
 </table>
 </div>
 
 
-<h3>Methoden — Der moderne Weg</h3>
+<h3>Methods — The Modern Way</h3>
 
 <ul>
-<li>Definiert in Klassen (global oder lokal)</li>
+<li>Defined in classes (global or local)</li>
 <li>Importing / Exporting / Changing / Returning
-Parameter</li>
-<li>Können klassenbasierte Exceptions auslösen</li>
-<li>Instanz- oder statische Methoden</li>
-<li>Kapselung über Sichtbarkeitsbereiche</li>
+parameters</li>
+<li>Can raise class-based exceptions</li>
+<li>Instance or static methods</li>
+<li>Encapsulation via visibility sections</li>
 </ul>
 
 
 <div class="snippet-card">
 
 <div class="snippet-header">
-<h3>Methoden-Beispiel</h3>
-<button class="copy-btn" onclick="copyCode(this)">Kopieren</button>
+<h3>Method Example</h3>
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 </div>
 
 <div class="snippet-body">
@@ -2077,7 +2259,7 @@ CLASS zcl_calc IMPLEMENTATION.
     ENDMETHOD.
 ENDCLASS.
 
-" Aufruf
+" Call
 DATA(lo_calc) = NEW zcl_calc( ).
 DATA(lv_result) = lo_calc->add(
     iv_a = 10
@@ -2089,36 +2271,36 @@ DATA(lv_result) = lo_calc->add(
 </div>
 
 
-<h3>Funktionsbausteine — Wann sie noch relevant sind</h3>
+<h3>Function Modules — When They Still Matter</h3>
 
 <p>
-Funktionsbausteine sind in ABAP Cloud nur erlaubt,
-wenn sie <strong>released</strong> sind (z.B.
-released RFC-enabled Function Modules). In
-Prüfungsaufgaben zu Legacy-Code vs. modernem Code
-werden sie thematisiert.
+Function modules are allowed in ABAP Cloud only
+when they are <strong>released</strong> (for example,
+released RFC-enabled function modules). In exam
+tasks about legacy vs. modern code they are
+discussed.
 </p>
 
 
-<h3>Subroutines — Obsolet</h3>
+<h3>Subroutines — Obsolete</h3>
 
 <p>
-<code>FORM</code> / <code>PERFORM</code> sind in
-ABAP for Cloud Development <strong>nicht verfügbar</strong>.
-Wenn eine Aufgabe eine Subroutine als "moderne"
-Lösung anbietet, ist das eine Falle.
+<code>FORM</code> / <code>PERFORM</code> are
+<strong>not available</strong> in ABAP for Cloud
+Development. If a task offers a subroutine as the
+"modern" answer, that is a trap.
 </p>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Eine Aufgabe könnte verlangen, Legacy-Code zu
-refaktorisieren. Die richtige Richtung ist fast
-immer: Subroutine → Methode, globaler mutabler
-Zustand → gekapselte Klasse, <code>TABLES</code>
-→ typisierte Parameter.
+A task might require refactoring legacy code.
+The correct direction is almost always:
+subroutine → method, global mutable state →
+encapsulated class, <code>TABLES</code> →
+typed parameters.
 
 </div>
 
@@ -2128,69 +2310,68 @@ Zustand → gekapselte Klasse, <code>TABLES</code>
 
 
 <!-- =====================================================
-     INTERNE TABELLEN
+     INTERNAL TABLES
      ===================================================== -->
 
 <div class="panel" id="panel-itab">
 
 <div class="module-header">
-    <h2>📋 Interne Tabellen</h2>
+    <h2>📋 Internal Tables</h2>
     <span class="weight-badge">Core ABAP</span>
 </div>
 
 <div class="module-content">
 
-<h3>Drei Tabellentypen</h3>
+<h3>Three Table Types</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Typ</th>
-<th>Zugriff</th>
-<th>Schlüssel</th>
-<th>Am besten für</th>
+<th>Type</th>
+<th>Access</th>
+<th>Key</th>
+<th>Best for</th>
 </tr>
 <tr>
 <td><code>STANDARD TABLE</code></td>
-<td>Index + lineare Suche</td>
-<td>Non-unique (Default)</td>
-<td>Sequenzielle Verarbeitung, kleine Tabellen</td>
+<td>Index + linear search</td>
+<td>Non-unique (default)</td>
+<td>Sequential processing, small tables</td>
 </tr>
 <tr>
 <td><code>SORTED TABLE</code></td>
-<td>Binäre Suche auf Schlüssel</td>
-<td>Unique oder non-unique</td>
-<td>Häufige Schlüssel-Lesezugriffe, sortierte Ausgabe</td>
+<td>Binary search on key</td>
+<td>Unique or non-unique</td>
+<td>Frequent key reads, sorted output</td>
 </tr>
 <tr>
 <td><code>HASHED TABLE</code></td>
 <td>Hash — O(1)</td>
-<td>Immer unique</td>
-<td>Große Tabellen, häufige Schlüssel-Lookups</td>
+<td>Always unique</td>
+<td>Large tables, frequent key lookups</td>
 </tr>
 </table>
 </div>
 
 
-<h3>Primärer vs. Sekundärer Schlüssel</h3>
+<h3>Primary vs. Secondary Key</h3>
 
 <p>
-Ein <strong>Primärschlüssel</strong> wird auf
-Tabellentyp-Ebene definiert und bestimmt
-Eindeutigkeit/Sortierung. Ein
-<strong>Sekundärschlüssel</strong> kann später
-hinzugefügt werden, um bestimmte Zugriffsmuster
-auf derselben Tabelle zu beschleunigen.
+A <strong>primary key</strong> is defined at the
+table type level and governs uniqueness/sorting.
+A <strong>secondary key</strong> can be added
+later to speed up specific access patterns on
+the same table.
 </p>
 
 <pre><code class="language-abap">
 
-" Standardtabelle mit Sekundärschlüssel
+" Standard table with secondary key
 DATA lt_customers TYPE STANDARD TABLE OF ty_customer
     WITH NON-UNIQUE SORTED KEY by_name
         COMPONENTS name.
 
-" Schneller Lookup über Sekundärschlüssel
+" Fast lookup using secondary key
 READ TABLE lt_customers
     WITH TABLE KEY by_name
         COMPONENTS name = 'ACME'
@@ -2199,11 +2380,11 @@ READ TABLE lt_customers
 </code></pre>
 
 
-<h3>Häufige Operationen</h3>
+<h3>Common Operations</h3>
 
 <pre><code class="language-abap">
 
-" APPEND (nur Standardtabellen)
+" APPEND (standard tables only)
 APPEND ls_customer TO lt_customers.
 
 " INSERT
@@ -2214,7 +2395,7 @@ READ TABLE lt_customers
     INTO DATA(ls_found)
     WITH KEY id = 100.
 
-" LOOP AT mit WHERE
+" LOOP AT with WHERE
 LOOP AT lt_customers INTO DATA(ls_c)
     WHERE status = 'A'.
     " ...
@@ -2233,35 +2414,33 @@ MODIFY lt_customers FROM ls_customer
 </code></pre>
 
 
-<h3>Performance-Regeln</h3>
+<h3>Performance Rules</h3>
 
 <ul>
-<li><code>READ TABLE</code> auf einer Standardtabelle
-mit <code>WITH KEY</code> ist <strong>linear</strong> —
-langsam bei großen Tabellen.</li>
-<li><code>READ TABLE ... INDEX</code> ist O(1) bei
-jedem Tabellentyp.</li>
-<li><code>ASSIGNING</code> + Feldsymbole verwenden,
-um das Kopieren großer Zeilen in Schleifen zu
-vermeiden.</li>
-<li><code>HASHED</code> für große Lookup-Tabellen
-bevorzugen, <code>SORTED</code> wenn auch die
-Reihenfolge benötigt wird.</li>
-<li><code>LOOP AT ... WHERE</code> auf riesigen
-Tabellen vermeiden, wenn ein gefilterter
-SQL-Read schneller wäre.</li>
+<li><code>READ TABLE</code> on a standard table
+with <code>WITH KEY</code> is <strong>linear</strong> —
+slow for large tables.</li>
+<li><code>READ TABLE ... INDEX</code> is O(1) on any
+table type.</li>
+<li>Use <code>ASSIGNING</code> + field symbols to
+avoid copying large rows in loops.</li>
+<li>Prefer <code>HASHED</code> for large lookup
+tables, <code>SORTED</code> when you also need
+order.</li>
+<li>Avoid <code>LOOP AT ... WHERE</code> on huge
+tables when a filtered SQL read would be faster.</li>
 </ul>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-"Welcher Tabellentyp ist am schnellsten für
-Schlüsselzugriff?" — <strong>HASHED</strong>.
-"Welcher ist am schnellsten für Indexzugriff?" —
-<strong>STANDARD</strong> (jeder Typ ist O(1) auf
-Index, aber Standard ist dafür ausgelegt).
+"Which table type is fastest for key access?" —
+<strong>HASHED</strong>.
+"Which is fastest for index access?" —
+<strong>STANDARD</strong> (every type is O(1) on
+index, but standard is designed for it).
 
 </div>
 
@@ -2283,84 +2462,82 @@ Index, aber Standard ist dafür ausgelegt).
 
 <div class="module-content">
 
-<h3>Core DDIC-Objekte</h3>
+<h3>Core DDIC Objects</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Objekt</th>
-<th>Zweck</th>
-<th>Wiederverwendung</th>
+<th>Object</th>
+<th>Purpose</th>
+<th>Reuse</th>
 </tr>
 <tr>
-<td><strong>Domäne</strong></td>
-<td>Technische Definition: Typ, Länge, Wertebereich</td>
-<td>Wiederverwendbar über Datenelemente</td>
+<td><strong>Domain</strong></td>
+<td>Technical definition: type, length, value range</td>
+<td>Reusable across data elements</td>
 </tr>
 <tr>
-<td><strong>Datenelement</strong></td>
-<td>Semantische Bedeutung: Feldlabels, Dokumentation</td>
-<td>Verwendet in Strukturen und Tabellen</td>
+<td><strong>Data Element</strong></td>
+<td>Semantic meaning: field labels, documentation</td>
+<td>Used in structures and tables</td>
 </tr>
 <tr>
-<td><strong>Struktur</strong></td>
-<td>Wiederverwendbare Feldgruppe, kein Datenspeicher</td>
-<td>Komponenten für Tabellen und Programme</td>
+<td><strong>Structure</strong></td>
+<td>Reusable field group, no data storage</td>
+<td>Components for tables and programs</td>
 </tr>
 <tr>
-<td><strong>Tabelle</strong></td>
-<td>Physischer Speicher (transparente Tabellen)</td>
-<td>Definiert mit Datenelementen</td>
+<td><strong>Table</strong></td>
+<td>Physical storage (transparent tables)</td>
+<td>Defined with data elements</td>
 </tr>
 </table>
 </div>
 
 
-<h3>Tabellenkategorien</h3>
+<h3>Table Categories</h3>
 
 <ul>
-<li><strong>Transparente Tabellen</strong> — Eins-zu-eins
-mit Datenbanktabellen; die Standardwahl.</li>
-<li><strong>Pooled Tables</strong> — in einem
-Datenbankpool gruppiert; historisch, in Cloud
-eingeschränkt.</li>
-<li><strong>Cluster Tables</strong> — mehrere Tabellen
-in einem Cluster; historisch, in Cloud
-eingeschränkt.</li>
+<li><strong>Transparent tables</strong> — one-to-one
+with database tables; the standard choice.</li>
+<li><strong>Pooled tables</strong> — grouped into a
+database pool; historical, limited in cloud.</li>
+<li><strong>Cluster tables</strong> — multiple tables
+stored in one cluster; historical, limited in
+cloud.</li>
 </ul>
 
 
-<h3>Technische Einstellungen</h3>
+<h3>Technical Settings</h3>
 
 <ul>
-<li><strong>Data Class</strong> — beeinflusst die
-physische Platzierung.</li>
-<li><strong>Size Category</strong> — erwartete
-Zeilenanzahl.</li>
-<li><strong>Buffering</strong> — full, generic oder
-none; auf Applikationsserver-Ebene gecacht.</li>
-<li><strong>Logging</strong> — ob Änderungen
-protokolliert werden.</li>
+<li><strong>Data class</strong> — affects physical
+placement.</li>
+<li><strong>Size category</strong> — expected row
+count.</li>
+<li><strong>Buffering</strong> — full, generic, or
+none; cached at application server level.</li>
+<li><strong>Logging</strong> — whether changes are
+logged.</li>
 </ul>
 
 
-<h3>Feldlängenänderung &amp; Aktivierung</h3>
+<h3>Field Length Change &amp; Activation</h3>
 
 <p>
-Wenn Sie ein Tabellenfeld <strong>verkürzen</strong>,
-muss das System möglicherweise Daten konvertieren
-und die Tabelle kann nicht online konvertiert
-werden — die Konvertierung wird bei der Aktivierung
-durchgeführt. Dies ist ein klassisches Prüfungsthema,
-da es die Verfügbarkeit beeinflusst.
+If you <strong>shorten</strong> a table field, the
+system may need to convert data and the table
+cannot be converted online — the conversion is
+performed during activation. This is a classic
+exam topic because it affects availability.
 </p>
 
 
-<h3>Buffering-Hinweise</h3>
+<h3>Buffering Notes</h3>
 
 <pre><code class="language-abap">
 
-" Gepufferter Zugriff
+" Buffered access
 SELECT SINGLE * FROM zconfig
     INTO @DATA(ls_cfg)
     WHERE key_field = @lv_key.
@@ -2368,23 +2545,22 @@ SELECT SINGLE * FROM zconfig
 </code></pre>
 
 <p>
-Gepufferte Tabellen werden aus dem
-Applikationsserver-Puffer gelesen, nicht aus der
-Datenbank. Dies ist schnell für kleine, sich selten
-ändernde Konfigurationsdaten — und gefährlich für
-sich häufig ändernde Daten.
+Buffered tables are read from the application
+server buffer, not the database. This is fast for
+small, rarely-changing configuration data — and
+dangerous for frequently-changing data.
 </p>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Eine Aufgabe könnte eine Tabelle präsentieren,
-die ständig gelesen, aber oft geändert wird.
-Buffering wäre <em>falsch</em>, weil der Puffer
-veralten würde. Wählen Sie Buffering nur für
-read-mostly Konfigurationstabellen.
+A task might present a table that is read
+constantly but changes often. Buffering would be
+<em>wrong</em> because the buffer would become
+stale. Choose buffering for read-mostly
+configuration tables only.
 
 </div>
 
@@ -2406,50 +2582,49 @@ read-mostly Konfigurationstabellen.
 
 <div class="module-content">
 
-<h3>Wichtige Themen</h3>
+<h3>Important Topics</h3>
 
 <ul>
-<li>Klassendefinition vs. Implementierung</li>
+<li>Class definition vs. implementation</li>
 <li>PUBLIC / PROTECTED / PRIVATE</li>
-<li>Instanzmethoden &amp; -attribute</li>
-<li>Statische Methoden &amp; Attribute</li>
+<li>Instance methods &amp; attributes</li>
+<li>Static methods &amp; attributes</li>
 <li>Interfaces</li>
-<li>Vererbung &amp; Redefinition</li>
-<li>Polymorphismus</li>
-<li>Objekt-Referenzen</li>
-<li>Exception-Klassen</li>
+<li>Inheritance &amp; redefinition</li>
+<li>Polymorphism</li>
+<li>Object references</li>
+<li>Exception classes</li>
 </ul>
 
 
-<h3>Aufruf-Syntax — Stark getestet</h3>
+<h3>Calling Syntax — Heavily Tested</h3>
 
 <pre><code class="language-abap">
 
-" Statischer Methodenaufruf (Klasse =>)
+" Static method call (class =>)
 DATA(lv_result) = zcl_util=>get_version( ).
 
-" Instanzmethodenaufruf (->)
+" Instance method call (->)
 DATA(lo_obj) = NEW zcl_util( ).
 DATA(lv_name) = lo_obj->get_name( ).
 
-" Statischer Attributzugriff
+" Static attribute access
 DATA(lv_count) = zcl_util=>mv_counter.
 
-" Instanzattributzugriff
+" Instance attribute access
 DATA(lv_id) = lo_obj->mv_id.
 
 </code></pre>
 
 <p>
-Merken Sie sich die beiden Pfeile:
-<code>=></code> ist für <strong>statischen</strong>
-Zugriff, <code>-></code> ist für
-<strong>Instanz</strong>-Zugriff. Eine sehr
-häufige Prüfungsfalle vertauscht sie.
+Memorize the two arrows:
+<code>=></code> is for <strong>static</strong> access,
+<code>-></code> is for <strong>instance</strong>
+access. A very common exam trap swaps them.
 </p>
 
 
-<h3>Interface-Beispiel</h3>
+<h3>Interface Example</h3>
 
 <pre><code class="language-abap">
 
@@ -2472,7 +2647,7 @@ CLASS zcl_customer IMPLEMENTATION.
 ENDCLASS.
 
 
-" Polymorpher Aufruf
+" Polymorphic call
 DATA lo_cust TYPE REF TO zif_customer.
 lo_cust = NEW zcl_customer( ).
 DATA(lv_name) = lo_cust->get_name( ).
@@ -2480,7 +2655,7 @@ DATA(lv_name) = lo_cust->get_name( ).
 </code></pre>
 
 
-<h3>Vererbung &amp; Redefinition</h3>
+<h3>Inheritance &amp; Redefinition</h3>
 
 <pre><code class="language-abap">
 
@@ -2499,23 +2674,23 @@ ENDCLASS.
 </code></pre>
 
 
-<h3>Exception-Klassen</h3>
+<h3>Exception Classes</h3>
 
 <ul>
-<li><code>CX_STATIC_CHECK</code> — muss deklariert
-oder behandelt werden</li>
-<li><code>CX_DYNAMIC_CHECK</code> — wird zur Laufzeit
-geprüft</li>
-<li><code>CX_NO_CHECK</code> — wird nicht geprüft</li>
+<li><code>CX_STATIC_CHECK</code> — must be declared
+or handled</li>
+<li><code>CX_DYNAMIC_CHECK</code> — checked at
+runtime</li>
+<li><code>CX_NO_CHECK</code> — not checked</li>
 </ul>
 
 <pre><code class="language-abap">
 
-" Statische Check-Exception deklarieren
+" Declare static check exception
 METHODS do_work
     RAISING zcx_my_error.
 
-" Auslösen
+" Raise
 RAISE EXCEPTION TYPE zcx_my_error
     EXPORTING
         textid = zcx_my_error=>invalid_input.
@@ -2523,32 +2698,31 @@ RAISE EXCEPTION TYPE zcx_my_error
 </code></pre>
 
 
-<h3>Sichtbarkeiten — Prüfungsrelevant</h3>
+<h3>Visibilities — Exam-Relevant</h3>
 
 <p>
-Eine typische Prüfungsaufgabe verlangt eine
-Klassenhierarchie mit <strong>exakten
-Sichtbarkeitsregeln</strong>:
+A typical exam task requires a class hierarchy
+with <strong>exact visibility rules</strong>:
 </p>
 
 <ul>
-<li><code>PUBLIC</code> — von überall zugänglich</li>
-<li><code>PROTECTED</code> — nur in der Klasse und
-Unterklassen</li>
-<li><code>PRIVATE</code> — nur in der Klasse selbst</li>
-<li><code>PUBLIC READ-ONLY</code> — lesbar von außen,
-schreibbar nur intern</li>
+<li><code>PUBLIC</code> — accessible from anywhere</li>
+<li><code>PROTECTED</code> — only in the class and
+subclasses</li>
+<li><code>PRIVATE</code> — only in the class itself</li>
+<li><code>PUBLIC READ-ONLY</code> — readable from
+outside, writable only internally</li>
 </ul>
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-In der praktischen Prüfung wird die
-Sichtbarkeit <strong>automatisiert geprüft</strong>.
-Wenn die Aufgabe sagt "Attribut X soll
-public-readonly sein", dann muss es exakt so
-definiert werden — nicht public, nicht private.
+In the practical exam, visibility is
+<strong>graded automatically</strong>. If the task
+says "attribute X should be public-readonly", then
+it must be defined exactly that way — not public,
+not private.
 
 </div>
 
@@ -2570,20 +2744,20 @@ definiert werden — nicht public, nicht private.
 
 <div class="module-content">
 
-<h3>Core-Themen</h3>
+<h3>Core Topics</h3>
 
 <ul>
 <li>SELECT / JOIN / WHERE</li>
 <li>GROUP BY / HAVING / ORDER BY</li>
-<li>Aggregationen</li>
-<li>SQL-Ausdrücke &amp; Funktionen</li>
-<li>Host-Variablen (<code>@</code>)</li>
-<li>Datenbankseitige Verarbeitung</li>
-<li>Code Pushdown</li>
+<li>Aggregations</li>
+<li>SQL expressions &amp; functions</li>
+<li>Host variables (<code>@</code>)</li>
+<li>Database-side processing</li>
+<li>Code pushdown</li>
 </ul>
 
 
-<h3>Modernes SELECT</h3>
+<h3>Modern SELECT</h3>
 
 <pre><code class="language-abap">
 
@@ -2629,11 +2803,11 @@ SELECT FROM zorders
 </code></pre>
 
 
-<h3>SQL-Ausdrücke</h3>
+<h3>SQL Expressions</h3>
 
 <pre><code class="language-abap">
 
-" CASE, CAST, COALESCE, String-Funktionen
+" CASE, CAST, COALESCE, string functions
 SELECT FROM zcustomer
     FIELDS id,
            name,
@@ -2650,31 +2824,31 @@ SELECT FROM zcustomer
 <h3>Code Pushdown</h3>
 
 <p>
-Code Pushdown bedeutet, datenintensive Verarbeitung
-<strong>so nah wie möglich an die Datenbank</strong>
-zu verlagern, anstatt große Datenmengen abzurufen
-und alles in ABAP zu verarbeiten.
+Code pushdown means moving data-intensive
+processing <strong>as close to the database as
+possible</strong> instead of retrieving large
+datasets and processing everything in ABAP.
 </p>
 
 <div class="rule-grid">
 <div class="rule-col allowed">
 <h5>✓ Push down</h5>
 <ul>
-<li>Filtern (<code>WHERE</code>)</li>
-<li>Joinen verwandter Tabellen</li>
+<li>Filtering (<code>WHERE</code>)</li>
+<li>Joining related tables</li>
 <li>Aggregation (<code>SUM</code>, <code>COUNT</code>)</li>
-<li>Sortieren (<code>ORDER BY</code>)</li>
-<li>Spaltenprojektion (nur benötigte Felder)</li>
-<li>Berechnungen in SQL-Ausdrücken</li>
+<li>Sorting (<code>ORDER BY</code>)</li>
+<li>Column projection (only needed fields)</li>
+<li>Calculations in SQL expressions</li>
 </ul>
 </div>
 <div class="rule-col forbidden">
-<h5>✗ In ABAP belassen</h5>
+<h5>✗ Keep in ABAP</h5>
 <ul>
-<li>Komplexe prozedurale Logik mit Seiteneffekten</li>
-<li>Geschäftsregeln mit externen Aufrufen</li>
-<li>Zeilenweise Formatierung für UI</li>
-<li>Logik, die nicht in SQL ausgedrückt werden kann</li>
+<li>Complex procedural logic with side effects</li>
+<li>Business rules with external calls</li>
+<li>Row-by-row formatting for UI</li>
+<li>Logic that cannot be expressed in SQL</li>
 </ul>
 </div>
 </div>
@@ -2682,13 +2856,12 @@ und alles in ABAP zu verarbeiten.
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Eine Aufgabe könnte einen langsamen Report
-präsentieren. Die richtige Antwort ist fast immer,
-den <em>Datentransfer zu reduzieren und die
-Verarbeitung nach unten zu verlagern</em> — nicht
-Buffering hinzuzufügen oder Speicher zu erhöhen.
+A task might present a slow report. The correct
+answer is almost always to <em>reduce data
+transfer and push processing down</em> — not to
+add buffering or increase memory.
 
 </div>
 
@@ -2710,39 +2883,39 @@ Buffering hinzuzufügen oder Speicher zu erhöhen.
 
 <div class="module-content">
 
-<h3>Werkzeuge, die Sie kennen müssen</h3>
+<h3>Tools You Must Know</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Werkzeug</th>
-<th>Transaktion</th>
-<th>Zweck</th>
+<th>Tool</th>
+<th>Transaction</th>
+<th>Purpose</th>
 </tr>
 <tr>
 <td>ABAP Debugger</td>
 <td>/h</td>
-<td>Durchlaufenden Code schrittweise ausführen</td>
+<td>Step through running code</td>
 </tr>
 <tr>
 <td>ABAP Profiler</td>
 <td>SAT</td>
-<td>Aggregierte Laufzeitanalyse der ABAP-Ausführung</td>
+<td>Aggregated runtime analysis of ABAP execution</td>
 </tr>
 <tr>
 <td>SQL Trace</td>
 <td>ST05</td>
-<td>Datenbankzugriffe analysieren, langsames SQL finden</td>
+<td>Analyze database access, find slow SQL</td>
 </tr>
 <tr>
 <td>Code Inspector</td>
 <td>SCI</td>
-<td>Statische Checks: Performance, Sicherheit, Syntax</td>
+<td>Static checks: performance, security, syntax</td>
 </tr>
 <tr>
 <td>ABAP Test Cockpit</td>
 <td>ATC</td>
-<td>Zentrales Qualitätsgate für Transporte</td>
+<td>Central quality gate for transports</td>
 </tr>
 </table>
 </div>
@@ -2751,39 +2924,39 @@ Buffering hinzuzufügen oder Speicher zu erhöhen.
 <h3>ABAP Profiler (SAT)</h3>
 
 <ul>
-<li>Aggregierte Ansicht: Gesamtzeit pro Prozedur</li>
-<li>Hit List: teuerste Operationen</li>
-<li>Aufrufhierarchie: wer was aufgerufen hat</li>
-<li>Datenbankzugriff-Aufschlüsselung</li>
+<li>Aggregated view: total time per procedure</li>
+<li>Hit list: most expensive operations</li>
+<li>Call hierarchy: who called what</li>
+<li>Database access breakdown</li>
 </ul>
 
 
 <h3>SQL Trace (ST05)</h3>
 
 <ul>
-<li>Erfasst alle Datenbank-Statements während eines Trace</li>
-<li>Identifiziert <strong>Full Table Scans</strong> und
-fehlende Indizes</li>
-<li>Zeigt den Ausführungsplan</li>
-<li>Suchen Sie nach <code>SELECT *</code>, wo eine
-schmalere Projektion ausreichen würde</li>
-<li>Suchen Sie nach SELECT innerhalb LOOP (klassischer
-Performance-Killer)</li>
+<li>Captures all database statements during a trace</li>
+<li>Identifies <strong>full table scans</strong> and
+missing indexes</li>
+<li>Shows the execution plan</li>
+<li>Look for <code>SELECT *</code> where a narrower
+projection would suffice</li>
+<li>Look for SELECT inside LOOP (classic performance
+killer)</li>
 </ul>
 
 
-<h3>Klassische Anti-Patterns</h3>
+<h3>Classic Anti-Patterns</h3>
 
 <pre><code class="language-abap">
 
-" ❌ SELECT innerhalb LOOP — N+1 Queries
+" ❌ SELECT inside LOOP — N+1 queries
 LOOP AT lt_customers INTO DATA(ls_c).
     SELECT SINGLE name FROM zcompany
         INTO @DATA(lv_name)
         WHERE company_id = @ls_c-company_id.
 ENDLOOP.
 
-" ✓ Ein JOIN oder ein SELECT ... FOR ALL ENTRIES
+" ✓ One JOIN or one SELECT ... FOR ALL ENTRIES
 SELECT c~id, co~name
     FROM zcustomer AS c
     INNER JOIN zcompany AS co
@@ -2793,31 +2966,30 @@ SELECT c~id, co~name
 </code></pre>
 
 
-<h3>Weitere Performance-Prinzipien</h3>
+<h3>Other Performance Principles</h3>
 
 <ul>
-<li>Nur die benötigten Spalten selektieren —
-<code>SELECT *</code> vermeiden.</li>
-<li><code>WHERE</code> verwenden, nicht ABAP-Filterung,
-wenn möglich.</li>
-<li><code>FOR ALL ENTRIES</code> sorgfältig verwenden —
-immer gegen leere Treibertabelle absichern.</li>
-<li><code>ASSIGNING</code> statt <code>INTO</code> in
-Schleifen bei großen Zeilen bevorzugen.</li>
-<li>Verschachtelte Schleifen vermeiden, wenn ein
-Hashed Lookup funktioniert.</li>
+<li>Select only the columns you need — avoid
+<code>SELECT *</code>.</li>
+<li>Use <code>WHERE</code>, not ABAP filtering, when
+possible.</li>
+<li>Use <code>FOR ALL ENTRIES</code> carefully —
+always guard against an empty driver table.</li>
+<li>Prefer <code>ASSIGNING</code> to
+<code>INTO</code> in loops for large rows.</li>
+<li>Avoid nested loops when a hashed lookup works.</li>
 </ul>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-In der praktischen Prüfung können Sie den
-ABAP Debugger und den Syntax-Checker nutzen,
-um Ihren Code zu verifizieren. Testen Sie, was
-Sie gebaut haben — mit <code>IF_OO_ADT_CLASSRUN</code>
-und <code>MAIN</code>.
+In the practical exam, you can use the ABAP
+Debugger and the syntax checker to verify your
+code. Test what you built — with
+<code>IF_OO_ADT_CLASSRUN</code> and
+<code>MAIN</code>.
 
 </div>
 
@@ -2877,14 +3049,14 @@ define view entity ZI_Customer
 </code></pre>
 
 
-<h3>Kardinalität</h3>
+<h3>Cardinality</h3>
 
 <pre><code class="language-abap">
 
-" [0..1]  = höchstens eins
-" [1..1]  = genau eins
-" [0..*]  = beliebig viele
-" [1..*]  = mindestens eins
+" [0..1]  = at most one
+" [1..1]  = exactly one
+" [0..*]  = any number
+" [1..*]  = at least one
 
 association [0..*]
     to I_OrderItem as _Items
@@ -2902,7 +3074,7 @@ _CompanyCode.CompanyName as CompanyName
 </code></pre>
 
 
-<h3>Parameter</h3>
+<h3>Parameters</h3>
 
 <pre><code class="language-abap">
 
@@ -2920,38 +3092,37 @@ where status = $parameters.p_status
 </code></pre>
 
 
-<h3>Wichtige Konzepte</h3>
+<h3>Key Concepts</h3>
 
 <ul>
-<li><strong>Association vs. JOIN</strong> — eine
-Association ist eine lazy, wiederverwendbare
-Beziehungsdefinition; ein JOIN ist eager und
-wird in der Query ausgeführt.</li>
-<li><strong>Kardinalität</strong> — auf der
-Association deklariert, von Konsumenten (z.B. RAP)
-genutzt, um die Beziehung zu verstehen.</li>
-<li><strong>Path Expression</strong> — Navigation
-von einer Entity zur anderen über
+<li><strong>Association vs. JOIN</strong> — an
+association is a lazy, reusable relationship
+definition; a JOIN is eager and executed in the
+query.</li>
+<li><strong>Cardinality</strong> — declared on the
+association, used by consumers (e.g. RAP) to
+understand the relationship.</li>
+<li><strong>Path Expression</strong> — navigate
+from one entity to another via
 <code>_Association.Field</code>.</li>
 <li><strong>Annotations</strong> —
 <code>@EndUserText.label</code>,
 <code>@Semantics</code>, <code>@AccessControl</code>,
-<code>@ObjectModel</code> — steuern UI und
-Verhalten.</li>
-<li><strong>Parameter</strong> — Eingabewerte, die
-zur Query-Zeit über <code>$parameters</code>
-gebunden werden.</li>
+<code>@ObjectModel</code> — drive UI and
+behavior.</li>
+<li><strong>Parameters</strong> — input values
+bound at query time via <code>$parameters</code>.</li>
 </ul>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Eine Aufgabe könnte verlangen, eine CDS View
-aus einer Tabelle zu generieren und mit
-Assoziationen zu erweitern. Üben Sie das
-Generieren in ADT — der Assistent führt Sie.
+A task might require generating a CDS view from
+a table and extending it with associations.
+Practice generating in ADT — the wizard guides
+you.
 
 </div>
 
@@ -2967,17 +3138,17 @@ Generieren in ADT — der Assistent führt Sie.
 <div class="panel" id="panel-dcl">
 
 <div class="module-header">
-    <h2>🔐 DCL / Autorisierung</h2>
-    <span class="weight-badge">Datenmodellierung</span>
+    <h2>🔐 DCL / Authorization</h2>
+    <span class="weight-badge">Data Modeling</span>
 </div>
 
 <div class="module-content">
 
-<h3>Grundlegendes DCL-Konzept</h3>
+<h3>Basic DCL Concept</h3>
 
 <p>
-DCL definiert Autorisierungsbeschränkungen für
-CDS-basierten Datenzugriff.
+DCL defines authorization restrictions for
+CDS-based data access.
 </p>
 
 
@@ -2997,42 +3168,42 @@ define role ZI_Customer_Role {
 </code></pre>
 
 
-<h3>Wichtige Konzepte</h3>
+<h3>Important Concepts</h3>
 
 <ul>
 <li>DCL Role</li>
 <li><code>GRANT SELECT</code></li>
 <li><code>$user</code> / <code>$session</code></li>
-<li>Autorisierungsbedingungen</li>
-<li>CDS-Autorisierungs-Annotationen</li>
-<li>Interaktion zwischen CDS und DCL</li>
-<li>Access Control auf Assoziationen</li>
+<li>Authorization conditions</li>
+<li>CDS authorization annotations</li>
+<li>Interaction between CDS and DCL</li>
+<li>Access control on associations</li>
 </ul>
 
 
-<h3>Wie es zusammenspielt</h3>
+<h3>How It Fits Together</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Schicht</th>
-<th>Steuert</th>
+<th>Layer</th>
+<th>Controls</th>
 </tr>
 <tr>
 <td>CDS View Entity</td>
-<td>Welche Daten existieren und wie sie geformt sind</td>
+<td>What data exists and how it is shaped</td>
 </tr>
 <tr>
 <td>DCL Role</td>
-<td>Wer welche Zeilen lesen darf</td>
+<td>Who can read which rows</td>
 </tr>
 <tr>
-<td>Autorisierungsobjekt</td>
-<td>Klassische SAP-Berechtigungsprüfung</td>
+<td>Authorization object</td>
+<td>Classic SAP authorization check</td>
 </tr>
 <tr>
 <td>Behavior Authorization (RAP)</td>
-<td>Wer erstellen/ändern/löschen darf</td>
+<td>Who can create/update/delete</td>
 </tr>
 </table>
 </div>
@@ -3040,13 +3211,11 @@ define role ZI_Customer_Role {
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Eine typische Aufgabe ist: "Fügen Sie eine
-CDS-Zugriffskontrolle auf eine kopierte CDS View
-unter Verwendung eines Autorisierungsobjekts
-hinzu." Üben Sie das Anlegen einer DCL Role
-in ADT.
+A typical task is: "Add a CDS access control to
+a copied CDS view using an authorization object."
+Practice creating a DCL Role in ADT.
 
 </div>
 
@@ -3056,66 +3225,66 @@ in ADT.
 
 
 <!-- =====================================================
-     RAP ARCHITEKTUR
+     RAP ARCHITECTURE
      ===================================================== -->
 
 <div class="panel" id="panel-rap">
 
 <div class="module-header">
-    <h2>🧱 RAP Architektur</h2>
+    <h2>🧱 RAP Architecture</h2>
     <span class="weight-badge">11–20%</span>
 </div>
 
 <div class="module-content">
 
-<h3>Typischer RAP-Stack</h3>
+<h3>Typical RAP Stack</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Schicht</th>
-<th>Zweck</th>
+<th>Layer</th>
+<th>Purpose</th>
 </tr>
 <tr>
 <td>CDS Data Model</td>
-<td>Business-Objekt-Datenmodell</td>
+<td>Business object data model</td>
 </tr>
 <tr>
 <td>Behavior Definition</td>
-<td>Transaktionales Verhalten</td>
+<td>Transactional behavior</td>
 </tr>
 <tr>
 <td>Behavior Implementation</td>
-<td>Benutzerdefinierte Geschäftslogik</td>
+<td>Custom business logic</td>
 </tr>
 <tr>
 <td>Service Definition</td>
-<td>Definiert, was exponiert wird</td>
+<td>Defines what is exposed</td>
 </tr>
 <tr>
 <td>Service Binding</td>
-<td>Bindet den Service an Protokoll/Runtime</td>
+<td>Binds the service to a protocol/runtime</td>
 </tr>
 <tr>
 <td>Consumer</td>
-<td>Fiori / API / externer Konsument</td>
+<td>Fiori / API / external consumer</td>
 </tr>
 </table>
 </div>
 
 
-<h3>Wichtige RAP-Konzepte</h3>
+<h3>Important RAP Concepts</h3>
 
 <ul>
 <li>Business Object</li>
-<li>Root Entity &amp; Child Entities</li>
+<li>Root entity &amp; child entities</li>
 <li>Composition</li>
-<li>Managed Szenario</li>
-<li>Unmanaged Szenario</li>
+<li>Managed scenario</li>
+<li>Unmanaged scenario</li>
 <li>Draft</li>
-<li>Behavior Definition &amp; Implementation</li>
-<li>Determination / Validation / Action</li>
-<li>Feature Control</li>
+<li>Behavior definition &amp; implementation</li>
+<li>Determination / validation / action</li>
+<li>Feature control</li>
 <li>Authorization</li>
 <li>EML</li>
 </ul>
@@ -3127,20 +3296,20 @@ in ADT.
 <div class="rule-col allowed">
 <h5>Managed</h5>
 <ul>
-<li>Framework übernimmt CREATE/UPDATE/DELETE</li>
-<li>Persistent Table in BDEF deklariert</li>
-<li>Sie fügen Determinations, Validations,
-Actions hinzu</li>
-<li>Standardwahl für neue BOs</li>
+<li>Framework handles CREATE/UPDATE/DELETE</li>
+<li>Persistent table declared in BDEF</li>
+<li>You add determinations, validations,
+actions</li>
+<li>Default choice for new BOs</li>
 </ul>
 </div>
 <div class="rule-col forbidden">
 <h5>Unmanaged</h5>
 <ul>
-<li>Sie implementieren Save/Read-Logik selbst</li>
-<li>Verwendet, wenn Persistenz nicht standard ist</li>
-<li>Oft Wrapper um Legacy-APIs oder externe Daten</li>
-<li>Mehr Code, mehr Kontrolle</li>
+<li>You implement save/read logic yourself</li>
+<li>Used when persistence is non-standard</li>
+<li>Often wraps legacy APIs or external data</li>
+<li>More code, more control</li>
 </ul>
 </div>
 </div>
@@ -3148,15 +3317,15 @@ Actions hinzu</li>
 
 <div class="exam-tip">
 
-<strong>Denken Sie in Schichten:</strong>
+<strong>Think in layers:</strong>
 
-CDS beschreibt die Daten.
+CDS describes the data.
 
-Behavior beschreibt, was passieren kann.
+Behavior describes what can happen.
 
-Service Definition beschreibt, was exponiert wird.
+Service definition describes what is exposed.
 
-Service Binding macht den Service verfügbar.
+Service binding makes the service available.
 
 </div>
 
@@ -3213,26 +3382,24 @@ authorization master
 <h3>Determination</h3>
 
 <p>
-Leitet Werte automatisch ab oder ändert sie
-basierend auf Geschäftsereignissen. Wird durch
-Framework-Events ausgelöst (<code>on modify</code>,
-<code>on save</code>).
+Automatically derives or changes values based on
+business events. Triggered by framework events
+(<code>on modify</code>, <code>on save</code>).
 </p>
 
 <h3>Validation</h3>
 
 <p>
-Prüft, ob Geschäftsdaten vor dem Speichern gültig
-sind. Meldet Nachrichten; ändert keine Daten.
+Checks whether business data is valid before
+saving. Reports messages; does not change data.
 </p>
 
 <h3>Action</h3>
 
 <p>
-Repräsentiert eine explizite Geschäftsoperation,
-die von einem Konsumenten oder einer Anwendung
-initiiert wird. Wird über EML oder OData
-aufgerufen.
+Represents an explicit business operation
+initiated by a consumer or application. Called
+via EML or OData.
 </p>
 
 
@@ -3240,28 +3407,28 @@ aufgerufen.
 
 <pre><code class="language-abap">
 
-" Statische Instanz-Level-Kontrolle
+" Static instance-level control
 field ( readonly ) id, created_at, created_by;
 
-" Dynamische Kontrolle über Feature-Instanz
-" in der Implementierung
-" (z.B. Delete für bestimmte Instanzen deaktivieren)
+" Dynamic control via feature instance
+" in the implementation
+" (e.g. disable delete for certain instances)
 
 </code></pre>
 
 
 <div class="exam-tip">
 
-<strong>Sehr wichtig:</strong>
+<strong>Very important:</strong>
 
-Verwechseln Sie nicht Determination, Validation
-und Action.
+Do not confuse determination, validation and
+action.
 
 <ul>
-<li><strong>Determination</strong> — leitet Werte ab/ändert sie</li>
-<li><strong>Validation</strong> — prüft und meldet</li>
-<li><strong>Action</strong> — explizite, vom Konsumenten
-ausgelöste Operation</li>
+<li><strong>Determination</strong> — derives/changes values</li>
+<li><strong>Validation</strong> — checks and reports</li>
+<li><strong>Action</strong> — explicit consumer-triggered
+operation</li>
 </ul>
 
 </div>
@@ -3344,18 +3511,18 @@ COMMIT ENTITIES
 </code></pre>
 
 
-<h3>EML-Konzepte</h3>
+<h3>EML Concepts</h3>
 
 <ul>
 <li><code>READ ENTITIES</code> / <code>MODIFY ENTITIES</code></li>
 <li><code>CREATE</code> / <code>UPDATE</code> / <code>DELETE</code></li>
-<li><code>%cid</code> — clientseitige temporäre ID für
-neue Zeilen</li>
+<li><code>%cid</code> — client-side temporary ID for
+new rows</li>
 <li><code>MAPPED</code> / <code>FAILED</code> / <code>REPORTED</code></li>
 <li><code>COMMIT ENTITIES</code></li>
-<li><code>IN LOCAL MODE</code> — umgeht Autorisierung,
-wird innerhalb von Behavior-Implementierungen
-verwendet</li>
+<li><code>IN LOCAL MODE</code> — bypasses
+authorization, used inside behavior
+implementations</li>
 </ul>
 
 
@@ -3364,30 +3531,29 @@ verwendet</li>
 <div class="table-wrap">
 <table>
 <tr>
-<th>Aspekt</th>
+<th>Aspect</th>
 <th>EML</th>
 <th>ABAP SQL</th>
 </tr>
 <tr>
-<td>Arbeitet auf</td>
-<td>RAP Business Objects</td>
-<td>Datenbanktabellen / CDS</td>
+<td>Works on</td>
+<td>RAP business objects</td>
+<td>Database tables / CDS</td>
 </tr>
 <tr>
-<td>Löst Behavior aus</td>
-<td>Ja (Determinations, Validations, Actions)</td>
-<td>Nein</td>
+<td>Triggers behavior</td>
+<td>Yes (determinations, validations, actions)</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Autorisierung</td>
-<td>Ja (außer LOCAL MODE)</td>
-<td>Separat behandelt</td>
+<td>Authorization</td>
+<td>Yes (unless LOCAL MODE)</td>
+<td>Handled separately</td>
 </tr>
 <tr>
-<td>Transaktionaler Puffer</td>
-<td>Ja — Commit nötig</td>
-<td>Direkter DB-Schreibzugriff (in Cloud
-eingeschränkt)</td>
+<td>Transactional buffer</td>
+<td>Yes — commit needed</td>
+<td>Direct DB write (restricted in cloud)</td>
 </tr>
 </table>
 </div>
@@ -3395,13 +3561,12 @@ eingeschränkt)</td>
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Eine Aufgabe könnte verlangen, eine
-Business-Objekt-Instanz zu erstellen, bei der
-alle Validations und Determinations ausgeführt
-werden. Die Antwort ist <strong>EML</strong>,
-nicht direktes SQL.
+A task might require creating a business object
+instance with all validations and determinations
+applied. The answer is <strong>EML</strong>, not
+direct SQL.
 
 </div>
 
@@ -3442,71 +3607,70 @@ define service ZUI_CUSTOMER {
 <h3>Service Binding</h3>
 
 <p>
-Das Service Binding verbindet die Service Definition
-mit einem Protokoll und einer Runtime, die zum
-Exponieren des Services verwendet wird. Häufige
-Binding-Typen:
+The service binding connects the service definition
+to a protocol and runtime used to expose the
+service. Common binding types:
 </p>
 
 <ul>
-<li><strong>OData V2</strong> — UI (Fiori)-Nutzung</li>
-<li><strong>OData V4</strong> — UI (Fiori)-Nutzung,
+<li><strong>OData V2</strong> — UI (Fiori) usage</li>
+<li><strong>OData V4</strong> — UI (Fiori) usage,
 modern</li>
-<li><strong>Web API</strong> — Machine-to-Machine</li>
-<li><strong>SQL</strong> — direkter SQL-Zugriff
-über CDS</li>
-<li><strong>InA</strong> — Analytics</li>
+<li><strong>Web API</strong> — machine-to-machine</li>
+<li><strong>SQL</strong> — direct SQL access via
+CDS</li>
+<li><strong>InA</strong> — analytics</li>
 </ul>
 
 
-<h3>Den Unterschied kennen</h3>
+<h3>Know the Difference</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Artefakt</th>
-<th>Frage</th>
+<th>Artifact</th>
+<th>Question</th>
 </tr>
 <tr>
 <td>CDS</td>
-<td>Was ist das Datenmodell?</td>
+<td>What is the data model?</td>
 </tr>
 <tr>
 <td>Behavior</td>
-<td>Welche Operationen/Geschäftsregeln gibt es?</td>
+<td>What operations/business rules exist?</td>
 </tr>
 <tr>
 <td>Service Definition</td>
-<td>Was soll exponiert werden?</td>
+<td>What should be exposed?</td>
 </tr>
 <tr>
 <td>Service Binding</td>
-<td>Wie wird der Service exponiert?</td>
+<td>How is the service exposed?</td>
 </tr>
 </table>
 </div>
 
 
-<h3>Fiori Elements Beziehung</h3>
+<h3>Fiori Elements Relationship</h3>
 
 <p>
-Fiori-Elements-Apps konsumieren OData-Services,
-die über Service Bindings exponiert werden.
-Annotationen im CDS-Modell (<code>@UI</code>,
-<code>@ObjectModel</code>) steuern die generierte UI.
+Fiori elements apps consume OData services
+exposed via service bindings. Annotations in the
+CDS model (<code>@UI</code>,
+<code>@ObjectModel</code>) drive the generated UI.
 </p>
 
 
 <div class="exam-tip">
 
-<strong>Häufige Verwechslung:</strong>
+<strong>Common confusion:</strong>
 
-Service Definition und Service Binding sind
-nicht dasselbe Artefakt.
+Service definition and service binding are not
+the same artifact.
 
 <ul>
-<li>Definition — <em>was</em></li>
-<li>Binding — <em>wie</em></li>
+<li>Definition — <em>what</em></li>
+<li>Binding — <em>how</em></li>
 </ul>
 
 </div>
@@ -3523,8 +3687,8 @@ nicht dasselbe Artefakt.
 <div class="panel" id="panel-testing">
 
 <div class="module-header">
-    <h2>🧪 Testing &amp; Qualität</h2>
-    <span class="weight-badge">Qualität</span>
+    <h2>🧪 Testing &amp; Quality</h2>
+    <span class="weight-badge">Quality</span>
 </div>
 
 <div class="module-content">
@@ -3532,15 +3696,15 @@ nicht dasselbe Artefakt.
 <h3>ABAP Unit</h3>
 
 <ul>
-<li>Testklasse</li>
-<li>Testmethode</li>
+<li>Test class</li>
+<li>Test method</li>
 <li>Assertions (<code>cl_abap_unit_assert</code>)</li>
-<li>Testisolation</li>
-<li>Testbares Design (Dependency Injection)</li>
+<li>Test isolation</li>
+<li>Testable design (dependency injection)</li>
 </ul>
 
 
-<h3>Testklassen-Skelett</h3>
+<h3>Test Class Skeleton</h3>
 
 <pre><code class="language-abap">
 
@@ -3569,29 +3733,29 @@ ENDCLASS.
 </code></pre>
 
 
-<h3>Qualitätsthemen</h3>
+<h3>Quality Topics</h3>
 
 <ul>
-<li>Clean ABAP (Benennung, Lesbarkeit, kleine
-Methoden)</li>
-<li>Aussagekräftige Namen</li>
-<li>Exception Handling</li>
+<li>Clean ABAP (naming, readability, small
+methods)</li>
+<li>Meaningful names</li>
+<li>Exception handling</li>
 <li>Performance</li>
-<li>SQL-Effizienz</li>
-<li>Unit Testing</li>
-<li>Code Inspector / ATC-Checks</li>
+<li>SQL efficiency</li>
+<li>Unit testing</li>
+<li>Code Inspector / ATC checks</li>
 </ul>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungstipp:</strong>
+<strong>Exam tip:</strong>
 
-Eine Aufgabe könnte fragen, welches Design eine
-Klasse <em>testbar</em> macht. Die Antwort
-beinhaltet meist <strong>Dependency Injection</strong>
-(über Konstruktor oder Setter) statt Hardcoding
-innerhalb der Klasse.
+A task might ask which design makes a class
+<em>testable</em>. The answer usually involves
+<strong>dependency injection</strong> (via
+constructor or setter) rather than hard-coding
+inside the class.
 
 </div>
 
@@ -3607,79 +3771,76 @@ innerhalb der Klasse.
 <div class="panel" id="panel-clean">
 
 <div class="module-header">
-    <h2>🧹 Clean Core &amp; Erweiterbarkeit</h2>
+    <h2>🧹 Clean Core &amp; Extensibility</h2>
     <span class="weight-badge">11–20%</span>
 </div>
 
 <div class="module-content">
 
-<h3>Warum Clean Core?</h3>
+<h3>Why Clean Core?</h3>
 
 <p>
-Der Clean-Core-Ansatz zielt darauf ab, den
-SAP-Kern stabil und upgrade-fähig zu halten,
-während Erweiterungen in geeignete unterstützte
-Erweiterungsmechanismen platziert werden.
+The Clean Core approach aims to keep the SAP core
+stable and upgradeable while placing extensions
+in appropriate supported extension mechanisms.
 </p>
 
 
-<h3>Drei Erweiterungsmodelle</h3>
+<h3>Three Extension Models</h3>
 
 <div class="table-wrap">
 <table>
 <tr>
-<th>Modell</th>
-<th>Wo</th>
-<th>Werkzeuge</th>
-<th>Für</th>
+<th>Model</th>
+<th>Where</th>
+<th>Tools</th>
+<th>Use for</th>
 </tr>
 <tr>
-<td><strong>In-App</strong></td>
-<td>In S/4HANA Cloud</td>
-<td>Key-User-Werkzeuge, Custom Fields,
-Custom Logic</td>
-<td>Kleine Konfigurationserweiterungen durch
-Key-User</td>
+<td><strong>In-app</strong></td>
+<td>Inside S/4HANA Cloud</td>
+<td>Key user tools, custom fields, custom logic</td>
+<td>Small configuration-level extensions by key
+users</td>
 </tr>
 <tr>
 <td><strong>Developer</strong></td>
-<td>In S/4HANA Cloud</td>
-<td>ABAP Cloud, ADT, RAP, Released APIs</td>
-<td>Volle ABAP-Erweiterungen, BAdIs, RAP BOs</td>
+<td>Inside S/4HANA Cloud</td>
+<td>ABAP Cloud, ADT, RAP, released APIs</td>
+<td>Full ABAP extensions, BAdIs, RAP BOs</td>
 </tr>
 <tr>
-<td><strong>Side-by-Side</strong></td>
+<td><strong>Side-by-side</strong></td>
 <td>SAP BTP ABAP Environment</td>
-<td>ABAP Cloud auf BTP</td>
-<td>Neue Apps, Integrationen,
-Erweiterungen</td>
+<td>ABAP Cloud on BTP</td>
+<td>New apps, integrations, extensions</td>
 </tr>
 </table>
 </div>
 
 
-<h3>Wichtige Konzepte</h3>
+<h3>Important Concepts</h3>
 
 <ul>
-<li>Released APIs (C0-, C1-Contracts)</li>
-<li>Extension Points</li>
-<li>Upgrade-Stabilität</li>
+<li>Released APIs (C0, C1 contracts)</li>
+<li>Extension points</li>
+<li>Upgrade stability</li>
 <li>ABAP Cloud</li>
-<li>Custom CDS Entities</li>
+<li>Custom CDS entities</li>
 <li>Released BAdIs</li>
-<li>Keine Modifikationen am SAP-Standard</li>
+<li>No modifications to SAP standard</li>
 </ul>
 
 
 <div class="exam-tip">
 
-<strong>Prüfungsdenken:</strong>
+<strong>Exam thinking:</strong>
 
-Wenn mehrere Erweiterungsansätze möglich sind,
-überlegen Sie, ob die Lösung unterstützte
-Erweiterungsmechanismen und Clean-Core-Prinzipien
-befolgt. Eine Modifikation am SAP-Standardcode ist
-fast nie die richtige Antwort.
+When several extension approaches are possible,
+consider whether the solution follows supported
+extension mechanisms and Clean Core principles.
+A modification to standard SAP code is almost
+never the right answer.
 
 </div>
 
@@ -3689,23 +3850,22 @@ fast nie die richtige Antwort.
 
 
 <!-- =====================================================
-     PRAXISAUFGABEN: ADT
+     PRACTICE TASKS: ADT
      ===================================================== -->
 
 <div class="panel" id="panel-tasks-adt">
 
 <div class="module-header">
-    <h2>💻 Praxisaufgaben: Eclipse ADT</h2>
-    <span class="weight-badge">Prüfungssimulation</span>
+    <h2>💻 Practice Tasks: Eclipse ADT</h2>
+    <span class="weight-badge">Exam simulation</span>
 </div>
 
 <div class="info-box warn">
 
-<strong>Format:</strong> Diese Aufgaben simulieren die
-praktischen Prüfungsaufgaben. Bearbeiten Sie sie
-in einer echten ADT-Umgebung. Die Bewertung ist
-automatisiert — exakte Benennung, Typen und
-Sichtbarkeiten sind entscheidend.
+<strong>Format:</strong> These tasks simulate the
+practical exam tasks. Work on them in a real ADT
+environment. Grading is automated — exact naming,
+types, and visibilities are decisive.
 
 </div>
 
@@ -3714,33 +3874,32 @@ Sichtbarkeiten sind entscheidend.
 
 <h4>
 <span class="task-num">1</span>
-Paket und Transportauftrag anlegen
+Create package and transport request
 <span class="task-tag adt">ADT</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Sie werden in der Prüfung
-aufgefordert, ein eigenes Paket mit dem korrekten
-Super-Package und einem Transportauftrag
-anzulegen. Alle Objekte, die Sie erstellen, müssen
-in diesem Paket liegen.
+<strong>Scenario:</strong> In the exam you will be
+asked to create your own package with the correct
+super-package and a transport request. All objects
+you create must reside in this package.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Paket <code>ZPACKAGE_&lt;GRUPPE&gt;</code> mit
-Super-Package</li>
-<li>Transportauftrag zugeordnet</li>
-<li>Alle Objekte im Paket</li>
+<li>Package <code>ZPACKAGE_&lt;GROUP&gt;</code> with
+super-package</li>
+<li>Transport request assigned</li>
+<li>All objects in the package</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Der Paketname und
-das Super-Package werden exakt vorgegeben. Weichen
-Sie nicht ab. Der Transportauftrag wird
-automatisch erstellt, wenn Sie das Paket anlegen.
+<strong>Exam tip:</strong> The package name and the
+super-package are specified exactly. Do not
+deviate. The transport request is created
+automatically when you create the package.
 </div>
 
 </div>
@@ -3750,34 +3909,33 @@ automatisch erstellt, wenn Sie das Paket anlegen.
 
 <h4>
 <span class="task-num">2</span>
-Klassenhierarchie mit exakten Sichtbarkeiten
+Class hierarchy with exact visibilities
 <span class="task-tag adt">ADT</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Erstellen Sie eine
-Klassenhierarchie mit spezifischen Regeln zur
-Attribut-Sichtbarkeit. Die Aufgabe gibt vor:
-<code>public-readonly</code>, <code>protected</code>,
-<code>private</code> — und Sie müssen diese
-<strong>exakt</strong> einhalten.
+<strong>Scenario:</strong> Create a class hierarchy
+with specific rules for attribute visibility. The
+task specifies: <code>public-readonly</code>,
+<code>protected</code>, <code>private</code> — and
+you must follow these <strong>exactly</strong>.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Oberklasse mit definierten Attributen</li>
-<li>Unterklasse, die erbt</li>
-<li>Sichtbarkeiten exakt wie vorgegeben</li>
-<li>Methoden ggf. <code>REDEFINITION</code></li>
+<li>Superclass with defined attributes</li>
+<li>Subclass that inherits</li>
+<li>Visibilities exactly as specified</li>
+<li>Methods possibly <code>REDEFINITION</code></li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Die Sichtbarkeiten
-werden automatisiert geprüft. <code>PUBLIC READ-ONLY</code>
-bedeutet: von außen lesbar, nur intern
-schreibbar. Das ist nicht dasselbe wie
+<strong>Exam tip:</strong> Visibilities are graded
+automatically. <code>PUBLIC READ-ONLY</code>
+means: readable from outside, writable only
+internally. This is not the same as
 <code>PUBLIC</code>.
 </div>
 
@@ -3788,34 +3946,32 @@ schreibbar. Das ist nicht dasselbe wie
 
 <h4>
 <span class="task-num">3</span>
-Interne Tabelle optimieren
+Optimize internal table
 <span class="task-tag adt">ADT</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Eine bestehende
-Implementierung verwendet eine
-<code>STANDARD TABLE</code> mit linearem
-<code>READ TABLE</code> in einer Schleife.
-Optimieren Sie den Code, ohne die
-Funktionalität zu ändern.
+<strong>Scenario:</strong> An existing
+implementation uses a <code>STANDARD TABLE</code>
+with linear <code>READ TABLE</code> in a loop.
+Optimize the code without changing functionality.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Optimierte interne Tabelle
-(<code>HASHED</code> oder <code>SORTED</code>
-mit Sekundärschlüssel)</li>
-<li>Angepasste READ-Operation</li>
-<li>Gleiche Ausgabe</li>
+<li>Optimized internal table
+(<code>HASHED</code> or <code>SORTED</code> with
+secondary key)</li>
+<li>Adjusted READ operation</li>
+<li>Same output</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Für unique
-Key-Lookups ist <code>HASHED</code> die schnellste
-Wahl. Für sortierte Ausgabe mit Key-Zugriff
+<strong>Exam tip:</strong> For unique key lookups,
+<code>HASHED</code> is the fastest choice. For
+sorted output with key access,
 <code>SORTED</code>.
 </div>
 
@@ -3826,33 +3982,31 @@ Wahl. Für sortierte Ausgabe mit Key-Zugriff
 
 <h4>
 <span class="task-num">4</span>
-DDIC-Objekte anlegen
+Create DDIC objects
 <span class="task-tag adt">ADT</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Erstellen Sie eine
-transparente Tabelle mit Datenelementen und
-Domänen. Achten Sie auf die technischen
-Einstellungen (Data Class, Size Category,
-Buffering).
+<strong>Scenario:</strong> Create a transparent
+table with data elements and domains. Pay
+attention to technical settings (Data Class,
+Size Category, Buffering).
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Domäne(n)</li>
-<li>Datenelement(e)</li>
-<li>Transparente Tabelle</li>
-<li>Technische Einstellungen konfiguriert</li>
+<li>Domain(s)</li>
+<li>Data element(s)</li>
+<li>Transparent table</li>
+<li>Technical settings configured</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Die Tabelle muss
-aktiviert werden. Wenn Feldlängen geändert werden,
-kann eine Konvertierung nötig sein — bei der
-Aktivierung.
+<strong>Exam tip:</strong> The table must be
+activated. If field lengths are changed, a
+conversion may be necessary — during activation.
 </div>
 
 </div>
@@ -3862,32 +4016,32 @@ Aktivierung.
 
 <h4>
 <span class="task-num">5</span>
-ABAP SQL Query optimieren
+Optimize ABAP SQL query
 <span class="task-tag adt">ADT</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Ein bestehender Report
-ruft Daten mit <code>SELECT *</code> ab und
-filtert in ABAP. Optimieren Sie die Query für
-Code Pushdown.
+<strong>Scenario:</strong> An existing report
+retrieves data with <code>SELECT *</code> and
+filters in ABAP. Optimize the query for code
+pushdown.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Nur benötigte Spalten selektieren</li>
-<li><code>WHERE</code>-Klausel statt ABAP-Filter</li>
-<li>Aggregation in SQL, falls nötig</li>
-<li>Ergebnis identisch</li>
+<li>Select only needed columns</li>
+<li><code>WHERE</code> clause instead of ABAP
+filter</li>
+<li>Aggregation in SQL if needed</li>
+<li>Identical result</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Code Pushdown
-bedeutet: Verarbeitung so nah wie möglich an die
-Datenbank. <code>SELECT *</code> ist fast immer
-falsch.
+<strong>Exam tip:</strong> Code pushdown means:
+processing as close to the database as possible.
+<code>SELECT *</code> is almost always wrong.
 </div>
 
 </div>
@@ -3896,21 +4050,21 @@ falsch.
 
 
 <!-- =====================================================
-     PRAXISAUFGABEN: RAP
+     PRACTICE TASKS: RAP
      ===================================================== -->
 
 <div class="panel" id="panel-tasks-rap">
 
 <div class="module-header">
-    <h2>🔨 Praxisaufgaben: RAP Business Object</h2>
-    <span class="weight-badge">Prüfungssimulation</span>
+    <h2>🔨 Practice Tasks: RAP Business Object</h2>
+    <span class="weight-badge">Exam simulation</span>
 </div>
 
 <div class="info-box warn">
 
-<strong>Format:</strong> Diese Aufgaben simulieren
-die RAP-Aufgaben der praktischen Prüfung.
-Bearbeiten Sie sie in ADT.
+<strong>Format:</strong> These tasks simulate the
+RAP tasks of the practical exam. Work on them in
+ADT.
 
 </div>
 
@@ -3919,34 +4073,33 @@ Bearbeiten Sie sie in ADT.
 
 <h4>
 <span class="task-num">1</span>
-RAP Business Object aus Tabelle generieren
+Generate RAP Business Object from table
 <span class="task-tag rap">RAP</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Generieren Sie ein
-RAP Business Object aus einer bestehenden
-Tabelle. ADT bietet einen Assistenten, der CDS
-View Entity, Behavior Definition und
-Service Definition erstellt.
+<strong>Scenario:</strong> Generate a RAP Business
+Object from an existing table. ADT provides a
+wizard that creates CDS View Entity, Behavior
+Definition, and Service Definition.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>CDS View Entity (Root)</li>
+<li>CDS View Entity (root)</li>
 <li>Behavior Definition (managed)</li>
-<li>Behavior Implementation (Klasse)</li>
+<li>Behavior Implementation (class)</li>
 <li>Service Definition</li>
 <li>Service Binding</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Nutzen Sie den
-RAP-Generator in ADT (Rechtsklick auf Tabelle →
-Generate RAP Business Object). Der Assistent
-führt Sie durch alle Schritte.
+<strong>Exam tip:</strong> Use the RAP generator
+in ADT (right-click on table → Generate RAP
+Business Object). The wizard walks you through
+all steps.
 </div>
 
 </div>
@@ -3956,33 +4109,31 @@ führt Sie durch alle Schritte.
 
 <h4>
 <span class="task-num">2</span>
-Determination implementieren
+Implement determination
 <span class="task-tag rap">RAP</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Verdrahten Sie eine
-Determination, die beim Erstellen eines neuen
-Datensatzes automatisch den Status auf
-<code>'NEW'</code> setzt.
+<strong>Scenario:</strong> Wire up a determination
+that automatically sets the status to
+<code>'NEW'</code> when a new record is created.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
 <li><code>determination setStatus on modify { create; }</code>
-in der BDEF</li>
-<li>Implementierung in der Behavior Pool Klasse</li>
-<li>Status wird automatisch gesetzt</li>
+in the BDEF</li>
+<li>Implementation in the behavior pool class</li>
+<li>Status is set automatically</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Die Determination
-wird in der BDEF deklariert und in der
-Behavior-Pool-Klasse implementiert. Sie ändert
-Werte — sie prüft nicht (das wäre eine
-Validation).
+<strong>Exam tip:</strong> The determination is
+declared in the BDEF and implemented in the
+behavior pool class. It changes values — it does
+not check (that would be a validation).
 </div>
 
 </div>
@@ -3992,30 +4143,30 @@ Validation).
 
 <h4>
 <span class="task-num">3</span>
-Validation implementieren
+Implement validation
 <span class="task-tag rap">RAP</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Implementieren Sie
-eine Validation, die prüft, ob ein Name
-ausgefüllt ist, bevor gespeichert wird.
+<strong>Scenario:</strong> Implement a validation
+that checks whether a name is filled before
+saving.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
 <li><code>validation checkName on save { create; update; }</code>
-in der BDEF</li>
-<li>Implementierung in der Behavior Pool Klasse</li>
-<li>Fehlermeldung bei leerem Namen</li>
+in the BDEF</li>
+<li>Implementation in the behavior pool class</li>
+<li>Error message for empty name</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Eine Validation
-meldet Nachrichten über <code>reported</code> und
-<code>failed</code>. Sie ändert keine Daten.
+<strong>Exam tip:</strong> A validation reports
+messages via <code>reported</code> and
+<code>failed</code>. It does not change data.
 </div>
 
 </div>
@@ -4025,31 +4176,30 @@ meldet Nachrichten über <code>reported</code> und
 
 <h4>
 <span class="task-num">4</span>
-Action implementieren
+Implement action
 <span class="task-tag rap">RAP</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Implementieren Sie
-eine Action <code>approve</code>, die den Status
-eines Datensatzes auf <code>'APPROVED'</code>
-setzt.
+<strong>Scenario:</strong> Implement an action
+<code>approve</code> that sets the status of a
+record to <code>'APPROVED'</code>.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
 <li><code>action approve result [1] $self;</code>
-in der BDEF</li>
-<li>Implementierung in der Behavior Pool Klasse</li>
-<li>Status wird auf <code>'APPROVED'</code> gesetzt</li>
+in the BDEF</li>
+<li>Implementation in the behavior pool class</li>
+<li>Status is set to <code>'APPROVED'</code></li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Eine Action wird
-explizit vom Konsumenten ausgelöst (via EML oder
-OData). Sie ist keine automatische Ableitung.
+<strong>Exam tip:</strong> An action is triggered
+explicitly by the consumer (via EML or OData).
+It is not an automatic derivation.
 </div>
 
 </div>
@@ -4059,33 +4209,31 @@ OData). Sie ist keine automatische Ableitung.
 
 <h4>
 <span class="task-num">5</span>
-Field Control verdrahten
+Wire up field control
 <span class="task-tag rap">RAP</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Legen Sie fest, dass
-die Felder <code>id</code>, <code>created_by</code>
-und <code>created_at</code> nach dem Erstellen
-schreibgeschützt sind.
+<strong>Scenario:</strong> Specify that the fields
+<code>id</code>, <code>created_by</code>, and
+<code>created_at</code> are read-only after
+creation.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
 <li><code>field ( readonly ) id, created_by, created_at;</code>
-in der BDEF</li>
-<li>Felder sind nach dem Erstellen nicht mehr
-änderbar</li>
+in the BDEF</li>
+<li>Fields are not editable after creation</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Statisches Field
-Control wird direkt in der BDEF deklariert.
-Dynamisches Field Control wird in der
-Behavior-Implementierung über eine
-Feature-Instanz gesteuert.
+<strong>Exam tip:</strong> Static field control is
+declared directly in the BDEF. Dynamic field
+control is controlled in the behavior
+implementation via a feature instance.
 </div>
 
 </div>
@@ -4095,32 +4243,31 @@ Feature-Instanz gesteuert.
 
 <h4>
 <span class="task-num">6</span>
-Service Binding konfigurieren
+Configure service binding
 <span class="task-tag rap">RAP</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Erstellen Sie ein
-Service Binding für Ihre Service Definition
-mit Typ <strong>OData V4 — UI</strong> und
-testen Sie die Vorschau.
+<strong>Scenario:</strong> Create a service
+binding for your service definition with type
+<strong>OData V4 — UI</strong> and test the
+preview.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Service Binding mit korrektem Typ</li>
-<li>Aktiviert</li>
-<li>Vorschau funktioniert</li>
+<li>Service binding with correct type</li>
+<li>Activated</li>
+<li>Preview works</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Das Service
-Binding verbindet die Service Definition mit
-dem Protokoll (OData V2/V4). Nach der
-Aktivierung können Sie die Vorschau in ADT
-öffnen.
+<strong>Exam tip:</strong> The service binding
+connects the service definition with the protocol
+(OData V2/V4). After activation you can open the
+preview in ADT.
 </div>
 
 </div>
@@ -4129,20 +4276,20 @@ Aktivierung können Sie die Vorschau in ADT
 
 
 <!-- =====================================================
-     PRAXISAUFGABEN: CDS
+     PRACTICE TASKS: CDS
      ===================================================== -->
 
 <div class="panel" id="panel-tasks-cds">
 
 <div class="module-header">
-    <h2>📐 Praxisaufgaben: CDS &amp; DCL</h2>
-    <span class="weight-badge">Prüfungssimulation</span>
+    <h2>📐 Practice Tasks: CDS &amp; DCL</h2>
+    <span class="weight-badge">Exam simulation</span>
 </div>
 
 <div class="info-box warn">
 
-<strong>Format:</strong> Diese Aufgaben simulieren
-die CDS- und DCL-Aufgaben der praktischen Prüfung.
+<strong>Format:</strong> These tasks simulate the
+CDS and DCL tasks of the practical exam.
 
 </div>
 
@@ -4151,31 +4298,29 @@ die CDS- und DCL-Aufgaben der praktischen Prüfung.
 
 <h4>
 <span class="task-num">1</span>
-CDS View Entity aus Tabelle generieren
+Generate CDS View Entity from table
 <span class="task-tag cds">CDS</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Generieren Sie eine
-CDS View Entity aus einer bestehenden
-transparenten Tabelle. Fügen Sie eine
-<code>@EndUserText.label</code>-Annotation
-hinzu.
+<strong>Scenario:</strong> Generate a CDS View
+Entity from an existing transparent table. Add an
+<code>@EndUserText.label</code> annotation.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>CDS View Entity mit <code>define view entity</code></li>
-<li>Schlüsselfeld markiert</li>
-<li>Annotation vorhanden</li>
+<li>CDS View Entity with <code>define view entity</code></li>
+<li>Key field marked</li>
+<li>Annotation present</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Der CDS-Generator
-in ADT erstellt die Grundstruktur. Sie müssen
-den Schlüssel und ggf. Annotationen ergänzen.
+<strong>Exam tip:</strong> The CDS generator in
+ADT creates the basic structure. You must add
+the key and possibly annotations.
 </div>
 
 </div>
@@ -4185,30 +4330,29 @@ den Schlüssel und ggf. Annotationen ergänzen.
 
 <h4>
 <span class="task-num">2</span>
-Assoziation und Kardinalität
+Association and cardinality
 <span class="task-tag cds">CDS</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Erweitern Sie Ihre
-CDS View um eine Assoziation zu einer anderen
-View mit Kardinalität <code>[0..1]</code>.
+<strong>Scenario:</strong> Extend your CDS view
+with an association to another view with
+cardinality <code>[0..1]</code>.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
 <li><code>association [0..1] to ...</code></li>
-<li>Pfad-Expression in der Select-Liste</li>
-<li>Korrekte <code>on</code>-Bedingung</li>
+<li>Path expression in the select list</li>
+<li>Correct <code>on</code> condition</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Eine Assoziation
-ist lazy — sie wird nur ausgeführt, wenn sie
-in der Select-Liste verwendet wird. Ein JOIN
-ist eager.
+<strong>Exam tip:</strong> An association is lazy
+— it is only executed when used in the select
+list. A JOIN is eager.
 </div>
 
 </div>
@@ -4218,32 +4362,30 @@ ist eager.
 
 <h4>
 <span class="task-num">3</span>
-CDS Access Control (DCL) hinzufügen
+Add CDS Access Control (DCL)
 <span class="task-tag cds">CDS</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Fügen Sie eine
-CDS-Zugriffskontrolle auf eine kopierte CDS
-View unter Verwendung eines
-Autorisierungsobjekts hinzu.
+<strong>Scenario:</strong> Add a CDS access
+control to a copied CDS view using an
+authorization object.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>DCL Role mit <code>define role</code></li>
+<li>DCL Role with <code>define role</code></li>
 <li><code>grant select on ...</code></li>
-<li>Bedingung mit <code>$user</code> oder
-Autorisierungsobjekt</li>
+<li>Condition with <code>$user</code> or
+authorization object</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Die DCL Role
-wird als separates Objekt angelegt und auf die
-CDS View angewendet. Sie definiert, wer welche
-Zeilen lesen darf.
+<strong>Exam tip:</strong> The DCL Role is
+created as a separate object and applied to the
+CDS view. It defines who can read which rows.
 </div>
 
 </div>
@@ -4253,19 +4395,18 @@ Zeilen lesen darf.
 
 <h4>
 <span class="task-num">4</span>
-Parameter in CDS View
+Parameter in CDS view
 <span class="task-tag cds">CDS</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Fügen Sie einen
-Parameter <code>p_status</code> zur CDS View
-hinzu und verwenden Sie ihn in der
-<code>WHERE</code>-Klausel.
+<strong>Scenario:</strong> Add a parameter
+<code>p_status</code> to the CDS view and use it
+in the <code>WHERE</code> clause.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
 <li><code>with parameters p_status : abap.char(1)</code></li>
 <li><code>where status = $parameters.p_status</code></li>
@@ -4273,10 +4414,9 @@ hinzu und verwenden Sie ihn in der
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Parameter werden
-zur Query-Zeit über <code>$parameters</code>
-gebunden. Sie sind nicht dasselbe wie
-Host-Variablen in ABAP SQL.
+<strong>Exam tip:</strong> Parameters are bound at
+query time via <code>$parameters</code>. They
+are not the same as host variables in ABAP SQL.
 </div>
 
 </div>
@@ -4286,30 +4426,30 @@ Host-Variablen in ABAP SQL.
 
 <h4>
 <span class="task-num">5</span>
-Annotationen hinzufügen
+Add annotations
 <span class="task-tag cds">CDS</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Fügen Sie
-UI-Annotationen hinzu, damit die CDS View
-in Fiori Elements korrekt dargestellt wird.
+<strong>Scenario:</strong> Add UI annotations so
+the CDS view is rendered correctly in Fiori
+Elements.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li><code>@UI.lineItem</code> oder
+<li><code>@UI.lineItem</code> or
 <code>@UI.identification</code></li>
 <li><code>@EndUserText.label</code></li>
-<li>Annotationen aktiviert</li>
+<li>Annotations activated</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> UI-Annotationen
-steuern die generierte Fiori-UI. Sie werden in
-der CDS View deklariert.
+<strong>Exam tip:</strong> UI annotations control
+the generated Fiori UI. They are declared in the
+CDS view.
 </div>
 
 </div>
@@ -4318,21 +4458,21 @@ der CDS View deklariert.
 
 
 <!-- =====================================================
-     PRAXISAUFGABEN: JOULE
+     PRACTICE TASKS: JOULE
      ===================================================== -->
 
 <div class="panel" id="panel-tasks-joule">
 
 <div class="module-header">
-    <h2>🤖 Praxisaufgaben: Joule in ADT</h2>
-    <span class="weight-badge">Prüfungssimulation</span>
+    <h2>🤖 Practice Tasks: Joule in ADT</h2>
+    <span class="weight-badge">Exam simulation</span>
 </div>
 
 <div class="info-box success">
 
-<strong>Open Book:</strong> Joule für Entwickler
-ist in der Prüfung verfügbar. Diese Aufgaben
-simulieren typische Joule-Nutzungsszenarien.
+<strong>Open Book:</strong> Joule for Developers is
+available during the exam. These tasks simulate
+typical Joule usage scenarios.
 
 </div>
 
@@ -4341,32 +4481,32 @@ simulieren typische Joule-Nutzungsszenarien.
 
 <h4>
 <span class="task-num">1</span>
-Code erklären lassen
+Explain code
 <span class="task-tag joule">Joule</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Sie erhalten einen
-Codeausschnitt in der Prüfung und müssen
-verstehen, was er tut. Nutzen Sie Joule's
-<strong>Explain</strong>-Funktion.
+<strong>Scenario:</strong> You receive a code
+snippet in the exam and must understand what it
+does. Use Joule's <strong>Explain</strong>
+function.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Code in den Joule Chat View einfügen</li>
-<li><code>/explain</code> Befehl verwenden</li>
-<li>Erklärung verstehen und ggf. für die
-Aufgabe nutzen</li>
+<li>Paste code into the Joule Chat View</li>
+<li>Use the <code>/explain</code> command</li>
+<li>Understand the explanation and use it for
+the task</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Joule erklärt
-ABAP-Code in natürlicher Sprache. Das hilft
-beim Verständnis komplexer Vorgaben oder
-bestehender Implementierungen.
+<strong>Exam tip:</strong> Joule explains ABAP
+code in natural language. This helps understand
+complex requirements or existing
+implementations.
 </div>
 
 </div>
@@ -4376,31 +4516,29 @@ bestehender Implementierungen.
 
 <h4>
 <span class="task-num">2</span>
-Unit Tests generieren lassen
+Generate unit tests
 <span class="task-tag joule">Joule</span>
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Für eine zu
-erstellende Klasse sollen ABAP Unit Tests
-generiert werden.
+<strong>Scenario:</strong> ABAP Unit tests should
+be generated for a class to be created.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Klasse auswählen</li>
+<li>Select the class</li>
 <li>Joule → Generate Unit Tests</li>
-<li>Generierte Tests prüfen und ggf.
-anpassen</li>
+<li>Check the generated tests and adjust if
+needed</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Joule generiert
-Tests, aber Sie sind für die Korrektheit
-verantwortlich. Prüfen Sie die generierten
-Assertions.
+<strong>Exam tip:</strong> Joule generates tests,
+but you are responsible for correctness. Check
+the generated assertions.
 </div>
 
 </div>
@@ -4415,27 +4553,25 @@ RAP Business Logic Prediction
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Sie sollen eine
-RAP-Implementierung erstellen. Nutzen Sie
-Joule's <code>/raplogic</code>-Befehl zur
-Unterstützung.
+<strong>Scenario:</strong> You need to create a
+RAP implementation. Use Joule's
+<code>/raplogic</code> command for support.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Joule Chat View öffnen</li>
-<li><code>/raplogic</code> eingeben</li>
-<li>Vorschlag prüfen und in den Code
-übernehmen</li>
+<li>Open Joule Chat View</li>
+<li>Enter <code>/raplogic</code></li>
+<li>Check suggestion and integrate into the
+code</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Joule kann
-RAP-Business-Logik vorschlagen. Verlassen Sie
-sich aber nicht blind darauf — validieren Sie
-den Vorschlag.
+<strong>Exam tip:</strong> Joule can suggest RAP
+business logic. But do not rely on it blindly —
+validate the suggestion.
 </div>
 
 </div>
@@ -4450,26 +4586,25 @@ Predictive Code Completion
 </h4>
 
 <div class="task-scenario">
-<strong>Szenario:</strong> Sie schreiben Code
-und möchten KI-gestützte Vervollständigung
-nutzen.
+<strong>Scenario:</strong> You are writing code
+and want to use AI-powered completion.
 </div>
 
 <div class="deliverable">
-<strong>Zu liefern:</strong>
+<strong>To deliver:</strong>
 <ul>
-<li>Joule Predictive Code Completion
-aktivieren</li>
-<li>Code tippen und Vorschläge annehmen</li>
-<li>Vorschläge prüfen</li>
+<li>Activate Joule Predictive Code
+Completion</li>
+<li>Type code and accept suggestions</li>
+<li>Check suggestions</li>
 </ul>
 </div>
 
 <div class="exam-tip">
-<strong>Prüfungstipp:</strong> Predictive Code
-Completion beschleunigt das Schreiben von
-Boilerplate-Code. Der Syntax-Checker bleibt
-die verlässlichste Instanz.
+<strong>Exam tip:</strong> Predictive Code
+Completion speeds up writing boilerplate code.
+The syntax checker remains the most reliable
+authority.
 </div>
 
 </div>
@@ -4484,15 +4619,15 @@ die verlässlichste Instanz.
 <div class="panel" id="panel-lab">
 
 <div class="module-header">
-    <h2>🔬 Hands-On Lab: Mini RAP App bauen</h2>
+    <h2>🔬 Hands-On Lab: Build a Mini RAP App</h2>
 </div>
 
 <div class="info-box">
-<strong>Ziel:</strong> Bauen Sie ein minimales
-RAP-Business-Object end-to-end in einer BTP-ABAP-
-Umgebung oder der ABAP Developer Edition.
-Dies einmal zu tun ist mehr wert als zehn
-Erklärungen zu lesen.
+<strong>Goal:</strong> Build a minimal RAP
+Business Object end-to-end in a BTP ABAP
+environment or the ABAP Developer Edition.
+Doing this once is worth more than reading ten
+explanations.
 </div>
 
 
@@ -4500,13 +4635,13 @@ Erklärungen zu lesen.
 
 <h4>
 <span class="step-num">1</span>
-Transparente Tabelle anlegen
+Create the transparent table
 </h4>
 
 <p>
-Erstellen Sie eine transparente Tabelle
-<code>ZCUSTOMER_LAB</code> mit Feldern:
-<code>client</code>, <code>id</code> (Schlüssel),
+Create a transparent table
+<code>ZCUSTOMER_LAB</code> with fields:
+<code>client</code>, <code>id</code> (key),
 <code>name</code>, <code>status</code>,
 <code>created_by</code>, <code>created_at</code>.
 </p>
@@ -4518,7 +4653,7 @@ Erstellen Sie eine transparente Tabelle
 
 <h4>
 <span class="step-num">2</span>
-CDS View Entity anlegen
+Create CDS View Entity
 </h4>
 
 <pre><code class="language-abap">
@@ -4545,7 +4680,7 @@ define view entity ZI_CustomerLab
 
 <h4>
 <span class="step-num">3</span>
-Behavior Definition anlegen
+Create Behavior Definition
 </h4>
 
 <pre><code class="language-abap">
@@ -4584,7 +4719,7 @@ authorization master ( instance )
 
 <h4>
 <span class="step-num">4</span>
-Behavior Pool implementieren
+Implement the Behavior Pool
 </h4>
 
 <pre><code class="language-abap">
@@ -4682,7 +4817,7 @@ ENDCLASS.
 
 <h4>
 <span class="step-num">5</span>
-Service Definition anlegen
+Create Service Definition
 </h4>
 
 <pre><code class="language-abap">
@@ -4702,14 +4837,14 @@ define service ZUI_CUSTOMERLAB {
 
 <h4>
 <span class="step-num">6</span>
-Service Binding anlegen
+Create Service Binding
 </h4>
 
 <p>
-Erstellen Sie ein Service Binding für
-<code>ZUI_CUSTOMERLAB</code> mit Typ
-<strong>OData V4 — UI</strong>. Aktivieren Sie
-es und nutzen Sie die Vorschau zum Testen.
+Create a service binding for
+<code>ZUI_CUSTOMERLAB</code> with type
+<strong>OData V4 — UI</strong>. Activate it and
+use the preview to test.
 </p>
 
 </div>
@@ -4719,18 +4854,18 @@ es und nutzen Sie die Vorschau zum Testen.
 
 <h4>
 <span class="step-num">7</span>
-Mit EML testen (optional)
+Test with EML (optional)
 </h4>
 
 <pre><code class="language-abap">
 
-" Alle lesen
+" Read all
 READ ENTITIES OF ZI_CustomerLab
     ENTITY CustomerLab
     ALL FIELDS WITH VALUE #( )
     RESULT DATA(lt_all).
 
-" Einen erstellen
+" Create one
 MODIFY ENTITIES OF ZI_CustomerLab
     ENTITY CustomerLab
     CREATE FIELDS ( name )
@@ -4745,20 +4880,1349 @@ COMMIT ENTITIES.
 
 <div class="exam-tip">
 
-<strong>Was dieses Lab beweist:</strong>
+<strong>What this lab proves:</strong>
 
-Sie können den systembasierten Teil von C_ABAPD
-nicht durch Lesen bestehen. Bauen Sie dies
-einmal, und Sie verinnerlichen:
+You cannot pass the system-based part of C_ABAPD
+by reading alone. Build this once, and you will
+internalize:
 <ul>
-<li>Die geschichtete Architektur (CDS → BDEF →
+<li>The layered architecture (CDS → BDEF →
 Impl → Service)</li>
-<li>Wie Determinations, Validations und Actions
-sich im Code unterscheiden</li>
-<li>Wie <code>IN LOCAL MODE</code> verwendet
-wird</li>
-<li>Wie EML Business Objects liest und ändert</li>
+<li>How determinations, validations and actions
+differ in code</li>
+<li>How <code>IN LOCAL MODE</code> is used</li>
+<li>How EML reads and modifies business objects</li>
 </ul>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FULL MOCK EXAM
+     ===================================================== -->
+
+<div class="panel" id="panel-mock">
+
+<div class="module-header">
+    <h2>📝 Full Mock Exam</h2>
+    <span class="weight-badge">3 hours · 67% to pass</span>
+</div>
+
+<div class="exam-header">
+
+<h3>⚠️ SAP Certified Associate — Back-End Developer — ABAP Cloud (C_ABAPD)</h3>
+
+<p>
+This is a realistic, full-length mock exam that
+mirrors the actual C_ABAPD certification. Work
+through it in a live SAP BTP ABAP environment via
+Eclipse ADT. The solutions and explanations are on
+the <strong>Solutions &amp; Answers</strong> page.
+</p>
+
+<div class="exam-meta">
+<span>⏱ Duration: 3 hours</span>
+<span>🎯 Passing score: 67%</span>
+<span>💯 Total points: 100</span>
+<span>📖 Open Book</span>
+<span>🤖 Joule allowed</span>
+</div>
+
+</div>
+
+<div class="info-box warn">
+
+<strong>Instructions:</strong>
+
+<ol style="padding-left:1.3rem;margin-top:0.5rem;">
+<li>Create a package <code>ZMOCK_&lt;YOURNAME&gt;</code>
+with super-package <code>ZLOCAL</code>.</li>
+<li>Create a transport request for the package.</li>
+<li>Complete all tasks below in order.</li>
+<li>Activate every object before moving on.</li>
+<li>Use the syntax checker and the ABAP Debugger
+to verify your code.</li>
+<li>You may use SAP Help Portal, SAP Learning, and
+Joule during the mock.</li>
+</ol>
+
+</div>
+
+
+<!-- ================================================
+     SECTION A — CORE ABAP
+     ================================================ -->
+
+<div class="exam-section-title">
+    Section A — Core ABAP (40 points)
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">A1</span>
+Class hierarchy with exact visibilities
+</h4>
+
+<p class="brief">
+<strong>10 points</strong> · Difficulty: Medium
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+<ol>
+<li>Create a global class <code>ZCL_MOCK_EMPLOYEE</code>
+with:
+    <ul style="margin-top:0.3rem;">
+        <li>A public read-only attribute
+        <code>mv_id</code> of type <code>i</code></li>
+        <li>A public read-only attribute
+        <code>mv_name</code> of type
+        <code>string</code></li>
+        <li>A protected attribute <code>mv_salary</code>
+        of type <code>decfloat34</code></li>
+        <li>A private attribute <code>mv_secret</code>
+        of type <code>string</code></li>
+    </ul>
+</li>
+<li>Implement a constructor that accepts
+<code>iv_id</code> (<code>i</code>),
+<code>iv_name</code> (<code>string</code>), and
+<code>iv_salary</code> (<code>decfloat34</code>)
+and populates the attributes.</li>
+<li>Implement a public method
+<code>get_salary</code> with returning parameter
+<code>rv_salary</code> of type
+<code>decfloat34</code> that returns the salary.</li>
+<li>Create a subclass
+<code>ZCL_MOCK_MANAGER</code> inheriting from
+<code>ZCL_MOCK_EMPLOYEE</code> that adds a public
+read-only attribute <code>mv_department</code>
+of type <code>string</code>.</li>
+<li>Override the constructor in the subclass to
+accept an additional <code>iv_department</code>
+parameter.</li>
+</ol>
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>Class <code>ZCL_MOCK_EMPLOYEE</code> (activated)</li>
+<li>Class <code>ZCL_MOCK_MANAGER</code> (activated)</li>
+<li>Exact visibilities: <code>PUBLIC READ-ONLY</code>,
+<code>PROTECTED</code>, <code>PRIVATE</code></li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">A2</span>
+Internal table optimization
+</h4>
+
+<p class="brief">
+<strong>10 points</strong> · Difficulty: Medium
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+The following legacy code is inefficient. Rewrite
+it to use a <code>HASHED TABLE</code> and a
+modern table expression. The output must be
+identical.
+
+<pre style="margin-top:0.5rem;"><code class="language-abap">
+DATA: lt_customers TYPE STANDARD TABLE OF ty_cust,
+      ls_customer  TYPE ty_cust,
+      lv_found     TYPE abap_bool.
+
+LOOP AT lt_ids INTO DATA(lv_id).
+    CLEAR lv_found.
+    LOOP AT lt_customers INTO ls_customer.
+        IF ls_customer-id = lv_id.
+            lv_found = abap_true.
+            EXIT.
+        ENDIF.
+    ENDLOOP.
+    IF lv_found = abap_true.
+        " process
+    ENDIF.
+ENDLOOP.
+</code></pre>
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>Optimized code using <code>HASHED TABLE</code></li>
+<li>Modern table expression <code>lt_customers[ id = lv_id ]</code></li>
+<li>Same result, no nested loops</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">A3</span>
+ABAP SQL with code pushdown
+</h4>
+
+<p class="brief">
+<strong>10 points</strong> · Difficulty: Medium
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+Write a class <code>ZCL_MOCK_REPORT</code> that:
+
+<ol>
+<li>Reads from table <code>ZORDER_MOCK</code>
+(fields: <code>order_id</code>, <code>customer_id</code>,
+<code>amount</code>, <code>currency</code>,
+<code>created_on</code>)</li>
+<li>Groups by <code>customer_id</code></li>
+<li>Returns only customers whose total amount is
+greater than a parameter <code>iv_min_amount</code></li>
+<li>Returns <code>customer_id</code>,
+<code>order_count</code> (COUNT), and
+<code>total_amount</code> (SUM)</li>
+<li>Sorted by <code>total_amount</code> descending</li>
+</ol>
+
+Store the result in a public read-only attribute
+<code>mt_result</code>.
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>Class <code>ZCL_MOCK_REPORT</code> (activated)</li>
+<li>One SELECT with GROUP BY, HAVING, ORDER BY</li>
+<li>No ABAP-side aggregation</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">A4</span>
+Exception handling
+</h4>
+
+<p class="brief">
+<strong>10 points</strong> · Difficulty: Medium
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+<ol>
+<li>Create an exception class <code>ZCX_MOCK_ERROR</code>
+inheriting from <code>CX_STATIC_CHECK</code>.</li>
+<li>Add a public read-only attribute
+<code>mv_reason</code> of type <code>string</code>
+and a constructor that accepts
+<code>iv_reason</code>.</li>
+<li>In <code>ZCL_MOCK_REPORT</code>, add a method
+<code>validate_amount</code> with importing
+<code>iv_amount</code> (type <code>decfloat34</code>)
+that raises <code>ZCX_MOCK_ERROR</code> if
+<code>iv_amount</code> is negative.</li>
+</ol>
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>Exception class <code>ZCX_MOCK_ERROR</code></li>
+<li>Method <code>validate_amount</code> with
+<code>RAISING</code> clause</li>
+<li>Proper use of <code>RAISE EXCEPTION TYPE</code></li>
+</ul>
+</div>
+
+</div>
+
+
+<!-- ================================================
+     SECTION B — CDS
+     ================================================ -->
+
+<div class="exam-section-title">
+    Section B — CDS &amp; Data Modeling (30 points)
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">B1</span>
+CDS View Entity with association
+</h4>
+
+<p class="brief">
+<strong>15 points</strong> · Difficulty: Medium
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+<ol>
+<li>Create a CDS view entity
+<code>ZI_MOCK_ORDER</code> on table
+<code>ZORDER_MOCK</code>.</li>
+<li>Mark <code>order_id</code> as key.</li>
+<li>Add an association
+<code>[0..1] to ZI_MOCK_CUSTOMER</code> as
+<code>_Customer</code> on
+<code>$projection.customer_id = _Customer.customer_id</code>.</li>
+<li>Create a second CDS view entity
+<code>ZI_MOCK_CUSTOMER</code> on table
+<code>ZCUSTOMER_MOCK</code> (fields:
+<code>customer_id</code>, <code>name</code>,
+<code>country</code>).</li>
+<li>Expose <code>_Customer.name</code> via a
+path expression as <code>CustomerName</code>.</li>
+<li>Add the annotation
+<code>@EndUserText.label</code> to both views.</li>
+</ol>
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>CDS view entity <code>ZI_MOCK_CUSTOMER</code></li>
+<li>CDS view entity <code>ZI_MOCK_ORDER</code>
+with association and path expression</li>
+<li>Both activated</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">B2</span>
+CDS Access Control (DCL)
+</h4>
+
+<p class="brief">
+<strong>15 points</strong> · Difficulty: Medium
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+<ol>
+<li>Create a DCL role
+<code>ZI_MOCK_ORDER_ROLE</code> for the view
+<code>ZI_MOCK_ORDER</code>.</li>
+<li>Grant <code>SELECT</code> only to entries
+where <code>created_by = $user</code>.</li>
+<li>Activate the DCL role.</li>
+<li>In the CDS view <code>ZI_MOCK_ORDER</code>,
+set <code>@AccessControl.authorizationCheck: #CHECK</code>.</li>
+</ol>
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>DCL role <code>ZI_MOCK_ORDER_ROLE</code></li>
+<li>Annotation <code>@AccessControl.authorizationCheck: #CHECK</code></li>
+<li>View and role activated</li>
+</ul>
+</div>
+
+</div>
+
+
+<!-- ================================================
+     SECTION C — RAP
+     ================================================ -->
+
+<div class="exam-section-title">
+    Section C — RAP (30 points)
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">C1</span>
+Managed RAP Business Object
+</h4>
+
+<p class="brief">
+<strong>15 points</strong> · Difficulty: Hard
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+<ol>
+<li>Create a managed RAP BO on the table
+<code>ZCUSTOMER_MOCK</code> with a root CDS
+view entity <code>ZR_MOCK_CUSTOMER</code>.</li>
+<li>Behavior definition
+<code>ZR_MOCK_CUSTOMER</code>:
+    <ul style="margin-top:0.3rem;">
+        <li>Managed implementation in class
+        <code>ZBP_R_MOCK_CUSTOMER</code>, unique</li>
+        <li>Persistent table
+        <code>ZCUSTOMER_MOCK</code></li>
+        <li>Lock master, authorization master</li>
+        <li>Enable <code>create; update; delete;</code></li>
+        <li>Field <code>customer_id</code> readonly</li>
+        <li>Add a determination
+        <code>setCreatedInfo</code> on
+        <code>modify { create; }</code></li>
+        <li>Add a validation
+        <code>checkNameNotEmpty</code> on
+        <code>save { create; update; }</code></li>
+    </ul>
+</li>
+<li>Implement both in the behavior pool
+<code>ZBP_R_MOCK_CUSTOMER</code>:
+    <ul style="margin-top:0.3rem;">
+        <li>Determination: set
+        <code>created_by = sy-uname</code> and
+        <code>created_at = utclong_current( )</code></li>
+        <li>Validation: if <code>name</code> is
+        empty, report a severity-error message</li>
+    </ul>
+</li>
+</ol>
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>CDS view entity <code>ZR_MOCK_CUSTOMER</code></li>
+<li>Behavior definition <code>ZR_MOCK_CUSTOMER</code></li>
+<li>Behavior pool class <code>ZBP_R_MOCK_CUSTOMER</code></li>
+<li>All activated and syntax-check clean</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">C2</span>
+Service Definition and Service Binding
+</h4>
+
+<p class="brief">
+<strong>15 points</strong> · Difficulty: Medium
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+<ol>
+<li>Create a service definition
+<code>ZUI_MOCK_CUSTOMER</code> exposing
+<code>ZR_MOCK_CUSTOMER</code> as
+<code>Customer</code>.</li>
+<li>Create a service binding
+<code>ZUI_MOCK_CUSTOMER_O4</code> of type
+<strong>OData V4 — UI</strong>.</li>
+<li>Activate the binding.</li>
+<li>Open the service preview and verify that
+the entity set <code>Customer</code> is
+available.</li>
+</ol>
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>Service definition <code>ZUI_MOCK_CUSTOMER</code></li>
+<li>Service binding <code>ZUI_MOCK_CUSTOMER_O4</code>
+(activated)</li>
+<li>Preview reachable</li>
+</ul>
+</div>
+
+</div>
+
+
+<!-- ================================================
+     BONUS
+     ================================================ -->
+
+<div class="exam-section-title">
+    Bonus — Optional (+10 points)
+</div>
+
+
+<div class="exam-task">
+
+<h4>
+<span class="exam-num">D1</span>
+Action with result parameter
+</h4>
+
+<p class="brief">
+<strong>10 points bonus</strong> · Difficulty: Hard
+</p>
+
+<div class="requirements">
+<strong>Requirements:</strong>
+
+<ol>
+<li>Add an action <code>upgradeToPremium</code>
+with <code>result [1] $self</code> to the
+behavior definition of <code>ZR_MOCK_CUSTOMER</code>.</li>
+<li>Implement it in the behavior pool: set the
+<code>status</code> field to <code>'PREMIUM'</code>
+and return the updated instances via the
+<code>result</code> parameter.</li>
+<li>Test the action using EML from a console
+class implementing <code>IF_OO_ADT_CLASSRUN</code>.</li>
+</ol>
+</div>
+
+<div class="checklist">
+<strong>Deliverables:</strong>
+<ul>
+<li>Action declared in BDEF</li>
+<li>Implementation in behavior pool</li>
+<li>EML test class (activated and executable)</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="info-box success" style="margin-top:2rem;">
+
+<strong>End of Mock Exam.</strong>
+
+Check your work against the
+<strong>Solutions &amp; Answers</strong> page in
+the sidebar. Score yourself honestly:
+
+<ul style="padding-left:1.3rem;margin-top:0.5rem;">
+<li><strong>90–100:</strong> Ready for the real exam</li>
+<li><strong>75–89:</strong> Nearly there — review weak areas</li>
+<li><strong>67–74:</strong> Borderline — do another lab</li>
+<li><strong>&lt; 67:</strong> Repeat the study roadmap</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     MOCK EXAM SOLUTIONS
+     ===================================================== -->
+
+<div class="panel" id="panel-mock-solutions">
+
+<div class="module-header">
+    <h2>✅ Solutions &amp; Answers — Mock Exam</h2>
+    <span class="weight-badge">Reference solutions</span>
+</div>
+
+<div class="info-box warn">
+
+<strong>Note:</strong> These are reference
+solutions. Your implementation may differ in
+naming or structure — but in the real exam,
+<strong>exact naming and types are graded
+automatically</strong>. Compare your output
+carefully.
+
+</div>
+
+
+<!-- ================================================
+     SECTION A SOLUTIONS
+     ================================================ -->
+
+<div class="exam-section-title">
+    Section A — Core ABAP Solutions
+</div>
+
+
+<div class="solution-box">
+
+<h5>A1 — Class hierarchy with exact visibilities</h5>
+
+<pre><code class="language-abap">
+" ───────── ZCL_MOCK_EMPLOYEE ─────────
+
+CLASS zcl_mock_employee DEFINITION
+    PUBLIC
+    CREATE PUBLIC.
+
+    PUBLIC SECTION.
+        DATA mv_id     TYPE i READ-ONLY.
+        DATA mv_name   TYPE string READ-ONLY.
+
+        METHODS constructor
+            IMPORTING
+                iv_id     TYPE i
+                iv_name   TYPE string
+                iv_salary TYPE decfloat34.
+
+        METHODS get_salary
+            RETURNING VALUE(rv_salary) TYPE decfloat34.
+
+    PROTECTED SECTION.
+        DATA mv_salary TYPE decfloat34.
+
+    PRIVATE SECTION.
+        DATA mv_secret TYPE string.
+ENDCLASS.
+
+CLASS zcl_mock_employee IMPLEMENTATION.
+
+    METHOD constructor.
+        mv_id     = iv_id.
+        mv_name   = iv_name.
+        mv_salary = iv_salary.
+    ENDMETHOD.
+
+    METHOD get_salary.
+        rv_salary = mv_salary.
+    ENDMETHOD.
+
+ENDCLASS.
+
+
+" ───────── ZCL_MOCK_MANAGER ─────────
+
+CLASS zcl_mock_manager DEFINITION
+    PUBLIC
+    INHERITING FROM zcl_mock_employee
+    CREATE PUBLIC.
+
+    PUBLIC SECTION.
+        DATA mv_department TYPE string READ-ONLY.
+
+        METHODS constructor
+            IMPORTING
+                iv_id         TYPE i
+                iv_name       TYPE string
+                iv_salary     TYPE decfloat34
+                iv_department TYPE string.
+
+ENDCLASS.
+
+CLASS zcl_mock_manager IMPLEMENTATION.
+
+    METHOD constructor.
+        super->constructor(
+            iv_id     = iv_id
+            iv_name   = iv_name
+            iv_salary = iv_salary
+        ).
+        mv_department = iv_department.
+    ENDMETHOD.
+
+ENDCLASS.
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li><code>PUBLIC READ-ONLY</code> makes the
+attributes readable from outside but writable
+only by the class — as required.</li>
+<li><code>PROTECTED</code> on <code>mv_salary</code>
+makes it visible in the subclass, allowing
+inheritance without exposing it externally.</li>
+<li><code>PRIVATE</code> on <code>mv_secret</code>
+encloses it strictly.</li>
+<li>The subclass constructor uses
+<code>super-&gt;constructor( )</code> to
+initialize the parent fields.</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="solution-box">
+
+<h5>A2 — Internal table optimization</h5>
+
+<pre><code class="language-abap">
+" Declaration: replace STANDARD with HASHED
+
+DATA lt_customers TYPE HASHED TABLE OF ty_cust
+    WITH UNIQUE KEY id.
+
+" Optimized loop — no nested loop
+
+LOOP AT lt_ids INTO DATA(lv_id).
+
+    DATA(ls_customer) = VALUE ty_cust(
+        lt_customers[ id = lv_id ]
+        DEFAULT VALUE #( )
+    ).
+
+    IF ls_customer IS NOT INITIAL.
+        " process
+    ENDIF.
+
+ENDLOOP.
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li><code>HASHED TABLE</code> with
+<code>UNIQUE KEY</code> gives O(1) lookup by
+<code>id</code>.</li>
+<li>The table expression
+<code>lt_customers[ id = lv_id ]</code> is the
+modern replacement for <code>READ TABLE</code>.</li>
+<li>Wrapping in <code>VALUE ty_cust( ... DEFAULT
+VALUE #( ) )</code> avoids an exception if the
+row is missing — the empty structure is returned.</li>
+<li>Nested loops eliminated — big performance win
+for large data sets.</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="solution-box">
+
+<h5>A3 — ABAP SQL with code pushdown</h5>
+
+<pre><code class="language-abap">
+CLASS zcl_mock_report DEFINITION
+    PUBLIC
+    CREATE PUBLIC.
+
+    PUBLIC SECTION.
+        TYPES: BEGIN OF ty_result,
+                   customer_id  TYPE zorder_mock-customer_id,
+                   order_count  TYPE i,
+                   total_amount TYPE decfloat34,
+               END OF ty_result.
+
+        TYPES ty_result_table TYPE STANDARD TABLE OF ty_result
+            WITH EMPTY KEY.
+
+        DATA mt_result TYPE ty_result_table READ-ONLY.
+
+        METHODS run
+            IMPORTING iv_min_amount TYPE decfloat34.
+
+ENDCLASS.
+
+CLASS zcl_mock_report IMPLEMENTATION.
+
+    METHOD run.
+        SELECT FROM zorder_mock
+            FIELDS customer_id,
+                   COUNT(*) AS order_count,
+                   SUM( amount ) AS total_amount
+            GROUP BY customer_id
+            HAVING SUM( amount ) &gt; @iv_min_amount
+            ORDER BY total_amount DESCENDING
+            INTO TABLE @mt_result.
+    ENDMETHOD.
+
+ENDCLASS.
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li>All aggregation (<code>COUNT</code>,
+<code>SUM</code>) happens on the database — this
+is code pushdown.</li>
+<li>Filtering with <code>HAVING</code> avoids
+transferring unneeded rows.</li>
+<li>Sorting is done with <code>ORDER BY</code> in
+the SQL, not in ABAP.</li>
+<li>No <code>SELECT *</code> — only the required
+columns are selected.</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="solution-box">
+
+<h5>A4 — Exception handling</h5>
+
+<pre><code class="language-abap">
+" ───────── ZCX_MOCK_ERROR ─────────
+
+CLASS zcx_mock_error DEFINITION
+    PUBLIC
+    INHERITING FROM cx_static_check
+    CREATE PUBLIC.
+
+    PUBLIC SECTION.
+        DATA mv_reason TYPE string READ-ONLY.
+
+        METHODS constructor
+            IMPORTING iv_reason TYPE string.
+
+ENDCLASS.
+
+CLASS zcx_mock_error IMPLEMENTATION.
+
+    METHOD constructor.
+        super-&gt;constructor( ).
+        mv_reason = iv_reason.
+    ENDMETHOD.
+
+ENDCLASS.
+
+
+" ───────── In ZCL_MOCK_REPORT ─────────
+
+METHODS validate_amount
+    IMPORTING iv_amount TYPE decfloat34
+    RAISING   zcx_mock_error.
+
+METHOD validate_amount.
+    IF iv_amount &lt; 0.
+        RAISE EXCEPTION TYPE zcx_mock_error
+            EXPORTING
+                iv_reason = 'Amount must not be negative'.
+    ENDIF.
+ENDMETHOD.
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li>Extending <code>CX_STATIC_CHECK</code> means
+callers <em>must</em> handle or propagate the
+exception.</li>
+<li>The <code>RAISING</code> clause in the method
+signature makes the compiler enforce this.</li>
+<li>Using <code>RAISE EXCEPTION TYPE</code> with
+named parameters is the modern, type-safe way to
+raise the error.</li>
+<li>The exception class carries a custom
+<code>mv_reason</code> attribute for structured
+error information.</li>
+</ul>
+</div>
+
+</div>
+
+
+<!-- ================================================
+     SECTION B SOLUTIONS
+     ================================================ -->
+
+<div class="exam-section-title">
+    Section B — CDS Solutions
+</div>
+
+
+<div class="solution-box">
+
+<h5>B1 — CDS View Entity with association</h5>
+
+<pre><code class="language-abap">
+" ───────── ZI_MOCK_CUSTOMER ─────────
+
+@EndUserText.label: 'Mock Customer'
+
+define view entity ZI_Mock_Customer
+    as select from zcustomer_mock
+{
+    key customer_id,
+        name,
+        country
+}
+
+
+" ───────── ZI_MOCK_ORDER ─────────
+
+@EndUserText.label: 'Mock Order'
+
+define view entity ZI_Mock_Order
+    as select from zorder_mock
+
+    association [0..1] to ZI_Mock_Customer as _Customer
+        on $projection.customer_id = _Customer.customer_id
+{
+    key order_id,
+        customer_id,
+        amount,
+        currency,
+        created_on,
+
+        _Customer.name as CustomerName,
+
+        _Customer
+}
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li>The association <code>[0..1]</code> declares
+a to-one relationship — one order has at most one
+customer.</li>
+<li>The <code>on</code> condition uses
+<code>$projection</code> to refer to the current
+view's own fields.</li>
+<li>Exposing <code>_Customer</code> as a field
+makes the association usable by consumers.</li>
+<li>The path expression
+<code>_Customer.name as CustomerName</code>
+navigates the association and exposes the customer
+name in the result set.</li>
+<li><code>@EndUserText.label</code> provides
+human-readable labels for the UI layer.</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="solution-box">
+
+<h5>B2 — CDS Access Control (DCL)</h5>
+
+<pre><code class="language-abap">
+" ───────── DCL Role ─────────
+
+@EndUserText.label: 'Mock Order Access'
+
+define role ZI_Mock_Order_Role {
+
+    grant select on ZI_Mock_Order
+
+        where
+            ( created_by = $user );
+
+}
+
+
+" ───────── In ZI_MOCK_ORDER (annotation) ─────────
+
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Mock Order'
+
+define view entity ZI_Mock_Order
+    ...
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li><code>define role</code> creates the DCL role
+and applies it to the specified CDS view.</li>
+<li><code>grant select on ... where ...</code>
+restricts which rows are visible for
+<code>SELECT</code> statements.</li>
+<li><code>$user</code> is a session variable
+that resolves to the current user at runtime.</li>
+<li>Setting <code>@AccessControl.authorizationCheck:
+#CHECK</code> forces the framework to enforce the
+access control — without this annotation, the DCL
+role would be ignored.</li>
+<li>If you set <code>#NOT_REQUIRED</code> instead,
+the DCL role is bypassed — that would be
+<em>wrong</em> for this task.</li>
+</ul>
+</div>
+
+</div>
+
+
+<!-- ================================================
+     SECTION C SOLUTIONS
+     ================================================ -->
+
+<div class="exam-section-title">
+    Section C — RAP Solutions
+</div>
+
+
+<div class="solution-box">
+
+<h5>C1 — Managed RAP Business Object</h5>
+
+<pre><code class="language-abap">
+" ───────── CDS View Entity: ZR_MOCK_CUSTOMER ─────────
+
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Mock Customer (Root)'
+
+define root view entity ZR_Mock_Customer
+    as select from zcustomer_mock
+{
+    key customer_id,
+        name,
+        country,
+        status,
+        created_by,
+        created_at
+}
+
+
+" ───────── Behavior Definition: ZR_MOCK_CUSTOMER ─────────
+
+managed implementation in class
+    zbp_r_mock_customer unique;
+
+strict ( 2 );
+
+define behavior for ZR_Mock_Customer
+persistent table zcustomer_mock
+lock master
+authorization master ( instance )
+{
+    create;
+    update;
+    delete;
+
+    field ( readonly ) customer_id, created_by, created_at;
+
+    determination setCreatedInfo
+        on modify { create; }
+
+    validation checkNameNotEmpty
+        on save { create; update; }
+}
+
+
+" ───────── Behavior Pool: ZBP_R_MOCK_CUSTOMER ─────────
+
+CLASS lhc_ZR_Mock_Customer DEFINITION
+    INHERITING FROM cl_abap_behavior_handler.
+
+    PRIVATE SECTION.
+        METHODS setCreatedInfo FOR DETERMINE
+            ON MODIFY IMPORTING keys FOR ZR_Mock_Customer.
+
+        METHODS checkNameNotEmpty FOR VALIDATE
+            ON SAVE IMPORTING keys FOR ZR_Mock_Customer.
+
+ENDCLASS.
+
+CLASS lhc_ZR_Mock_Customer IMPLEMENTATION.
+
+    METHOD setCreatedInfo.
+        MODIFY ENTITIES OF ZR_Mock_Customer IN LOCAL MODE
+            ENTITY ZR_Mock_Customer
+            UPDATE FIELDS ( created_by created_at )
+            WITH VALUE #(
+                FOR key IN keys (
+                    %tky       = key-%tky
+                    created_by = sy-uname
+                    created_at = utclong_current( )
+                )
+            ).
+    ENDMETHOD.
+
+    METHOD checkNameNotEmpty.
+        READ ENTITIES OF ZR_Mock_Customer IN LOCAL MODE
+            ENTITY ZR_Mock_Customer
+            FIELDS ( name ) WITH VALUE #(
+                FOR key IN keys ( %tky = key-%tky )
+            )
+            RESULT DATA(lt_cust).
+
+        LOOP AT lt_cust INTO DATA(ls_cust).
+            IF ls_cust-name IS INITIAL.
+                APPEND VALUE #(
+                    %tky = ls_cust-%tky
+                ) TO failed-ZR_Mock_Customer.
+
+                APPEND VALUE #(
+                    %tky = ls_cust-%tky
+                    %msg = new_message_with_text(
+                        severity = if_abap_behv_message=&gt;severity-error
+                        text     = 'Name must not be empty'
+                    )
+                ) TO reported-ZR_Mock_Customer.
+            ENDIF.
+        ENDLOOP.
+    ENDMETHOD.
+
+ENDCLASS.
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li><code>define root view entity</code> marks
+this as the root of the business object — required
+for a RAP BO.</li>
+<li><code>managed implementation in class ...
+unique</code> — managed means the framework
+handles the transactional buffer and persistence.</li>
+<li><code>determination setCreatedInfo on modify
+{ create; }</code> — fires on every CREATE
+operation, before the record is saved.</li>
+<li><code>validation checkNameNotEmpty on save
+{ create; update; }</code> — fires when the
+record is saved, for both create and update.</li>
+<li>Determinations <strong>change</strong> data
+(here: <code>created_by</code>, <code>created_at</code>);
+validations <strong>check</strong> data and
+report messages.</li>
+<li>In the behavior implementation, <code>IN
+LOCAL MODE</code> bypasses authorization — this
+is standard inside behavior pools since
+authorization was already handled at the outer
+boundary.</li>
+<li>The loop iterates through all affected
+instances and reports a message per invalid
+row.</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="solution-box">
+
+<h5>C2 — Service Definition and Service Binding</h5>
+
+<pre><code class="language-abap">
+" ───────── Service Definition ─────────
+
+@EndUserText.label: 'Mock Customer Service'
+
+define service ZUI_Mock_Customer {
+
+    expose ZR_Mock_Customer as Customer;
+
+}
+
+
+" ───────── Service Binding (created in ADT) ─────────
+" Name:  ZUI_MOCK_CUSTOMER_O4
+" Type:  OData V4 - UI
+" Bound Service Definition: ZUI_MOCK_CUSTOMER
+" Status: Activated
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li>The service definition declares <em>what</em>
+is exposed — here, the root BO is exposed as the
+entity set <code>Customer</code>.</li>
+<li>Aliasing as <code>Customer</code> gives the
+consumer a clean entity name, separate from the
+internal CDS name.</li>
+<li>The service binding connects that definition
+to a protocol. <strong>OData V4 — UI</strong> is
+the modern choice for Fiori elements apps.</li>
+<li>Activation is mandatory — an inactive binding
+does not serve requests.</li>
+<li>Verifying the preview confirms the entity set
+is reachable — the same check you'd perform in
+the real exam.</li>
+</ul>
+</div>
+
+</div>
+
+
+<!-- ================================================
+     BONUS SOLUTION
+     ================================================ -->
+
+<div class="exam-section-title">
+    Bonus Solution
+</div>
+
+
+<div class="solution-box">
+
+<h5>D1 — Action with result parameter</h5>
+
+<pre><code class="language-abap">
+" ───────── BDEF addition ─────────
+
+action upgradeToPremium result [1] $self;
+
+
+" ───────── Behavior Pool addition ─────────
+
+METHODS upgradeToPremium FOR MODIFY
+    IMPORTING keys FOR ACTION ZR_Mock_Customer~upgradeToPremium
+    RESULT result.
+
+METHOD upgradeToPremium.
+
+    " Update status
+    MODIFY ENTITIES OF ZR_Mock_Customer IN LOCAL MODE
+        ENTITY ZR_Mock_Customer
+        UPDATE FIELDS ( status )
+        WITH VALUE #(
+            FOR key IN keys (
+                %tky   = key-%tky
+                status = 'PREMIUM'
+            )
+        ).
+
+    " Read the updated rows back
+    READ ENTITIES OF ZR_Mock_Customer IN LOCAL MODE
+        ENTITY ZR_Mock_Customer
+        ALL FIELDS WITH VALUE #(
+            FOR key IN keys ( %tky = key-%tky )
+        )
+        RESULT DATA(lt_result).
+
+    " Populate result parameter
+    result = VALUE #(
+        FOR ls IN lt_result (
+            %tky   = ls-%tky
+            %param = ls
+        )
+    ).
+
+ENDMETHOD.
+
+
+" ───────── EML test class ─────────
+
+CLASS zcl_mock_action_test DEFINITION
+    PUBLIC
+    FINAL
+    CREATE PUBLIC.
+
+    PUBLIC SECTION.
+        INTERFACES if_oo_adt_classrun.
+ENDCLASS.
+
+CLASS zcl_mock_action_test IMPLEMENTATION.
+
+    METHOD if_oo_adt_classrun~main.
+
+        " Create
+        MODIFY ENTITIES OF ZR_Mock_Customer
+            ENTITY ZR_Mock_Customer
+            CREATE FIELDS ( customer_id name country )
+            WITH VALUE #(
+                ( %cid        = 'C1'
+                  customer_id = '999'
+                  name        = 'Test Customer'
+                  country     = 'DE' )
+            )
+            MAPPED DATA(lt_mapped).
+
+        COMMIT ENTITIES.
+
+        " Call action
+        MODIFY ENTITIES OF ZR_Mock_Customer
+            ENTITY ZR_Mock_Customer
+            EXECUTE upgradeToPremium
+            FROM VALUE #(
+                ( %key-customer_id = '999' )
+            )
+            RESULT DATA(lt_result).
+
+        COMMIT ENTITIES.
+
+        " Output result
+        LOOP AT lt_result INTO DATA(ls_result).
+            out-&gt;write( |Customer { ls_result-%param-customer_id } |
+                     &amp;&amp; | now { ls_result-%param-status }| ).
+        ENDLOOP.
+
+    ENDMETHOD.
+
+ENDCLASS.
+</code></pre>
+
+<div class="explain">
+<strong>Why this is correct:</strong>
+
+<ul>
+<li><code>action upgradeToPremium result [1]
+$self</code> declares the action with a
+cardinality of one result per instance, returning
+the self entity type.</li>
+<li>The <code>MODIFY ENTITIES ... UPDATE</code>
+inside the action changes the status.</li>
+<li>The <code>READ ENTITIES ... ALL FIELDS</code>
+retrieves the up-to-date row so we can return it
+to the caller via <code>result</code>.</li>
+<li>The <code>result</code> parameter is
+populated with <code>%tky</code> (the technical
+key of each instance) and <code>%param</code>
+(the actual data structure).</li>
+<li>In the EML test, <code>COMMIT ENTITIES</code>
+is required after <code>CREATE</code> and after
+the action to persist changes to the database.</li>
+<li><code>IF_OO_ADT_CLASSRUN</code> is the modern
+way to runnable-test a console class in ADT —
+much easier than creating a report.</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="info-box success" style="margin-top:2rem;">
+
+<strong>How to score yourself:</strong>
+
+<ul style="padding-left:1.3rem;margin-top:0.5rem;">
+<li><strong>A1–A4 (40 pts):</strong> Award full
+points only if visibilities, types, and
+<code>RAISING</code> clauses are exact.</li>
+<li><strong>B1–B2 (30 pts):</strong> Award full
+points only if the association cardinality,
+path expression, and <code>@AccessControl</code>
+annotation are correct.</li>
+<li><strong>C1–C2 (30 pts):</strong> Award full
+points only if the BO is <em>managed</em>, the
+determination and validation trigger on the right
+events, and the service binding is
+<em>activated</em>.</li>
+<li><strong>D1 (+10):</strong> Award bonus points
+for a working action with a correctly populated
+<code>result</code> parameter.</li>
+</ul>
+
+<strong>67 points or higher = pass.</strong>
 
 </div>
 
@@ -4858,7 +6322,7 @@ function copyCode(btn) {
                 btn.innerText;
 
             btn.innerText =
-                'Kopiert!';
+                'Copied!';
 
             btn.style.borderColor =
                 'var(--success)';
